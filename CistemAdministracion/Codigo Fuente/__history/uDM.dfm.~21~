@@ -1,0 +1,541 @@
+object DM: TDM
+  OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  Height = 389
+  Width = 746
+  object Channel: TROWinInetHTTPChannel
+    UserAgent = 'RemObjects SDK'
+    TargetURL = 'http://127.0.0.1:9003/BIN'
+    ServerLocators = <>
+    DispatchOptions = []
+    Left = 40
+    Top = 8
+  end
+  object Message: TROBinMessage
+    Envelopes = <>
+    Left = 40
+    Top = 56
+  end
+  object RemoteService: TRORemoteService
+    Message = Message
+    Channel = Channel
+    ServiceName = 'ServiceEmpresas'
+    Left = 40
+    Top = 104
+  end
+  object RemoteDataAdapter: TDARemoteDataAdapter
+    GetSchemaCall.RemoteService = RemoteService
+    GetDataCall.RemoteService = RemoteService
+    UpdateDataCall.RemoteService = RemoteService
+    GetScriptsCall.RemoteService = RemoteService
+    RemoteService = RemoteService
+    DataStreamer = DataStreamer
+    Left = 40
+    Top = 200
+  end
+  object cdsMaestro: TDACDSDataTable
+    RemoteUpdatesOptions = []
+    Fields = <>
+    Params = <>
+    MasterMappingMode = mmDataRequest
+    StreamingOptions = [soDisableEventsWhileStreaming]
+    RemoteDataAdapter = rdaMaestro
+    LogicalName = 'Reporte'
+    IndexDefs = <>
+    Left = 608
+    Top = 256
+  end
+  object cdsDetalle: TDACDSDataTable
+    RemoteUpdatesOptions = []
+    Fields = <>
+    Params = <>
+    MasterMappingMode = mmDataRequest
+    StreamingOptions = [soDisableEventsWhileStreaming]
+    RemoteDataAdapter = rdaDetalle
+    LogicalName = 'Reporte'
+    IndexDefs = <>
+    Left = 680
+    Top = 256
+  end
+  object dsMaestro: TDADataSource
+    DataSet = cdsMaestro.Dataset
+    DataTable = cdsMaestro
+    Left = 608
+    Top = 304
+  end
+  object dsDetalle: TDADataSource
+    DataSet = cdsDetalle.Dataset
+    DataTable = cdsDetalle
+    Left = 680
+    Top = 304
+  end
+  object dbpMaestro: TppDBPipeline
+    DataSource = dsMaestro
+    UserName = 'dbpMaestro'
+    Left = 608
+    Top = 160
+  end
+  object dbpDetalle: TppDBPipeline
+    DataSource = dsDetalle
+    UserName = 'dbpDetalle'
+    Left = 680
+    Top = 160
+  end
+  object repReportes: TppReport
+    AutoStop = False
+    DataPipeline = dbpMaestro
+    PrinterSetup.BinName = 'Default'
+    PrinterSetup.DocumentName = 'Report'
+    PrinterSetup.PaperName = 'Letter'
+    PrinterSetup.PrinterName = 'Default'
+    PrinterSetup.mmMarginBottom = 6350
+    PrinterSetup.mmMarginLeft = 6350
+    PrinterSetup.mmMarginRight = 6350
+    PrinterSetup.mmMarginTop = 6350
+    PrinterSetup.mmPaperHeight = 279401
+    PrinterSetup.mmPaperWidth = 215900
+    PrinterSetup.PaperSize = 1
+    Template.SaveTo = stDatabase
+    Template.Format = ftASCII
+    AllowPrintToArchive = True
+    AllowPrintToFile = True
+    DeviceType = 'Screen'
+    EmailSettings.ReportFormat = 'PDF'
+    OutlineSettings.CreateNode = False
+    OutlineSettings.CreatePageNodes = False
+    OutlineSettings.Enabled = False
+    OutlineSettings.Visible = False
+    PreviewFormSettings.WindowState = wsMaximized
+    PreviewFormSettings.ZoomSetting = zs100Percent
+    TextSearchSettings.DefaultString = '<FindText>'
+    TextSearchSettings.Enabled = True
+    Left = 608
+    Top = 104
+    Version = '10.08'
+    mmColumnWidth = 0
+    DataPipelineName = 'dbpMaestro'
+    object ppParameterList1: TppParameterList
+    end
+  end
+  object ExtraOptions1: TExtraOptions
+    About = 'TExtraDevices 3.00'
+    HTML.ItemsToExport = [reText, reImage, reLine, reShape, reRTF, reBarCode, reCheckBox]
+    HTML.BackLink = '&lt&lt'
+    HTML.ForwardLink = '&gt&gt'
+    HTML.ShowLinks = True
+    HTML.UseTextFileName = False
+    HTML.ZoomableImages = False
+    HTML.Visible = True
+    HTML.PixelFormat = pf8bit
+    HTML.SingleFileOutput = False
+    XHTML.ItemsToExport = [reText, reImage, reLine, reShape, reRTF, reBarCode, reCheckBox]
+    XHTML.BackLink = '&lt&lt'
+    XHTML.ForwardLink = '&gt&gt'
+    XHTML.ShowLinks = True
+    XHTML.UseTextFileName = False
+    XHTML.ZoomableImages = False
+    XHTML.Visible = True
+    XHTML.PixelFormat = pf8bit
+    XHTML.SingleFileOutput = False
+    RTF.ItemsToExport = [reText, reImage, reLine, reShape, reRTF, reBarCode, reCheckBox]
+    RTF.Visible = True
+    RTF.RichTextAsImage = False
+    RTF.UseTextBox = True
+    RTF.PixelFormat = pf8bit
+    RTF.PixelsPerInch = 96
+    Lotus.ItemsToExport = [reText, reImage, reLine, reShape, reRTF, reBarCode, reCheckBox]
+    Lotus.Visible = True
+    Lotus.ColSpacing = 16934
+    Quattro.ItemsToExport = [reText, reImage, reLine, reShape, reRTF, reBarCode, reCheckBox]
+    Quattro.Visible = True
+    Quattro.ColSpacing = 16934
+    Excel.ItemsToExport = [reText, reImage, reLine, reShape, reRTF, reBarCode, reCheckBox]
+    Excel.Visible = True
+    Excel.ColSpacing = 16934
+    Excel.RowSizing = False
+    Excel.AutoConvertToNumber = True
+    Graphic.ItemsToExport = [reText, reImage, reLine, reShape, reRTF, reBarCode, reCheckBox]
+    Graphic.PixelFormat = pf8bit
+    Graphic.UseTextFileName = False
+    Graphic.Visible = True
+    Graphic.PixelsPerInch = 96
+    Graphic.GrayScale = False
+    PDF.ItemsToExport = [reText, reImage, reLine, reShape, reRTF, reBarCode, reCheckBox]
+    PDF.FastCompression = False
+    PDF.CompressImages = True
+    PDF.ScaleImages = True
+    PDF.Visible = True
+    PDF.RichTextAsImage = False
+    PDF.RichEditPixelFormat = pf1bit
+    PDF.PixelFormat = pf24bit
+    PDF.PixelsPerInch = 96
+    PDF.Permissions = [ppPrint, ppModify, ppCopy, ppModifyAnnot]
+    PDF.ViewerPreferences = []
+    PDF.AutoEmbedFonts = True
+    PDF.ImageFormat = riBitmap
+    DotMatrix.ItemsToExport = [reText, reImage, reLine, reShape, reRTF, reBarCode, reCheckBox]
+    DotMatrix.Visible = True
+    DotMatrix.CharsPerInch = cs10CPI
+    DotMatrix.LinesPerInch = ls6LPI
+    DotMatrix.Port = 'LPT1'
+    DotMatrix.ContinousPaper = False
+    DotMatrix.PrinterType = ptEpson
+    Left = 680
+    Top = 104
+  end
+  object StyleRepository: TcxStyleRepository
+    Left = 536
+    Top = 304
+    PixelsPerInch = 96
+    object TcxStyle
+    end
+    object cxStyle1: TcxStyle
+      AssignedValues = [svColor]
+      Color = clSkyBlue
+    end
+    object TcxStyle
+    end
+    object cxStyle2: TcxStyle
+      AssignedValues = [svColor]
+      Color = clMoneyGreen
+    end
+  end
+  object rdaMaestro: TDARemoteDataAdapter
+    GetSchemaCall.RemoteService = RemoteService
+    GetDataCall.RemoteService = RemoteService
+    GetDataCall.MethodName = 'AbreDataSetReporte'
+    GetDataCall.Params = <
+      item
+        Name = 'Result'
+        DataType = rtBinary
+        Flag = fResult
+        Value = Null
+      end
+      item
+        Name = 'SQL'
+        DataType = rtString
+        Flag = fIn
+        Value = Null
+      end
+      item
+        Name = 'Parametros'
+        DataType = rtUserDefined
+        Flag = fIn
+        TypeName = 'TParametros'
+        Value = Null
+      end>
+    GetDataCall.Default = False
+    GetDataCall.OutgoingTableNamesParameter = 'aTableNameArray'
+    GetDataCall.OutgoingTableRequestInfosParameter = 'aTableRequestInfoArray'
+    GetDataCall.IncomingDataParameter = 'Result'
+    UpdateDataCall.RemoteService = RemoteService
+    GetScriptsCall.RemoteService = RemoteService
+    RemoteService = RemoteService
+    DataStreamer = DataStreamer
+    Left = 608
+    Top = 208
+  end
+  object rdaDetalle: TDARemoteDataAdapter
+    GetSchemaCall.RemoteService = RemoteService
+    GetDataCall.RemoteService = RemoteService
+    GetDataCall.MethodName = 'AbreDataSetReporte'
+    GetDataCall.Params = <
+      item
+        Name = 'Result'
+        DataType = rtBinary
+        Flag = fResult
+        Value = Null
+      end
+      item
+        Name = 'SQL'
+        DataType = rtString
+        Flag = fIn
+        Value = Null
+      end
+      item
+        Name = 'Parametros'
+        DataType = rtUserDefined
+        Flag = fIn
+        TypeName = 'TParametros'
+        Value = Null
+      end>
+    GetDataCall.Default = False
+    GetDataCall.OutgoingTableNamesParameter = 'aTableNameArray'
+    GetDataCall.OutgoingTableRequestInfosParameter = 'aTableRequestInfoArray'
+    GetDataCall.IncomingDataParameter = 'Result'
+    UpdateDataCall.RemoteService = RemoteService
+    GetScriptsCall.RemoteService = RemoteService
+    RemoteService = RemoteService
+    DataStreamer = DataStreamer
+    Left = 680
+    Top = 208
+  end
+  object ChannelEstacion: TROWinInetHTTPChannel
+    UserAgent = 'RemObjects SDK'
+    TargetURL = 'http://10.10.10.1:9001/BIN'
+    ServerLocators = <>
+    DispatchOptions = []
+    Left = 144
+    Top = 8
+  end
+  object MessageEstacion: TROBinMessage
+    Envelopes = <>
+    Left = 144
+    Top = 56
+  end
+  object cdsEstacion: TDACDSDataTable
+    RemoteUpdatesOptions = []
+    Fields = <
+      item
+        Name = 'EstacionID'
+        DataType = datInteger
+        Required = True
+        InPrimaryKey = True
+      end
+      item
+        Name = 'Nombre'
+        DataType = datString
+        Size = 70
+        Required = True
+      end
+      item
+        Name = 'RazonSocial'
+        DataType = datString
+        Size = 70
+      end
+      item
+        Name = 'RFC'
+        DataType = datString
+        Size = 30
+        Required = True
+      end
+      item
+        Name = 'ClavePemex'
+        DataType = datString
+        Size = 10
+        Required = True
+      end
+      item
+        Name = 'NoBombas'
+        DataType = datInteger
+        Required = True
+      end
+      item
+        Name = 'Colonia'
+        DataType = datString
+        Size = 80
+      end
+      item
+        Name = 'Ciudad'
+        DataType = datString
+        Size = 30
+      end
+      item
+        Name = 'CodigoPostal'
+        DataType = datString
+        Size = 10
+      end
+      item
+        Name = 'Host'
+        DataType = datString
+        Size = 30
+      end
+      item
+        Name = 'CuentaContable'
+        DataType = datString
+        Size = 20
+      end
+      item
+        Name = 'Impuesto'
+        DataType = datFloat
+        Required = True
+      end>
+    Params = <>
+    MasterMappingMode = mmDataRequest
+    StreamingOptions = [soDisableEventsWhileStreaming]
+    RemoteDataAdapter = RemoteDataAdapter
+    LogicalName = 'dbo Estacion'
+    IndexDefs = <>
+    Left = 40
+    Top = 272
+  end
+  object DataStreamer: TDABin2DataStreamer
+    Left = 40
+    Top = 152
+  end
+  object dxSkinController1: TdxSkinController
+    Kind = lfOffice11
+    SkinName = 'Office2007Black'
+    Left = 536
+    Top = 256
+  end
+  object ChannelExpress: TROWinInetHTTPChannel
+    UserAgent = 'RemObjects SDK'
+    TargetURL = 'http://localhost:9005/BIN'
+    ServerLocators = <>
+    DispatchOptions = []
+    Left = 440
+    Top = 16
+  end
+  object MessageExpress: TROBinMessage
+    Envelopes = <>
+    Left = 440
+    Top = 64
+  end
+  object CistemGasService: TRORemoteService
+    Message = MessageEstacion
+    Channel = ChannelEstacion
+    ServiceName = 'ServiceProxy'
+    Left = 144
+    Top = 104
+  end
+  object AdapterCistemGas: TDARemoteDataAdapter
+    GetSchemaCall.RemoteService = CistemGasService
+    GetDataCall.RemoteService = CistemGasService
+    UpdateDataCall.RemoteService = CistemGasService
+    GetScriptsCall.RemoteService = CistemGasService
+    RemoteService = CistemGasService
+    DataStreamer = DataCistemGas
+    Left = 144
+    Top = 200
+  end
+  object DataCistemGas: TDABin2DataStreamer
+    Left = 144
+    Top = 152
+  end
+  object ChannelFlotillas: TROWinInetHTTPChannel
+    UserAgent = 'RemObjects SDK'
+    TargetURL = 'http://127.0.0.1:9002/BIN'
+    ServerLocators = <>
+    DispatchOptions = []
+    Left = 264
+    Top = 8
+  end
+  object MessageFlotillas: TROBinMessage
+    Envelopes = <>
+    Left = 264
+    Top = 56
+  end
+  object FlotillasService: TRORemoteService
+    Message = MessageFlotillas
+    Channel = ChannelFlotillas
+    ServiceName = 'ServiceFlotillas'
+    Left = 264
+    Top = 104
+  end
+  object AdapterFlotillas: TDARemoteDataAdapter
+    GetSchemaCall.RemoteService = FlotillasService
+    GetDataCall.RemoteService = FlotillasService
+    UpdateDataCall.RemoteService = FlotillasService
+    GetScriptsCall.RemoteService = FlotillasService
+    RemoteService = FlotillasService
+    DataStreamer = DataFlotillas
+    Left = 264
+    Top = 200
+  end
+  object DataFlotillas: TDABin2DataStreamer
+    Left = 264
+    Top = 152
+  end
+  object rdaG: TDARemoteDataAdapter
+    GetSchemaCall.RemoteService = RAG
+    GetDataCall.RemoteService = RAG
+    GetDataCall.MethodName = 'AbreDataSetReportes'
+    GetDataCall.Params = <
+      item
+        Name = 'Result'
+        DataType = rtBinary
+        Flag = fResult
+        Value = Null
+      end
+      item
+        Name = 'SQL'
+        DataType = rtString
+        Flag = fIn
+        Value = Null
+      end
+      item
+        Name = 'Parametros'
+        DataType = rtUserDefined
+        Flag = fIn
+        TypeName = 'TParametros'
+        Value = Null
+      end>
+    GetDataCall.Default = False
+    GetDataCall.OutgoingTableNamesParameter = 'aTableNameArray'
+    GetDataCall.OutgoingTableRequestInfosParameter = 'aTableRequestInfoArray'
+    GetDataCall.IncomingDataParameter = 'Result'
+    UpdateDataCall.RemoteService = RAG
+    GetScriptsCall.RemoteService = RAG
+    RemoteService = RAG
+    DataStreamer = DataCistemGas
+    Left = 80
+    Top = 328
+  end
+  object cdsG: TDACDSDataTable
+    RemoteUpdatesOptions = []
+    Fields = <>
+    Params = <>
+    MasterMappingMode = mmDataRequest
+    StreamingOptions = [soDisableEventsWhileStreaming]
+    RemoteDataAdapter = rdaG
+    LogicalName = 'Reporte'
+    IndexDefs = <>
+    Left = 40
+    Top = 328
+  end
+  object RAG: TRORemoteService
+    Message = MessageEstacion
+    Channel = ChannelEstacion
+    ServiceName = 'ServiceCistemGas'
+    Left = 120
+    Top = 328
+  end
+  object rdaF: TDARemoteDataAdapter
+    GetSchemaCall.RemoteService = FlotillasService
+    GetDataCall.RemoteService = FlotillasService
+    GetDataCall.MethodName = 'AbreDataSetReportes'
+    GetDataCall.Params = <
+      item
+        Name = 'Result'
+        DataType = rtBinary
+        Flag = fResult
+        Value = Null
+      end
+      item
+        Name = 'SQL'
+        DataType = rtString
+        Flag = fIn
+        Value = Null
+      end
+      item
+        Name = 'Parametros'
+        DataType = rtUserDefined
+        Flag = fIn
+        TypeName = 'TParametros'
+        Value = Null
+      end>
+    GetDataCall.Default = False
+    GetDataCall.OutgoingTableNamesParameter = 'aTableNameArray'
+    GetDataCall.OutgoingTableRequestInfosParameter = 'aTableRequestInfoArray'
+    GetDataCall.IncomingDataParameter = 'Result'
+    UpdateDataCall.RemoteService = FlotillasService
+    GetScriptsCall.RemoteService = FlotillasService
+    RemoteService = FlotillasService
+    DataStreamer = DataCistemGas
+    Left = 304
+    Top = 328
+  end
+  object cdsF: TDACDSDataTable
+    RemoteUpdatesOptions = []
+    Fields = <>
+    Params = <>
+    MasterMappingMode = mmDataRequest
+    StreamingOptions = [soDisableEventsWhileStreaming]
+    RemoteDataAdapter = rdaF
+    LogicalName = 'Reporte'
+    IndexDefs = <>
+    Left = 264
+    Top = 328
+  end
+end

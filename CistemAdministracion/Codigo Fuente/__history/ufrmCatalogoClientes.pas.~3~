@@ -1,0 +1,223 @@
+unit ufrmCatalogoClientes;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, ufrmCatalogo, cxStyles, cxCustomData, cxGraphics, cxFilter, cxData,
+  cxDataStorage, cxEdit, DB, cxDBData, cxTextEdit, cxDBEdit, cxLabel,
+  cxContainer, cxGroupBox, dxmdaset, uDADataTable, uDAScriptingProvider,
+  uDACDSDataTable, cxGridLevel, cxClasses, cxControls, cxGridCustomView,
+  cxGridCustomTableView, cxGridTableView, cxGridDBTableView, cxGrid, cxPC,
+  cxCheckBox, dxSkinsCore, dxSkinsDefaultPainters, dxSkinscxPCPainter,
+  uDAInterfaces, Menus, cxLookAndFeelPainters, cxMaskEdit, cxDropDownEdit,
+  cxImageComboBox, StdCtrls, cxButtons, uDAMemDataTable, cxCurrencyEdit,
+  dxSkinBlack, dxSkinBlue, dxSkinCaramel, dxSkinCoffee, dxSkinGlassOceans,
+  dxSkiniMaginary, dxSkinLilian, dxSkinLiquidSky, dxSkinLondonLiquidSky,
+  dxSkinMcSkin, dxSkinMoneyTwins, dxSkinOffice2007Black, dxSkinOffice2007Blue,
+  dxSkinOffice2007Green, dxSkinOffice2007Pink, dxSkinOffice2007Silver,
+  dxSkinSilver, dxSkinStardust, dxSkinSummer2008, dxSkinValentine,
+  dxSkinXmas2008Blue, cxLookAndFeels, dxSkinDarkRoom, dxSkinDarkSide,
+  dxSkinFoggy, dxSkinPumpkin, dxSkinSeven, dxSkinSharp, dxSkinSpringTime,
+  cxCalendar;
+
+type
+  TfrmCatalogoClientes = class(TfrmCatalogo)
+    GrpBoxDatos: TcxGroupBox;
+    LblClientes: TcxLabel;
+    LblCliente: TcxLabel;
+    LblCalle: TcxLabel;
+    LblCiudad: TcxLabel;
+    LblColonia: TcxLabel;
+    LblTelefono: TcxLabel;
+    LblCP: TcxLabel;
+    LblRFC: TcxLabel;
+    TxtCliente: TcxDBTextEdit;
+    TxtNombre: TcxDBTextEdit;
+    TxtGrupo: TcxDBTextEdit;
+    TxtCalle: TcxDBTextEdit;
+    TxtColonia: TcxDBTextEdit;
+    TxtCiudad: TcxDBTextEdit;
+    TxtTelefono: TcxDBTextEdit;
+    TxtRFC: TcxDBTextEdit;
+    LblGrupo: TcxLabel;
+    TxtCP: TcxDBTextEdit;
+    dbgCatalogoDBTableView1ClienteID: TcxGridDBColumn;
+    dbgCatalogoDBTableView1Nombre: TcxGridDBColumn;
+    dbgCatalogoDBTableView1Grupo: TcxGridDBColumn;
+    dbgCatalogoDBTableView1Calle: TcxGridDBColumn;
+    dbgCatalogoDBTableView1Colonia: TcxGridDBColumn;
+    dbgCatalogoDBTableView1Ciudad: TcxGridDBColumn;
+    dbgCatalogoDBTableView1Telefono: TcxGridDBColumn;
+    dbgCatalogoDBTableView1CodigoPostal: TcxGridDBColumn;
+    dbgCatalogoDBTableView1RFC: TcxGridDBColumn;
+    dbgCatalogoDBTableView1Status: TcxGridDBColumn;
+    LblCurp: TcxLabel;
+    TxtCurp: TcxDBTextEdit;
+    CheckActivo: TcxDBCheckBox;
+    cxTabSheet3: TcxTabSheet;
+    cxGroupBox1: TcxGroupBox;
+    cxDBTextEdit1: TcxDBTextEdit;
+    cxDBTextEdit2: TcxDBTextEdit;
+    cxLabel1: TcxLabel;
+    cxLabel2: TcxLabel;
+    cxDBCheckBox2: TcxDBCheckBox;
+    cxDBCheckBox3: TcxDBCheckBox;
+    cxDBCheckBox1: TcxDBCheckBox;
+    cxDBCheckBox4: TcxDBCheckBox;
+    cxDBTextEdit3: TcxDBTextEdit;
+    cxLabel3: TcxLabel;
+    cxDBTextEdit4: TcxDBTextEdit;
+    cxLabel4: TcxLabel;
+    cdsRFC: TDACDSDataTable;
+    cxTabSheet4: TcxTabSheet;
+    cxGroupBox9: TcxGroupBox;
+    BtnProcesar: TcxButton;
+    lblImpresora: TcxLabel;
+    cbImpresora: TcxImageComboBox;
+    cxGroupBox2: TcxGroupBox;
+    cxLabel5: TcxLabel;
+    cxDBTextEdit5: TcxDBTextEdit;
+    cxLabel6: TcxLabel;
+    cxDBTextEdit6: TcxDBTextEdit;
+    btnAsignar: TcxButton;
+    cxLabel7: TcxLabel;
+    edtCliente: TcxCurrencyEdit;
+    datos: TcxTabSheet;
+    cxLabel8: TcxLabel;
+    cxDBDateEdit1: TcxDBDateEdit;
+    cxDBCheckBox5: TcxDBCheckBox;
+    procedure BtnProcesarClick(Sender: TObject);
+    procedure cdsCatalogoNewRecord(DataTable: TDADataTable);
+    procedure TxtRFCExit(Sender: TObject);
+    procedure btnAsignarClick(Sender: TObject);
+    procedure pgcCatalogoPageChanging(Sender: TObject; NewPage: TcxTabSheet;
+      var AllowChange: Boolean);
+    procedure cdsCatalogoBeforePost(DataTable: TDADataTable);
+  private
+    { Private declarations }
+    function ExisteClienteRFC:Boolean;
+  public
+    { Public declarations }
+  end;
+
+var
+  frmCatalogoClientes: TfrmCatalogoClientes;
+
+implementation
+uses Modules, uDM, UtileriasComun, LibraryAdministracion_Intf, ufrmDatosPuntos;
+
+{$R *.dfm}
+
+procedure TfrmCatalogoClientes.btnAsignarClick(Sender: TObject);
+begin
+  inherited;
+  if (cdsCatalogo.State = dsBrowse) and (edtCliente.EditValue > 0) and
+     (DM.Servidor.ClienteValido(cdsCatalogo.FieldByName('ClienteID').AsInteger, edtCliente.EditValue)) then
+  begin
+    cdsCatalogo.Edit;
+    cdsCatalogo.FieldByName('ClienteID').AsInteger:=edtCliente.EditValue;
+    cdsCatalogo.Post;
+  end
+  else
+    MessageDlg('No fue posible asignar la tarjeta.', mtError, [mbOK], 0);
+end;
+
+procedure TfrmCatalogoClientes.BtnProcesarClick(Sender: TObject);
+var
+  Aux: TReporte;
+begin
+  inherited;
+  Aux:=DM.Servidor.BuscaReporte('DATACARD SMARTDRIVER', 1);
+  if Aux <> nil then
+  begin
+    if DM.Parametros = nil then
+      DM.Parametros:=TParametros.Create;
+    DM.Parametros.ClienteIni:=cdsCatalogo.FieldByName('ClienteID').AsInteger;
+    DM.Imprimir(Aux.SQL1, Aux.SQL2, Aux.Template, Aux.CampoJoin, 'DATACARD SMARTDRIVER');
+    Aux.Free;
+  end;
+end;
+
+procedure TfrmCatalogoClientes.cdsCatalogoBeforePost(DataTable: TDADataTable);
+begin
+  inherited;
+  if cdsCatalogo.FieldByName('CodigoPostal').AsString = '' then
+    cdsCatalogo.FieldByName('CodigoPostal').AsString:=' ';
+  if cdsCatalogo.FieldByName('RFC').AsString = '' then
+    cdsCatalogo.FieldByName('RFC').AsString:=' ';
+end;
+
+procedure TfrmCatalogoClientes.cdsCatalogoNewRecord(DataTable: TDADataTable);
+begin
+  inherited;
+  cdsCatalogo.FieldByName('ClienteID').AsInteger := DM.Servidor.Folio('ClienteID', '');
+  cdsCatalogo.FieldByName('LimiteCredito').AsFloat := 0;
+  cdsCatalogo.FieldByName('Credito').AsBoolean := False;
+  cdsCatalogo.FieldByName('DiasCredito').AsInteger := 0;
+  cdsCatalogo.FieldByName('AutorizaCheque').AsBoolean := false;
+  cdsCatalogo.FieldByName('TicketBoucher').AsBoolean := True;
+  cdsCatalogo.FieldByName('AutorizaValeCredito').AsBoolean := False;
+  cdsCatalogo.FieldByName('Status').AsBoolean := True;
+  DataTable.FieldByName('FechaAltaCliente').AsDateTime := Now;
+  DataTable.FieldByName('RegistroCliente').AsInteger := DM.MiLoginInfo.EmpleadoID;
+  //DataTable.FieldByName('Sexo').AsInteger := 1;
+  TxtNombre.SetFocus;
+end;
+
+procedure TfrmCatalogoClientes.TxtRFCExit(Sender: TObject);
+begin
+  inherited;
+  if (cdsCatalogo.State = dsEdit) or  (cdsCatalogo.State = dsInsert)then
+  begin
+    if ExisteClienteRFC then
+    begin
+      IF DM.Seguridad.SeguridadPorNombre('Duplicar Clientes') <> nil then
+      Begin
+          //ShowMessage('Permiso Aceptado Para Duplicar');
+      End
+      else
+      Begin
+        MessageDlg('Cliente ya Existe'+#13+#10+'No Tiene Permisos para Duplicar Clientes', mtError, [mbOK], 0);
+        //cdsCatalogo.FieldByName('RFC').AsString:='';
+        txtRFC.SetFocus;
+      End;
+
+    {  if not (MessageDlg('Existe RFC'+#13+#10+'Desea Registrar Cliente con identico RFC ',
+      mtConfirmation, [mbYes, mbNo], 0, mbYes) = mrYes) then
+      begin
+        cdsCatalogo.FieldByName('Rfc').AsString:='';
+        txtRfc.SetFocus;
+      end;  }
+    end;
+    if not DM.ValidaRFC(TxtRFC.Text) then
+    begin
+        MessageDlg('El RFC no debe de llevar Espacios ni Guiones(-)', mtError, [mbOK], 0);
+        txtRFC.SetFocus;
+    end;
+  end;
+end;
+
+function TfrmCatalogoClientes.ExisteClienteRFC:Boolean;
+begin
+  cdsRFC.Close;
+  cdsRFC.ParamByName('ClienteID').AsInteger:=cdsCatalogo.FieldByName('ClienteID').AsInteger;
+  cdsRFC.ParamByName('Rfc').AsString:=cdsCatalogo.FieldByName('Rfc').AsString;
+  cdsRFC.Open;
+  Result:=cdsRFC.RecordCount > 0;
+end;
+
+procedure TfrmCatalogoClientes.pgcCatalogoPageChanging(Sender: TObject;
+  NewPage: TcxTabSheet; var AllowChange: Boolean);
+begin
+  inherited;
+  if (NewPage.PageIndex = 4) and (cdsCatalogo.State = dsBrowse) and (cdsCatalogo.RecordCount > 0) then
+  begin
+    AllowChange:=False;
+    DatosPuntos(cdsCatalogo.FieldByName('ClienteID').AsInteger);
+  end;
+end;
+
+initialization
+  ModuleInfoManager.RegisterModule('Clientes',  TfrmCatalogoClientes );
+end.

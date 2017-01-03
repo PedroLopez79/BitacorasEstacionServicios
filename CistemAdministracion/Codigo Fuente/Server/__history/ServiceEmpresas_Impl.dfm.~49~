@@ -1,0 +1,622 @@
+object ServiceEmpresas: TServiceEmpresas
+  OldCreateOrder = True
+  OnCreate = DataAbstractServiceCreate
+  SessionManager = ServerDataModule3.SessionManager
+  ServiceSchema = Schema
+  ServiceDataStreamer = DataStreamer
+  ExportedDataTables = <>
+  AllowWhereSQL = True
+  Height = 243
+  Width = 332
+  object Schema: TDASchema
+    ConnectionManager = ServerDataModule3.ConnectionManager3
+    DataDictionary = ServerDataModule3.DataDictionary
+    Datasets = <
+      item
+        Params = <>
+        Statements = <
+          item
+            Connection = 'FACTURAELECTRONICA'
+            ConnectionType = 'SDAC'
+            Default = True
+            TargetTable = 'dbo.usuarios'
+            StatementType = stAutoSQL
+            ColumnMappings = <
+              item
+                DatasetField = 'IDEMPLEADO'
+                TableField = 'IDEMPLEADO'
+              end
+              item
+                DatasetField = 'CODIGO'
+                TableField = 'CODIGO'
+              end
+              item
+                DatasetField = 'NOMBRE'
+                TableField = 'NOMBRE'
+              end
+              item
+                DatasetField = 'USERNAME'
+                TableField = 'USERNAME'
+              end
+              item
+                DatasetField = 'USERPASSWORD'
+                TableField = 'USERPASSWORD'
+              end>
+          end>
+        Name = 'dbo.usuarios'
+        BusinessRulesClient.CompileOnServer = False
+        BusinessRulesClient.RunOnClientAndServer = False
+        Fields = <
+          item
+            Name = 'IDEMPLEADO'
+            DataType = datInteger
+          end
+          item
+            Name = 'CODIGO'
+            DataType = datString
+            Size = 10
+          end
+          item
+            Name = 'NOMBRE'
+            DataType = datString
+            Size = 70
+          end
+          item
+            Name = 'USERNAME'
+            DataType = datString
+            Size = 10
+          end
+          item
+            Name = 'USERPASSWORD'
+            DataType = datString
+            Size = 10
+          end>
+      end
+      item
+        Params = <
+          item
+            Name = 'EstacionID'
+            DataType = datInteger
+            Value = ''
+            ParamType = daptInput
+          end>
+        Statements = <
+          item
+            Connection = 'FACTURAELECTRONICA'
+            ConnectionType = 'SDAC'
+            Default = True
+            SQL = 
+              'select top 1 *'#10'from tipocambio'#10'where EstacionID=:EstacionID'#10'orde' +
+              'r by Fecha desc'#10
+            StatementType = stSQL
+            ColumnMappings = <
+              item
+                DatasetField = 'TipoCambioID'
+                TableField = 'TipoCambioID'
+              end
+              item
+                DatasetField = 'TipoCambio'
+                TableField = 'TipoCambio'
+              end
+              item
+                DatasetField = 'EstacionID'
+                TableField = 'EstacionID'
+              end
+              item
+                DatasetField = 'Fecha'
+                TableField = 'Fecha'
+              end>
+          end>
+        Name = 'ObtenerTipoCambioPorEstacion'
+        BusinessRulesClient.CompileOnServer = False
+        BusinessRulesClient.RunOnClientAndServer = False
+        Fields = <
+          item
+            Name = 'TipoCambioID'
+            DataType = datInteger
+          end
+          item
+            Name = 'TipoCambio'
+            DataType = datFloat
+          end
+          item
+            Name = 'EstacionID'
+            DataType = datInteger
+          end
+          item
+            Name = 'Fecha'
+            DataType = datDateTime
+          end>
+      end
+      item
+        Params = <>
+        Statements = <
+          item
+            Connection = 'FACTURAELECTRONICA'
+            ConnectionType = 'SDAC'
+            Default = True
+            TargetTable = 'dbo.TipoCambio'
+            StatementType = stAutoSQL
+            ColumnMappings = <
+              item
+                DatasetField = 'TipoCambioID'
+                TableField = 'TipoCambioID'
+              end
+              item
+                DatasetField = 'TipoCambio'
+                TableField = 'TipoCambio'
+              end
+              item
+                DatasetField = 'EstacionID'
+                TableField = 'EstacionID'
+              end
+              item
+                DatasetField = 'Fecha'
+                TableField = 'Fecha'
+              end>
+          end>
+        Name = 'dbo.TipoCambio'
+        BusinessRulesClient.CompileOnServer = False
+        BusinessRulesClient.RunOnClientAndServer = False
+        Fields = <
+          item
+            Name = 'TipoCambioID'
+            DataType = datInteger
+          end
+          item
+            Name = 'TipoCambio'
+            DataType = datFloat
+          end
+          item
+            Name = 'EstacionID'
+            DataType = datInteger
+          end
+          item
+            Name = 'Fecha'
+            DataType = datDateTime
+          end>
+      end
+      item
+        Params = <
+          item
+            Name = 'Usuario'
+            Value = '1'
+            ParamType = daptInput
+          end
+          item
+            Name = 'Clave'
+            Value = '1'
+            ParamType = daptInput
+          end>
+        Statements = <
+          item
+            Connection = 'FACTURAELECTRONICA'
+            ConnectionType = 'SDAC'
+            Default = True
+            SQL = 
+              'SELECT IDEMPLEADO, NOMBRE'#10'FROM usuarios'#10'WHERE (USERNAME = :Usuar' +
+              'io) AND (USERPASSWORD = :Clave)'
+            StatementType = stSQL
+            ColumnMappings = <
+              item
+                DatasetField = 'IDEMPLEADO'
+                TableField = 'IDEMPLEADO'
+              end
+              item
+                DatasetField = 'NOMBRE'
+                TableField = 'NOMBRE'
+              end>
+          end>
+        Name = 'spValidaUsuario'
+        BusinessRulesClient.CompileOnServer = False
+        BusinessRulesClient.RunOnClientAndServer = False
+        Fields = <
+          item
+            Name = 'IDEMPLEADO'
+            DataType = datInteger
+          end
+          item
+            Name = 'NOMBRE'
+            DataType = datString
+            Size = 70
+          end>
+      end
+      item
+        Params = <
+          item
+            Name = 'UsuarioID'
+            Value = ''
+            ParamType = daptInput
+          end>
+        Statements = <
+          item
+            Connection = 'FACTURAELECTRONICA'
+            ConnectionType = 'SDAC'
+            Default = True
+            SQL = 
+              'DECLARE @UsuarioID AS INT'#10#10'SELECT @UsuarioID = :UsuarioID'#10#10'SELEC' +
+              'T DISTINCT Opcion.OpcionID, Descripcion FROM'#10'       (SELECT     ' +
+              'OpcionID'#10'        FROM       Acceso'#10'        WHERE usuarioid = @Us' +
+              'uarioID'#10#10'        UNION'#10#10'        SELECT     OpcionID'#10'        FROM' +
+              '       GrupoAcceso'#10'        WHERE GrupoID IN (SELECT GrupoID FROM' +
+              ' GrupoUsuario'#10'                          WHERE UsuarioID = @Usuar' +
+              'ioID)) SelectUnion  INNER JOIN'#10'                          Opcion ' +
+              'ON Opcion.OpcionID = SelectUnion.OpcionID'#10'ORDER BY Opcion.Opcion' +
+              'ID'#10
+            StatementType = stSQL
+            ColumnMappings = <
+              item
+                DatasetField = 'OpcionID'
+                TableField = 'OpcionID'
+              end
+              item
+                DatasetField = 'Descripcion'
+                TableField = 'Descripcion'
+              end>
+          end>
+        Name = 'spAccesos'
+        BusinessRulesClient.CompileOnServer = False
+        BusinessRulesClient.RunOnClientAndServer = False
+        Fields = <
+          item
+            Name = 'OpcionID'
+            DataType = datInteger
+          end
+          item
+            Name = 'Descripcion'
+            DataType = datString
+            Size = 50
+          end>
+      end
+      item
+        Params = <>
+        Statements = <
+          item
+            Connection = 'FACTURAELECTRONICA'
+            ConnectionType = 'SDAC'
+            Default = True
+            TargetTable = 'dbo.Acceso'
+            StatementType = stAutoSQL
+            ColumnMappings = <
+              item
+                DatasetField = 'UsuarioID'
+                TableField = 'UsuarioID'
+              end
+              item
+                DatasetField = 'OpcionID'
+                TableField = 'OpcionID'
+              end>
+          end>
+        Name = 'dbo.Acceso'
+        BusinessRulesClient.CompileOnServer = False
+        BusinessRulesClient.RunOnClientAndServer = False
+        Fields = <
+          item
+            Name = 'UsuarioID'
+            DataType = datInteger
+          end
+          item
+            Name = 'OpcionID'
+            DataType = datInteger
+          end>
+      end
+      item
+        Params = <>
+        Statements = <
+          item
+            Connection = 'FACTURAELECTRONICA'
+            ConnectionType = 'SDAC'
+            Default = True
+            TargetTable = 'dbo.Opcion'
+            StatementType = stAutoSQL
+            ColumnMappings = <
+              item
+                DatasetField = 'OpcionID'
+                TableField = 'OpcionID'
+              end
+              item
+                DatasetField = 'Descripcion'
+                TableField = 'Descripcion'
+              end
+              item
+                DatasetField = 'ImageIndex'
+                TableField = 'ImageIndex'
+              end
+              item
+                DatasetField = 'PadreID'
+                TableField = 'PadreID'
+              end
+              item
+                DatasetField = 'Orden'
+                TableField = 'Orden'
+              end>
+          end>
+        Name = 'dbo.Opcion'
+        BusinessRulesClient.CompileOnServer = False
+        BusinessRulesClient.RunOnClientAndServer = False
+        Fields = <
+          item
+            Name = 'OpcionID'
+            DataType = datInteger
+          end
+          item
+            Name = 'Descripcion'
+            DataType = datString
+            Size = 50
+          end
+          item
+            Name = 'ImageIndex'
+            DataType = datInteger
+          end
+          item
+            Name = 'PadreID'
+            DataType = datInteger
+          end
+          item
+            Name = 'Orden'
+            DataType = datInteger
+          end>
+      end
+      item
+        Params = <>
+        Statements = <>
+        Name = 'ObtenerLimiteAFacturar'
+        BusinessRulesClient.CompileOnServer = False
+        BusinessRulesClient.RunOnClientAndServer = False
+        Fields = <>
+      end
+      item
+        Params = <>
+        Statements = <
+          item
+            Connection = 'FACTURAELECTRONICA'
+            ConnectionType = 'SDAC'
+            Default = True
+            TargetTable = 'dbo.Empresas'
+            StatementType = stAutoSQL
+            ColumnMappings = <
+              item
+                DatasetField = 'EMPRESAID'
+                TableField = 'EMPRESAID'
+              end
+              item
+                DatasetField = 'Nombre'
+                TableField = 'Nombre'
+              end
+              item
+                DatasetField = 'RazonSocial'
+                TableField = 'RazonSocial'
+              end
+              item
+                DatasetField = 'RFC'
+                TableField = 'RFC'
+              end
+              item
+                DatasetField = 'ClavePemex'
+                TableField = 'ClavePemex'
+              end
+              item
+                DatasetField = 'NoBombas'
+                TableField = 'NoBombas'
+              end
+              item
+                DatasetField = 'Colonia'
+                TableField = 'Colonia'
+              end
+              item
+                DatasetField = 'Ciudad'
+                TableField = 'Ciudad'
+              end
+              item
+                DatasetField = 'CodigoPostal'
+                TableField = 'CodigoPostal'
+              end
+              item
+                DatasetField = 'Host'
+                TableField = 'Host'
+              end
+              item
+                DatasetField = 'CuentaContable'
+                TableField = 'CuentaContable'
+              end
+              item
+                DatasetField = 'Impuesto'
+                TableField = 'Impuesto'
+              end
+              item
+                DatasetField = 'ClienteSagarpa'
+                TableField = 'ClienteSagarpa'
+              end
+              item
+                DatasetField = 'ClienteSagarpaPemex'
+                TableField = 'ClienteSagarpaPemex'
+              end
+              item
+                DatasetField = 'IvaRetenido'
+                TableField = 'IvaRetenido'
+              end>
+          end>
+        Name = 'dbo.Empresas'
+        BusinessRulesClient.CompileOnServer = False
+        BusinessRulesClient.RunOnClientAndServer = False
+        Fields = <
+          item
+            Name = 'EMPRESAID'
+            DataType = datInteger
+          end
+          item
+            Name = 'Nombre'
+            DataType = datString
+            Size = 70
+          end
+          item
+            Name = 'RazonSocial'
+            DataType = datString
+            Size = 70
+          end
+          item
+            Name = 'RFC'
+            DataType = datString
+            Size = 30
+          end
+          item
+            Name = 'ClavePemex'
+            DataType = datString
+            Size = 10
+          end
+          item
+            Name = 'NoBombas'
+            DataType = datInteger
+          end
+          item
+            Name = 'Colonia'
+            DataType = datString
+            Size = 80
+          end
+          item
+            Name = 'Ciudad'
+            DataType = datString
+            Size = 30
+          end
+          item
+            Name = 'CodigoPostal'
+            DataType = datString
+            Size = 10
+          end
+          item
+            Name = 'Host'
+            DataType = datString
+            Size = 30
+          end
+          item
+            Name = 'CuentaContable'
+            DataType = datString
+            Size = 30
+          end
+          item
+            Name = 'Impuesto'
+            DataType = datFloat
+          end
+          item
+            Name = 'ClienteSagarpa'
+            DataType = datInteger
+          end
+          item
+            Name = 'ClienteSagarpaPemex'
+            DataType = datInteger
+          end
+          item
+            Name = 'IvaRetenido'
+            DataType = datBoolean
+          end>
+      end>
+    JoinDataTables = <>
+    UnionDataTables = <>
+    Commands = <
+      item
+        Params = <
+          item
+            Name = 'UsuarioID'
+            Value = ''
+            ParamType = daptInput
+          end>
+        Statements = <
+          item
+            Connection = 'FACTURAELECTRONICA'
+            ConnectionType = 'SDAC'
+            Default = True
+            TargetTable = 'dbo.Acceso'
+            SQL = 'DELETE'#10'FROM'#10'   Acceso'#10'WHERE'#10'   UsuarioID = :UsuarioID'
+            StatementType = stSQL
+            ColumnMappings = <>
+          end>
+        Name = 'AccesosEliminar'
+      end
+      item
+        Params = <
+          item
+            Name = 'OpcionID'
+            Value = ''
+            ParamType = daptInput
+          end
+          item
+            Name = 'UsuarioID'
+            Value = ''
+            ParamType = daptInput
+          end>
+        Statements = <
+          item
+            Connection = 'FACTURAELECTRONICA'
+            ConnectionType = 'SDAC'
+            Default = True
+            TargetTable = 'dbo.Acceso'
+            SQL = 
+              '  INSERT'#10'  INTO Acceso'#10'    (OpcionID, UsuarioID)'#10'  VALUES'#10'    (:' +
+              'OpcionID, :UsuarioID)'#10
+            StatementType = stSQL
+            ColumnMappings = <>
+          end>
+        Name = 'AccesosInsertar'
+      end>
+    RelationShips = <
+      item
+        Name = 'FK_spValidaUsuario_spValidaUsuario'
+        MasterDatasetName = 'spValidaUsuario'
+        DetailDatasetName = 'spValidaUsuario'
+        RelationshipType = rtForeignKey
+      end>
+    UpdateRules = <>
+    Version = 0
+    Left = 24
+    Top = 72
+  end
+  object dbpUsuario: TDABusinessProcessor
+    Schema = Schema
+    InsertCommandName = 'Insert_dbo Usuario'
+    DeleteCommandName = 'Delete_dbo Usuario'
+    UpdateCommandName = 'Update_dbo Usuario'
+    ReferencedDataset = 'dbo Usuario'
+    ProcessorOptions = [poAutoGenerateRefreshDataset]
+    UpdateMode = updWhereKeyOnly
+    Left = 128
+    Top = 24
+  end
+  object bpReporte: TDABusinessProcessor
+    Schema = Schema
+    InsertCommandName = 'Insert_dbo Reporte'
+    DeleteCommandName = 'Delete_dbo Reporte'
+    UpdateCommandName = 'Update_dbo Reporte'
+    ReferencedDataset = 'dbo Reporte'
+    ProcessorOptions = []
+    UpdateMode = updWhereKeyOnly
+    RaiseExceptionAtError = True
+    Left = 128
+    Top = 78
+  end
+  object DataStreamer: TDABin2DataStreamer
+    Left = 24
+    Top = 16
+  end
+  object dbpDetalleLiquidacion: TDABusinessProcessor
+    Schema = Schema
+    InsertCommandName = 'Insert_dbo DetalleLiquidacion2'
+    DeleteCommandName = 'Delete_dbo DetalleLiquidacion2'
+    UpdateCommandName = 'Update_dbo DetalleLiquidacion2'
+    ReferencedDataset = 'LIQDetalleLiquidacion2'
+    ProcessorOptions = [poAutoGenerateRefreshDataset]
+    UpdateMode = updWhereKeyOnly
+    Left = 128
+    Top = 128
+  end
+  object dbpLiquidacion: TDABusinessProcessor
+    Schema = Schema
+    InsertCommandName = 'Insert_dbo Liquidacion2'
+    DeleteCommandName = 'Delete_dbo Liquidacion2'
+    UpdateCommandName = 'Update_dbo Liquidacion2'
+    ReferencedDataset = 'LIQLiquidacion2'
+    ProcessorOptions = [poAutoGenerateRefreshDataset]
+    UpdateMode = updWhereKeyOnly
+    Left = 256
+    Top = 16
+  end
+end
