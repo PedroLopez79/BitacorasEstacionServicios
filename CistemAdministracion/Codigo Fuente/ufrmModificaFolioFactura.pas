@@ -78,7 +78,7 @@ end;
 
 procedure TfrmModificaFolioFactura.ActionImprimir(Action: TBasicAction);
 begin
-  DM.ImprimirFactura(DM.Servidor.FacturaID(edtSerieImprime.EditValue, Trunc(edtFolioImprime.EditValue)));
+  //DM.ImprimirFactura(DM.Servidor.FacturaID(edtSerieImprime.EditValue, Trunc(edtFolioImprime.EditValue)));
 end;
 
 procedure TfrmModificaFolioFactura.edtFolioImprimePropertiesChange(

@@ -293,8 +293,7 @@ var
 implementation
 
   uses Modules, uDM, dmActions,  ufrmBuscarCliente,
-  LibraryEmpresas_Intf, UtileriasComun, ufrmBuscarProducto,
-  LibraryCistemGas_Intf, ufrmEditarCliente;
+  LibraryEmpresas_Intf, UtileriasComun, ufrmBuscarProducto;
 
 {$R *.dfm}
 
@@ -647,11 +646,11 @@ var
 begin
   inherited;
   Fecha:=Trunc(now);
-  if DM.ATicket.Fecha>Fecha-30 then     //solo se aceptan tickets con 30 dias despues de 30 dias no se facturan
-  begin
-    cdsTicketFactura.FieldByName('TicketFacturaID').AsInteger:=DM.Servidor.Folio('TicketFacturaID','');
-    AgregarProducto;
-  end;
+  //if DM.ATicket.Fecha>Fecha-30 then     //solo se aceptan tickets con 30 dias despues de 30 dias no se facturan
+  //begin
+  //  cdsTicketFactura.FieldByName('TicketFacturaID').AsInteger:=DM.Servidor.Folio('TicketFacturaID','');
+  //  AgregarProducto;
+  //end;
 end;
 
 procedure TFrmFacturacionDePiso.cdsTicketFacturaNewRecord(
@@ -670,12 +669,12 @@ begin
   MiCliente:=cdsCliente.FieldByName('ClienteID').AsInteger;
   if (cdsCliente.Active) and (MiCliente > 0) then
   begin
-    if EditarCliente(MiCliente) then
-    begin
-      cdsCliente.Close;
-      cdsCliente.ParamByName('ClienteID').AsInteger:=MiCliente;
-      cdsCliente.Open; 
-    end;
+    //if EditarCliente(MiCliente) then
+    //begin
+    //  cdsCliente.Close;
+    //  cdsCliente.ParamByName('ClienteID').AsInteger:=MiCliente;
+    //  cdsCliente.Open;
+    //end;
   end;
 end;
 
@@ -793,7 +792,7 @@ begin
     end
     else
     begin
-      DM.ATicket:=DM.ObtenerTicket(EstacionActual, DisplayValue);
+      {DM.ATicket:=DM.ObtenerTicket(EstacionActual, DisplayValue);
       if DM.ATicket.ProductoID > 0 then
       begin
         if DM.ATicket.Fecha>Fecha-30 then
@@ -816,7 +815,7 @@ begin
         Error:=True;
         ErrorText:='Ticket No Existe';
         DisplayValue:='0';
-      end;
+      end;}
     end;
   end;
 end;
@@ -1181,7 +1180,7 @@ begin
     cdsDetalleValesFactura.Next;
   end;
   DM.Servidor.GuardarDatosFactura(DM.DatosFactura);
-  DM.ImprimirFactura(DM.DatosFactura.Factura.FacturaID);
+  //DM.ImprimirFactura(DM.DatosFactura.Factura.FacturaID);
 end;
 
 procedure TFrmFacturacionDePiso.grdValesDBTableView1DblClick(Sender: TObject);

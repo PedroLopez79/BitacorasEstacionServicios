@@ -18,7 +18,10 @@ uses
   dxSkinOffice2007Pink, dxSkinOffice2007Silver, dxSkinSilver, dxSkinStardust,
   dxSkinSummer2008, dxSkinValentine, dxSkinXmas2008Blue, cxLookAndFeelPainters,
   cxLookAndFeels, dxSkinDarkRoom, dxSkinDarkSide, dxSkinFoggy, dxSkinPumpkin,
-  dxSkinSeven, dxSkinSharp, dxSkinSpringTime;
+  dxSkinSeven, dxSkinSharp, dxSkinSpringTime, dxSkinMetropolis,
+  dxSkinMetropolisDark, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
+  dxSkinOffice2013White, cxPCdxBarPopupMenu, cxNavigator, uDAFields,
+  uROComponent;
 
 type
   TFrmCompra = class(TfrmCustomModule)

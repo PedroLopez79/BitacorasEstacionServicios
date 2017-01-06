@@ -118,7 +118,7 @@
             </Delphi.Personality>
             <ModelSupport>False</ModelSupport>
             <Platforms>
-                <Platform value="Android" ActiveMobileDevice="rsxe5_android">True</Platform>
+                <Platform value="Android">True</Platform>
                 <Platform value="Win32">True</Platform>
                 <Platform value="Win64">False</Platform>
             </Platforms>
@@ -130,22 +130,6 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="..\..\CistemComun\CodigoFuente\CustomModule.pas">
-            <Form>frmCustomModule</Form>
-        </DCCReference>
-        <DCCReference Include="..\..\CistemComun\CodigoFuente\dmActions.pas">
-            <Form>dmAppActions</Form>
-            <DesignClass>TDataModule</DesignClass>
-        </DCCReference>
-        <DCCReference Include="..\..\CistemComun\CodigoFuente\dmImagenes.pas">
-            <Form>dmImages</Form>
-            <DesignClass>TDataModule</DesignClass>
-        </DCCReference>
-        <DCCReference Include="..\..\CistemComun\CodigoFuente\Modules.pas"/>
-        <DCCReference Include="..\..\CistemComun\CodigoFuente\Seguridad.pas"/>
-        <DCCReference Include="..\..\CistemComun\CodigoFuente\ufrmCatalogo.pas">
-            <Form>frmCatalogo</Form>
-        </DCCReference>
         <DCCReference Include="uDM.pas">
             <Form>DM</Form>
             <DesignClass>TDataModule</DesignClass>
@@ -153,14 +137,8 @@
         <DCCReference Include="ufrmPrincipal.pas">
             <Form>frmPrincipal</Form>
         </DCCReference>
-        <DCCReference Include="ufrmAnticipos.pas">
-            <Form>frmMovimientos</Form>
-        </DCCReference>
         <DCCReference Include="UfrmCatalogoCategoria.pas">
             <Form>frmCatalogoCategoria</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmCatalogoClientes.pas">
-            <Form>frmCatalogoClientes</Form>
         </DCCReference>
         <DCCReference Include="ufrmCatalogoDespachador.pas">
             <Form>frmCatalogoDespachador</Form>
@@ -183,35 +161,8 @@
         <DCCReference Include="ufrmMermas.pas">
             <Form>FrmMermas</Form>
         </DCCReference>
-        <DCCReference Include="UfrmMovimientoAnticipo.pas">
-            <Form>frmCatalogoAnticipo</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmTraspasos.pas">
-            <Form>FrmTraspaso</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmValesCredito.pas">
-            <Form>FrmValesCredito</Form>
-        </DCCReference>
-        <DCCReference Include="uTraspasoEntreEstaciones.pas">
-            <Form>frmTraspasoEntreEstaciones</Form>
-        </DCCReference>
         <DCCReference Include="ufrmAlmacen.pas">
             <Form>frmAlmacen</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmConceptos.pas">
-            <Form>frmConceptos</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmSalidas.pas">
-            <Form>frmSalidas</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmBombas.pas">
-            <Form>frmDistribucionBomba</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmAgrupacion.pas">
-            <Form>frmAgrupacion</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmAgrupacionBombas.pas">
-            <Form>frmAgrupacionBombas</Form>
         </DCCReference>
         <DCCReference Include="ufrmBuscar.pas">
             <Form>frmBuscar</Form>
@@ -222,23 +173,12 @@
         <DCCReference Include="ufrmEstaciones.pas">
             <Form>FrmEstaciones</Form>
         </DCCReference>
-        <DCCReference Include="..\..\CistemComun\CodigoFuente\UtileriasComun.pas"/>
         <DCCReference Include="ufrmBuscarProducto.pas">
             <Form>FrmBuscarProducto</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmBanco.pas">
-            <Form>frmBanco</Form>
         </DCCReference>
         <DCCReference Include="ufrmCatalogoCuentaBancaria.pas">
             <Form>FrmCatalogoCuentaBancaria</Form>
         </DCCReference>
-        <DCCReference Include="ufrmQuemaCupones.pas">
-            <Form>frmQuemaCupones</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmAplicarCorte.pas">
-            <Form>FrmAplicarCorte</Form>
-        </DCCReference>
-        <DCCReference Include="..\..\CistemGas\Codigo Fuente\Server\LibraryCistemGas_Intf.pas"/>
         <DCCReference Include="ufrmCatalogoReportes.pas">
             <Form>frmCatalogoReportes</Form>
         </DCCReference>
@@ -248,17 +188,11 @@
         <DCCReference Include="ufrmCatalogoFormaPago.pas">
             <Form>ufrmCatalogoFormadePago</Form>
         </DCCReference>
-        <DCCReference Include="ufrmImprimirCupones.pas">
-            <Form>frmImprimirCupones</Form>
-        </DCCReference>
         <DCCReference Include="UfrmReporteGenerales.pas">
             <Form>frmReporteGenerales</Form>
         </DCCReference>
         <DCCReference Include="ufrmReporteCupon.pas">
             <Form>frmReporteCupon</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmCancelarFactura.pas">
-            <Form>frmCancelarFactura</Form>
         </DCCReference>
         <DCCReference Include="ufrmModificaFolio.pas">
             <Form>frmModificarFolio</Form>
@@ -275,36 +209,12 @@
         <DCCReference Include="ufrmCatalogoUsuarios.pas">
             <Form>frmCatalogoUsuarios</Form>
         </DCCReference>
-        <DCCReference Include="ufrmFaltantesyPagos.pas">
-            <Form>frmFaltantesyPagos</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmTipoCambio.pas">
-            <Form>frmTipodeCambio</Form>
-        </DCCReference>
-        <DCCReference Include="UfrmDepositos.pas">
-            <Form>frmDepositos</Form>
-        </DCCReference>
-        <DCCReference Include="..\..\CistemComun\CodigoFuente\ufrmPassword.pas">
-            <Form>frmPassword</Form>
-        </DCCReference>
         <DCCReference Include="ufrmReImprimirFactura.pas">
             <Form>frmReImprimirFactura</Form>
         </DCCReference>
         <DCCReference Include="uRapFunctions.pas"/>
-        <DCCReference Include="ufrmConsentrado.pas">
-            <Form>frmConcentrado</Form>
-        </DCCReference>
         <DCCReference Include="ufrmParametros.pas">
             <Form>frmParametros</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmComprasCombustible.pas">
-            <Form>frmComprasCombustible</Form>
-        </DCCReference>
-        <DCCReference Include="..\..\CistemComun\CodigoFuente\rbPrvDlg.pas">
-            <Form>rbPrintPreview</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmReportesCorte.pas">
-            <Form>frmReportesCorte</Form>
         </DCCReference>
         <DCCReference Include="ufrmPantallaReportes.pas">
             <Form>frmPantallaReportes</Form>
@@ -315,29 +225,8 @@
         <DCCReference Include="ufrmReportesEspecificos.pas">
             <Form>frmReportesEspecificos</Form>
         </DCCReference>
-        <DCCReference Include="..\..\CistemComun\CodigoFuente\ExportaDataSet.pas"/>
         <DCCReference Include="ufrmReportesExportar.pas">
             <Form>frmReportesExportar</Form>
-        </DCCReference>
-        <DCCReference Include="..\..\CistemComun\CodigoFuente\uPSI_ExportaDataSet.pas"/>
-        <DCCReference Include="ufrmGeneraFacturas.pas">
-            <Form>frmGeneraFacturas</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmConsultaSaldos.pas">
-            <Form>frmConsultaSaldos</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmCapturaMovimientos.pas">
-            <Form>frmCapturaMovimientos</Form>
-        </DCCReference>
-        <DCCReference Include="..\..\CistemExpress\Codigo Fuente\ExpressLibrary_Intf.pas"/>
-        <DCCReference Include="ufrmConcilliacion.pas">
-            <Form>frmConcilliacion</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmCierreMensual.pas">
-            <Form>frmCierreMensual</Form>
-        </DCCReference>
-        <DCCReference Include="..\..\CistemComun\CodigoFuente\ufrmSplash.pas">
-            <Form>frmSplash</Form>
         </DCCReference>
         <DCCReference Include="ufrmSplashScreen.pas">
             <Form>frmSplashScreen</Form>
@@ -348,65 +237,59 @@
         <DCCReference Include="ufrmBuscarEmpleado.pas">
             <Form>frmBuscarEmpleado</Form>
         </DCCReference>
-        <DCCReference Include="..\..\CistemComun\CodigoFuente\LibXmlParser.pas"/>
-        <DCCReference Include="ufrmDatosPuntos.pas">
-            <Form>frmDatosPuntos</Form>
-        </DCCReference>
         <DCCReference Include="ufrmCatalogoPuntosCategoria.pas">
             <Form>frmCatalogoPuntosCategoria</Form>
         </DCCReference>
         <DCCReference Include="ufrmCatalogoPuntosPremio.pas">
             <Form>frmCatalogoPuntosPremio</Form>
         </DCCReference>
-        <DCCReference Include="ufrmPuntosEntregaPremio.pas">
-            <Form>frmPuntosEntregaPremio</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmPuntosSaldo.pas">
-            <Form>frmPuntosSaldo</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmEditarCliente.pas">
-            <Form>Form1</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmPuntosCargaManual.pas">
-            <Form>frmPuntosCargaManual</Form>
-        </DCCReference>
         <DCCReference Include="ufrmPCatalogoClub.pas">
             <Form>frmPCatalogoClub</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmPuntosCatalogoDesingCriterio.pas">
-            <Form>frmPuntosCatalogoDesingCriterio</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmPuntosCatalogoCriterio.pas">
-            <Form>frmPuntosCatalogoCriterio</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmAgrupacionEstacion.pas">
-            <Form>frmAgrupacionEstacion</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmDatosCupon.pas">
-            <Form>frmDatosCupon</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmAgregaMovimientosDespachador.pas">
-            <Form>frmAgregaMovimientosDespachador</Form>
-        </DCCReference>
-        <DCCReference Include="uFrmFacturaPemex.pas">
-            <Form>frmFacturaPemex</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmPuntosDespachador.pas">
-            <Form>frmPuntosDespachador</Form>
         </DCCReference>
         <DCCReference Include="ufrmCatalogoArticulos.pas">
             <Form>frmCatalogoArticulos</Form>
         </DCCReference>
-        <DCCReference Include="ufrmReporteSAT.pas">
-            <Form>frmReporteSAT</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmDatosSAT.pas">
-            <Form>frmDatosSAT</Form>
-        </DCCReference>
-        <DCCReference Include="ufrmReenviaCorreoSAT.pas">
-            <Form>frmReenviaCorreoSAT</Form>
-        </DCCReference>
         <DCCReference Include="Server\LibraryEmpresas_Intf.pas"/>
+        <DCCReference Include="CistemComun\CodigoFuente\CustomModule.pas">
+            <Form>frmCustomModule</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="CistemComun\CodigoFuente\dmImagenes.pas">
+            <Form>dmImages</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="CistemComun\CodigoFuente\dmActions.pas">
+            <Form>dmAppActions</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="CistemComun\CodigoFuente\ExportaDataSet.pas"/>
+        <DCCReference Include="CistemComun\CodigoFuente\LibXmlParser.pas"/>
+        <DCCReference Include="CistemComun\CodigoFuente\rbPrvDlg.pas">
+            <Form>rbPrintPreview</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="CistemComun\CodigoFuente\Seguridad.pas"/>
+        <DCCReference Include="CistemComun\CodigoFuente\ufrmCatalogo.pas">
+            <Form>frmCatalogo</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="CistemComun\CodigoFuente\ufrmPassword.pas">
+            <Form>frmPassword</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="CistemComun\CodigoFuente\ufrmSplash.pas">
+            <Form>frmSplash</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="CistemComun\CodigoFuente\uPSI_ExportaDataSet.pas"/>
+        <DCCReference Include="CistemComun\CodigoFuente\UtileriasComun.pas"/>
+        <DCCReference Include="CistemComun\CodigoFuente\Modules.pas"/>
+        <DCCReference Include="ufrmBitacoraServiciosEst.pas">
+            <Form>frmBitacoraServicioEst</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Debug">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

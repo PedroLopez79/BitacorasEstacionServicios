@@ -9,14 +9,14 @@ uses
   uROComboService,
   fServerForm in 'fServerForm.pas' {ServerForm},
   fServerDataModule in 'fServerDataModule.pas' {ServerDataModule3: TDataModule},
-  ufrmServerForm in '..\..\..\CistemComun\CodigoFuente\ufrmServerForm.pas' {frmServerForm},
-  UtileriasComun in '..\..\..\CistemComun\CodigoFuente\UtileriasComun.pas',
-  LibXmlParser in '..\..\..\CistemComun\CodigoFuente\LibXmlParser.pas',
-  ufrmPassword in '..\..\..\CistemComun\CodigoFuente\ufrmPassword.pas' {frmPassword},
   libeay32 in 'libeay32.pas',
   LibraryEmpresas_Intf in 'LibraryEmpresas_Intf.pas',
   LibraryEmpresas_Invk in 'LibraryEmpresas_Invk.pas',
-  ServiceEmpresas_Impl in 'ServiceEmpresas_Impl.pas' {ServiceEmpresas: TDataAbstractService};
+  ServiceEmpresas_Impl in 'ServiceEmpresas_Impl.pas' {ServiceEmpresas: TDataAbstractService},
+  ufrmPassword in '..\CistemComun\CodigoFuente\ufrmPassword.pas' {frmPassword},
+  ufrmServerForm in '..\CistemComun\CodigoFuente\ufrmServerForm.pas' {frmServerForm},
+  LibXmlParser in '..\CistemComun\CodigoFuente\LibXmlParser.pas',
+  UtileriasComun in '..\CistemComun\CodigoFuente\UtileriasComun.pas';
 
 var
   Mutex : THandle;
@@ -37,7 +37,8 @@ begin
 
     Application.Initialize;
     Application.CreateForm(TServerDataModule3, ServerDataModule3);
-    Application.CreateForm(TServerForm, ServerForm);
-    Application.Run;
+  Application.CreateForm(TServerForm, ServerForm);
+  //Application.CreateForm(TfrmServerForm, frmServerForm);
+  Application.Run;
   //end;
 end.

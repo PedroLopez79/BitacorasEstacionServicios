@@ -19,7 +19,7 @@ object ServiceEmpresas: TServiceEmpresas
             Connection = 'FACTURAELECTRONICA'
             ConnectionType = 'SDAC'
             Default = True
-            TargetTable = 'dbo.usuarios'
+            TargetTable = 'dbo.USUARIO'
             StatementType = stAutoSQL
             ColumnMappings = <
               item
@@ -194,8 +194,8 @@ object ServiceEmpresas: TServiceEmpresas
             ConnectionType = 'SDAC'
             Default = True
             SQL = 
-              'SELECT IDEMPLEADO, NOMBRE'#10'FROM usuarios'#10'WHERE (USERNAME = :Usuar' +
-              'io) AND (USERPASSWORD = :Clave)'
+              'SELECT IDEMPLEADO, NOMBRE'#10'FROM USUARIO'#10'WHERE (USERNAME = :Usuari' +
+              'o) AND (USERPASSWORD = :Clave)'
             StatementType = stSQL
             ColumnMappings = <
               item
@@ -1176,6 +1176,92 @@ object ServiceEmpresas: TServiceEmpresas
             Name = 'CampoJoin'
             DataType = datString
             Size = 20
+          end>
+      end
+      item
+        Params = <>
+        Statements = <
+          item
+            Connection = 'BitacoraEstacionServ'
+            ConnectionType = 'SDAC'
+            Default = True
+            TargetTable = 'dbo.BITACORAESTACION'
+            SQL = 
+              'SELECT '#9#10#9'"BITACORAID", "USUARIOID", "FECHA", '#10#9'"NOTA", "ACTIVID' +
+              'AD", "FRECUENCIA", '#10#9'"OBSERVACIONES", "ESTACIONID" '#10'FROM '#10#9'"dbo"' +
+              '."BITACORAESTACION" '#10'WHERE '#10#9'{WHERE} '
+            StatementType = stSQL
+            ColumnMappings = <
+              item
+                DatasetField = 'BITACORAID'
+                TableField = 'BITACORAID'
+              end
+              item
+                DatasetField = 'USUARIOID'
+                TableField = 'USUARIOID'
+              end
+              item
+                DatasetField = 'FECHA'
+                TableField = 'FECHA'
+              end
+              item
+                DatasetField = 'NOTA'
+                TableField = 'NOTA'
+              end
+              item
+                DatasetField = 'ACTIVIDAD'
+                TableField = 'ACTIVIDAD'
+              end
+              item
+                DatasetField = 'FRECUENCIA'
+                TableField = 'FRECUENCIA'
+              end
+              item
+                DatasetField = 'OBSERVACIONES'
+                TableField = 'OBSERVACIONES'
+              end
+              item
+                DatasetField = 'ESTACIONID'
+                TableField = 'ESTACIONID'
+              end>
+          end>
+        Name = 'dbo.BITACORAESTACION'
+        BusinessRulesClient.CompileOnServer = False
+        BusinessRulesClient.RunOnClientAndServer = False
+        Fields = <
+          item
+            Name = 'BITACORAID'
+            DataType = datInteger
+            Required = True
+          end
+          item
+            Name = 'USUARIOID'
+            DataType = datInteger
+          end
+          item
+            Name = 'FECHA'
+            DataType = datDateTime
+          end
+          item
+            Name = 'NOTA'
+            DataType = datString
+            Size = 200
+          end
+          item
+            Name = 'ACTIVIDAD'
+            DataType = datMemo
+          end
+          item
+            Name = 'FRECUENCIA'
+            DataType = datMemo
+          end
+          item
+            Name = 'OBSERVACIONES'
+            DataType = datMemo
+          end
+          item
+            Name = 'ESTACIONID'
+            DataType = datInteger
           end>
       end>
     JoinDataTables = <>

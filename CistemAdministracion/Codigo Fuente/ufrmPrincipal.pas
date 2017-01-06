@@ -14,10 +14,15 @@ uses
   dxSkinOffice2007Green, dxSkinOffice2007Pink, dxSkinOffice2007Silver,
   dxSkinSilver, dxSkinStardust, dxSkinValentine, dxSkinXmas2008Blue,
   cxLookAndFeelPainters, dxSkinSummer2008, cxGraphics, cxLookAndFeels,
-  dxSkinDarkRoom, dxSkinDarkSide, dxSkinFoggy, dxSkinPumpkin, dxSkinSeven,
-  dxSkinSharp, dxSkinSpringTime, dxSkinMetropolis, dxSkinMetropolisDark,
+  dxSkinDarkSide, dxSkinPumpkin,
+  dxSkinSpringTime, dxSkinDarkRoom, dxSkinFoggy,
+  dxSkinSeven, dxSkinSharp, cxCurrencyEdit, cxBarEditItem, dxRibbonSkins,
+  dxSkinOffice2010Black, dxSkinOffice2010Blue, dxSkinOffice2010Silver,
+  dxSkinBlueprint, dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle,
+  dxSkinHighContrast, dxSkinMetropolis, dxSkinMetropolisDark,
   dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray, dxSkinOffice2013White,
-  dxRibbonSkins, System.Actions;
+  dxSkinSevenClassic, dxSkinSharpPlus, dxSkinTheAsphaltWorld, dxSkinVS2010,
+  dxSkinWhiteprint, System.Actions;
 
 type
   TfrmPrincipal = class(TdxCustomRibbonForm)
@@ -29,7 +34,6 @@ type
     dxBarManager1: TdxBarManager;
     tbReportes: TdxBar;
     tbConfigurar: TdxBar;
-    tbInventarios: TdxBar;
     tbRapida: TdxBar;
     tbAcciones: TdxBar;
     btnSalir: TdxBarButton;
@@ -104,7 +108,6 @@ type
     btnProcesarVentas: TdxBarLargeButton;
     btnCerrarLiquidacion: TdxBarLargeButton;
     pnlPrincipal: TcxGroupBox;
-    tbFacturacion: TdxBar;
     btnGenerarFacturas: TdxBarLargeButton;
     btnConsultaSaldos: TdxBarLargeButton;
     btnCapturaMovimientos: TdxBarLargeButton;
@@ -131,11 +134,12 @@ type
     dxBarLargeButton27: TdxBarLargeButton;
     Ribbon: TdxRibbon;
     rtbAcciones: TdxRibbonTab;
-    RibbonTab7: TdxRibbonTab;
-    RibbonTab4: TdxRibbonTab;
     RibbonTab2: TdxRibbonTab;
     dxRibbon1Tab1: TdxRibbonTab;
     RibbonTab3: TdxRibbonTab;
+    RibbonTab1: TdxRibbonTab;
+    dxBarManager1Bar1: TdxBar;
+    dxBarLargeButton28: TdxBarLargeButton;
     procedure btnLogoutClick(Sender: TObject);
     procedure btnSalirClick(Sender: TObject);
     procedure tmrPrincipalTimer(Sender: TObject);
@@ -160,34 +164,14 @@ implementation
 uses dmImagenes, uDM, UtileriasComun, dmActions, Modules;
 
 const
-  TotalModulos = 27;
-  Modulos: Array[1..TotalModulos] of string = ('Facturas',
-                                               'Modificar Folio Factura',
-                                               'Cancelar Factura',
-                                               'Modificar Folio',
-                                               'Reporte SAT',
-                                               'Reenvio de Facturas',
-                                               'Almacen',
-                                               'Inventarios',
+  TotalModulos = 7;
+  Modulos: Array[1..TotalModulos] of string = ('BitacoraServicios',
                                                'Generales',
                                                'Especificos',
                                                'Exportar',
-                                               'Empresas',
-                                               'Productos',
-                                               'Clientes',
-                                               'Proveedores',
-                                               'Categorias',
-                                               'Tipos de Valores',
-                                               'Almacenes',
-                                               'Bancos',
-                                               'Cuentas Bancarias',
-                                               'Concepto Salidas',
-                                               'Salidas',
                                                'Usuarios',
                                                'Reportes',
-                                               'Propiedades del Sistema',
-                                               'Tipo de Cambio',
-                                               'Datos SAT');
+                                               'Propiedades del Sistema');
 
 {$R *.dfm}
 
