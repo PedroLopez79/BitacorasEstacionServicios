@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ufrmSplash, StdCtrls, ExtCtrls, jpeg;
+  Dialogs, ufrmSplash, StdCtrls, ExtCtrls, jpeg, dxGDIPlusClasses;
 
 type
   TfrmSplashScreen = class(TfrmSplash)

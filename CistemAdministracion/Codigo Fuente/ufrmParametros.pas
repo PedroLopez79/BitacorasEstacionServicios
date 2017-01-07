@@ -17,7 +17,10 @@ uses
   dxSkinOffice2007Green, dxSkinOffice2007Pink, dxSkinOffice2007Silver,
   dxSkinSilver, dxSkinStardust, dxSkinSummer2008, dxSkinValentine,
   dxSkinXmas2008Blue, cxLookAndFeels, dxSkinDarkRoom, dxSkinDarkSide,
-  dxSkinFoggy, dxSkinPumpkin, dxSkinSeven, dxSkinSharp, dxSkinSpringTime;
+  dxSkinFoggy, dxSkinPumpkin, dxSkinSeven, dxSkinSharp, dxSkinSpringTime,
+  dxSkinMetropolis, dxSkinMetropolisDark, dxSkinOffice2013DarkGray,
+  dxSkinOffice2013LightGray, dxSkinOffice2013White, Vcl.ComCtrls, dxCore,
+  cxDateUtils, dxRibbonSkins, uDAFields, uROComponent;
 
 type
   TfrmParametros = class(TdxCustomRibbonForm)
@@ -455,16 +458,16 @@ begin
 
   cdsEstaciones.Close;
   cdsEstaciones.Open;
-  cdsEmpleados.Close;
-  cdsEmpleados.ParamByName('EstacionID').AsInteger:= DM.Estacion;
-  cdsEmpleados.Open;
+  //cdsEmpleados.Close;
+  //cdsEmpleados.ParamByName('EstacionID').AsInteger:= DM.Estacion;
+  //cdsEmpleados.Open;
 
   edtFechaInicial.Date:=Trunc(Now);
   edtFechaFinal.Date:=Trunc(Now);
   cxEstaciones.EditValue:=DM.Estacion;
-  cdsAgrupacion.Close;
-  cdsAgrupacion.ParamByName('EstacionID').AsInteger:=DM.Estacion;
-  cdsAgrupacion.Open;
+  //cdsAgrupacion.Close;
+  //cdsAgrupacion.ParamByName('EstacionID').AsInteger:=DM.Estacion;
+  //cdsAgrupacion.Open;
 end;
 
 procedure TfrmParametros.LimpiaParametros;

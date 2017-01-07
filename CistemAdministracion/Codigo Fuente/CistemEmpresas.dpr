@@ -73,7 +73,7 @@ begin
   Application.CreateForm(TdmImages, dmImages);
   Application.CreateForm(TdmAppActions, dmAppActions);
   Application.CreateForm(TrbPrintPreview, rbPrintPreview);
-  Application.CreateForm(TfrmSplash, frmSplash);
+  //Application.CreateForm(TfrmSplash, frmSplash);
   Sleep(3000);
   frmSplashScreen.Hide;
   frmSplashScreen.Free;

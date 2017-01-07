@@ -164,14 +164,12 @@ implementation
 uses dmImagenes, uDM, UtileriasComun, dmActions, Modules;
 
 const
-  TotalModulos = 7;
+  TotalModulos = 5;
   Modulos: Array[1..TotalModulos] of string = ('BitacoraServicios',
                                                'Generales',
-                                               'Especificos',
-                                               'Exportar',
-                                               'Usuarios',
                                                'Reportes',
-                                               'Propiedades del Sistema');
+                                               'Usuarios',
+                                               'Estaciones');
 
 {$R *.dfm}
 
@@ -215,7 +213,7 @@ begin
   Ribbon.Tabs[1].Active:=True;
   btnLogin.Enabled:=True;
   btnLogout.Enabled:=False;
-  Caption:='Cistem Administracion 1.0';
+  Caption:='Bitacoras 1.0';
   for I := 1 to TotalModulos do
     Boton(I).Enabled:=False;
 end;

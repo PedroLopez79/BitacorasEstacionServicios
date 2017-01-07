@@ -177,7 +177,7 @@ begin
   AgregaParametro('ClienteIni', datInteger);
   AgregaParametro('ClienteFin', datInteger);
   AgregaParametro ('Estacion',datInteger);
-  AgregaParametro('SecuenciaIni',datInteger);
+  {AgregaParametro('SecuenciaIni',datInteger);
   AgregaParametro('SecuenciaFin',datInteger);
   AgregaParametro('Factura',datInteger);
   AgregaParametro('Serie',datString);
@@ -200,7 +200,7 @@ begin
   AgregaParametro('EmpleadoIni',datInteger);
   AgregaParametro('EmpleadoFin',datInteger);
   AgregaParametro('EstacionIni',datInteger);
-  AgregaParametro('EstacionFin',datInteger);
+  AgregaParametro('EstacionFin',datInteger);}
 
 
   //AgregaParametro('Serie',datString);
@@ -241,7 +241,7 @@ begin
   DataSet.ParamByName('ClienteIni').AsInteger:=Parametros.ClienteIni;
   DataSet.ParamByName('ClienteFin').AsInteger:=Parametros.ClienteFin;
   Dataset.ParamByName('Estacion').AsInteger:=Parametros.Estacion;
-  Dataset.ParamByName('SecuenciaIni').AsInteger:=Parametros.SecuenciaIni;
+  {Dataset.ParamByName('SecuenciaIni').AsInteger:=Parametros.SecuenciaIni;
   Dataset.ParamByName('SecuenciaFin').AsInteger:=Parametros.SecuenciaFin;
   Dataset.ParamByName('Factura').AsInteger:=Parametros.Factura;
   Dataset.ParamByName('FolioFactura').AsInteger:=Parametros.FolioFactura;
@@ -264,7 +264,7 @@ begin
   DataSet.ParamByName('EmpleadoIni').AsInteger:=Parametros.EmpleadoIni;
   DataSet.ParamByName('EmpleadoFin').AsInteger:=Parametros.EmpleadoFin;
   DataSet.ParamByName('EstacionIni').AsInteger:=Parametros.EstacionIni;
-  DataSet.ParamByName('EstacionFin').Asinteger:=Parametros.EstacionFin;
+  DataSet.ParamByName('EstacionFin').Asinteger:=Parametros.EstacionFin; }
 
   //Dataset.ParamByName('Serie').AsString:=Parametros.Serie;
   {  DataSet.ParamByName('ProcesaTabla').AsBoolean:=Pos('#CONSUMOS', UpperCase(SQL)) > 0;

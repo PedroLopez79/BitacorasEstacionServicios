@@ -17,7 +17,10 @@ uses
   dxSkinOffice2007Black, dxSkinOffice2007Blue, dxSkinOffice2007Green,
   dxSkinOffice2007Pink, dxSkinOffice2007Silver, dxSkinPumpkin, dxSkinSeven,
   dxSkinSharp, dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
-  dxSkinValentine, dxSkinXmas2008Blue, cxCheckBox;
+  dxSkinValentine, dxSkinXmas2008Blue, cxCheckBox, dxSkinMetropolis,
+  dxSkinMetropolisDark, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
+  dxSkinOffice2013White, cxPCdxBarPopupMenu, cxNavigator, uDAFields,
+  uROComponent;
 
 type
   TFrmEstaciones = class(TfrmCatalogo)

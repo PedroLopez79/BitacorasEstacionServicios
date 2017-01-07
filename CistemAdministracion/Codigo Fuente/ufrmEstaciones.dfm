@@ -3,18 +3,13 @@ inherited FrmEstaciones: TFrmEstaciones
   PixelsPerInch = 96
   TextHeight = 13
   inherited pgcCatalogo: TcxPageControl
-    ActivePage = cxTabSheet2
     inherited cxTabSheet1: TcxTabSheet
       ExplicitLeft = 3
       ExplicitTop = 3
       ExplicitWidth = 616
       ExplicitHeight = 416
       inherited dbgCatalogo: TcxGrid
-        Width = 616
-        Height = 416
         LevelTabs.Style = 5
-        ExplicitWidth = 616
-        ExplicitHeight = 416
         inherited dbgCatalogoDBTableView1: TcxGridDBTableView
           object dbgCatalogoDBTableView1RecID: TcxGridDBColumn
             DataBinding.FieldName = 'RecID'
@@ -74,6 +69,7 @@ inherited FrmEstaciones: TFrmEstaciones
       object GrpBoxDatos: TcxGroupBox
         Left = 1
         Top = 8
+        Hint = ''
         Style.BorderStyle = ebsUltraFlat
         Style.LookAndFeel.NativeStyle = False
         StyleDisabled.LookAndFeel.NativeStyle = False
@@ -85,6 +81,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object TxtNoEstacion: TcxDBTextEdit
           Left = 16
           Top = 38
+          Hint = ''
           DataBinding.DataField = 'EmpresaID'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -100,6 +97,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object LblNoEstacion: TcxLabel
           Left = 16
           Top = 22
+          Hint = ''
           Caption = 'Estaci'#243'n'
           Style.BorderStyle = ebsNone
           Style.LookAndFeel.NativeStyle = True
@@ -111,6 +109,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object LblDireccion: TcxLabel
           Left = 16
           Top = 100
+          Hint = ''
           Caption = 'Direcci'#243'n'
           Style.BorderStyle = ebsNone
           Style.LookAndFeel.NativeStyle = True
@@ -122,6 +121,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object LblRFC: TcxLabel
           Left = 416
           Top = 140
+          Hint = ''
           Caption = 'R.F.C.'
           Style.BorderStyle = ebsNone
           Style.LookAndFeel.NativeStyle = True
@@ -133,6 +133,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object LblClavePemex: TcxLabel
           Left = 232
           Top = 140
+          Hint = ''
           Caption = 'Clave Pemex'
           Style.BorderStyle = ebsNone
           Style.LookAndFeel.NativeStyle = True
@@ -144,6 +145,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object LblHost: TcxLabel
           Left = 232
           Top = 179
+          Hint = ''
           Caption = 'Host'
           Style.BorderStyle = ebsNone
           Style.LookAndFeel.NativeStyle = True
@@ -155,6 +157,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object LblNombre: TcxLabel
           Left = 103
           Top = 22
+          Hint = ''
           Caption = 'Nombre'
           Style.BorderStyle = ebsNone
           Style.LookAndFeel.NativeStyle = True
@@ -166,6 +169,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object TxtNombre: TcxDBTextEdit
           Left = 103
           Top = 38
+          Hint = ''
           DataBinding.DataField = 'Nombre'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -180,6 +184,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object TxtDireccion: TcxDBTextEdit
           Left = 16
           Top = 116
+          Hint = ''
           DataBinding.DataField = 'Colonia'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -194,6 +199,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object TxtRFC: TcxDBTextEdit
           Left = 416
           Top = 156
+          Hint = ''
           DataBinding.DataField = 'RFC'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -208,6 +214,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object TxtClavePemex: TcxDBTextEdit
           Left = 232
           Top = 156
+          Hint = ''
           DataBinding.DataField = 'ClavePemex'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -222,6 +229,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object TxtHost: TcxDBTextEdit
           Left = 232
           Top = 196
+          Hint = ''
           DataBinding.DataField = 'Host'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -236,6 +244,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object LblNodeBombas: TcxLabel
           Left = 16
           Top = 179
+          Hint = ''
           Caption = 'No. de Bombas'
           Style.BorderStyle = ebsNone
           Style.LookAndFeel.NativeStyle = True
@@ -247,6 +256,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object TxtNoBombas: TcxDBTextEdit
           Left = 16
           Top = 196
+          Hint = ''
           DataBinding.DataField = 'NoBombas'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -261,6 +271,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object cxDBTextEdit1: TcxDBTextEdit
           Left = 16
           Top = 156
+          Hint = ''
           DataBinding.DataField = 'Ciudad'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -275,6 +286,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object cxLabel1: TcxLabel
           Left = 16
           Top = 140
+          Hint = ''
           Caption = 'Ciudad'
           Style.BorderStyle = ebsNone
           Style.LookAndFeel.NativeStyle = True
@@ -286,6 +298,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object LblCuentaContable: TcxLabel
           Left = 232
           Top = 219
+          Hint = ''
           Caption = 'Cuenta Contable'
           Style.BorderStyle = ebsNone
           Transparent = True
@@ -293,6 +306,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object TxtCuentaContable: TcxDBTextEdit
           Left = 232
           Top = 236
+          Hint = ''
           DataBinding.DataField = 'CuentaContable'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -307,6 +321,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object TxtIva: TcxDBTextEdit
           Left = 16
           Top = 236
+          Hint = ''
           DataBinding.DataField = 'Impuesto'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -321,6 +336,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object LblImpuento: TcxLabel
           Left = 16
           Top = 219
+          Hint = ''
           Caption = 'Porcentaje de Impuesto'
           Style.BorderStyle = ebsNone
           Transparent = True
@@ -328,6 +344,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object cxLabel2: TcxLabel
           Left = 16
           Top = 61
+          Hint = ''
           Caption = 'Razon Social'
           Style.BorderStyle = ebsNone
           Style.LookAndFeel.NativeStyle = True
@@ -339,6 +356,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object cxDBTextEdit2: TcxDBTextEdit
           Left = 16
           Top = 77
+          Hint = ''
           DataBinding.DataField = 'RazonSocial'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -353,6 +371,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object cxDBTextEdit3: TcxDBTextEdit
           Left = 16
           Top = 284
+          Hint = ''
           DataBinding.DataField = 'ISR'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -367,6 +386,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object cxLabel3: TcxLabel
           Left = 16
           Top = 268
+          Hint = ''
           Caption = 'Porcentaje ISR'
           Style.BorderStyle = ebsNone
           Transparent = True
@@ -374,6 +394,7 @@ inherited FrmEstaciones: TFrmEstaciones
         object cxDBCheckBox1: TcxDBCheckBox
           Left = 232
           Top = 288
+          Hint = ''
           Caption = 'Iva Retenido ?'
           DataBinding.DataField = 'IvaRetenido'
           DataBinding.DataSource = dsCatalogo
@@ -386,7 +407,7 @@ inherited FrmEstaciones: TFrmEstaciones
   inherited cdsCatalogo: TDAMemDataTable
     Fields = <
       item
-        Name = 'EmpresaID'
+        Name = 'EMPRESAID'
         DataType = datInteger
       end
       item
@@ -436,7 +457,7 @@ inherited FrmEstaciones: TFrmEstaciones
       item
         Name = 'CuentaContable'
         DataType = datString
-        Size = 20
+        Size = 30
       end
       item
         Name = 'Impuesto'
@@ -451,16 +472,16 @@ inherited FrmEstaciones: TFrmEstaciones
         DataType = datInteger
       end
       item
-        Name = 'ISR'
-        DataType = datFloat
-      end
-      item
         Name = 'IvaRetenido'
         DataType = datBoolean
+      end
+      item
+        Name = 'ISR'
+        DataType = datFloat
       end>
+    LogicalName = 'dbo.Empresas'
     RemoteDataAdapter = DM.RemoteDataAdapter
     OnNewRecord = cdsCatalogoNewRecord
-    LogicalName = 'dbo Empresas'
   end
   inherited dsCatalogo: TDADataSource
     DataSet = cdsCatalogo.Dataset

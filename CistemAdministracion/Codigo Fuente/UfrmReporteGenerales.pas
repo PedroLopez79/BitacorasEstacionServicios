@@ -9,7 +9,10 @@ uses
   cxMaskEdit, cxDropDownEdit, cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox,
   DB, uDADataTable, uDAScriptingProvider, uDACDSDataTable, cxControls, jpeg,
   cxImage, ComCtrls, cxListView, ImgList, dxSkinsCore, ufrmPantallaReportes,
-  dxSkinsDefaultPainters, dxSkinsdxRibbonPainter, uDAMemDataTable;
+  dxSkinsDefaultPainters, dxSkinsdxRibbonPainter, uDAMemDataTable,
+  cxLookAndFeels, dxSkinMetropolis, dxSkinMetropolisDark,
+  dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray, dxSkinOffice2013White,
+  uROComponent;
 type
   TfrmReporteGenerales = class(TfrmPantallaReportes)
     procedure FormCreate(Sender: TObject);
