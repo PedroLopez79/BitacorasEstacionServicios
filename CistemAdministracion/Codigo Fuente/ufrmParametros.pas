@@ -417,16 +417,16 @@ end;
 
 procedure TfrmParametros.dbcEmpleadoIniEnter(Sender: TObject);
 begin
-  cdsEmpleados.Close;
-  cdsEmpleados.ParamByName('EstacionID').AsInteger:= strtoint(cxEstaciones.Text);
-  cdsEmpleados.Open;
+  //cdsEmpleados.Close;
+  //cdsEmpleados.ParamByName('EstacionID').AsInteger:= strtoint(cxEstaciones.Text);
+  //cdsEmpleados.Open;
 end;
 
 procedure TfrmParametros.dbcEmpledoFinEnter(Sender: TObject);
 begin
-  cdsEmpleados.Close;
-  cdsEmpleados.ParamByName('EstacionID').AsInteger:= strtoint(cxEstaciones.Text);
-  cdsEmpleados.Open;
+  //cdsEmpleados.Close;
+  //cdsEmpleados.ParamByName('EstacionID').AsInteger:= strtoint(cxEstaciones.Text);
+  //cdsEmpleados.Open;
 end;
 
 procedure TfrmParametros.edtBuscaClienteIniClick(Sender: TObject);
@@ -458,9 +458,9 @@ begin
 
   cdsEstaciones.Close;
   cdsEstaciones.Open;
-  //cdsEmpleados.Close;
+  cdsEmpleados.Close;
   //cdsEmpleados.ParamByName('EstacionID').AsInteger:= DM.Estacion;
-  //cdsEmpleados.Open;
+  cdsEmpleados.Open;
 
   edtFechaInicial.Date:=Trunc(Now);
   edtFechaFinal.Date:=Trunc(Now);

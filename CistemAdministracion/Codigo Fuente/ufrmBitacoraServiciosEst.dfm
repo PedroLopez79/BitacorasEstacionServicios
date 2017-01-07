@@ -275,7 +275,7 @@ inherited frmBitacoraServicioEst: TfrmBitacoraServicioEst
       Height = 45
       Align = alBottom
       BevelOuter = bvLowered
-      TabOrder = 1
+      TabOrder = 6
       object Label2: TLabel
         Left = 141
         Top = 3
@@ -335,14 +335,14 @@ inherited frmBitacoraServicioEst: TfrmBitacoraServicioEst
       Top = 190
       Width = 153
       Height = 177
-      TabOrder = 4
+      TabOrder = 5
     end
     object cxDateEdit1: TcxDateEdit
       Left = 536
       Top = 78
       Hint = ''
       Properties.EditFormat = 'dd/mm/yyyy'
-      TabOrder = 5
+      TabOrder = 1
       Width = 161
     end
     object cxDateEdit2: TcxDateEdit
@@ -352,7 +352,7 @@ inherited frmBitacoraServicioEst: TfrmBitacoraServicioEst
       Properties.AssignedValues.EditFormat = True
       Properties.DisplayFormat = 'dd/mm/yyyy  hh:mm:ss'
       Properties.Kind = ckDateTime
-      TabOrder = 6
+      TabOrder = 4
       Width = 161
     end
   end

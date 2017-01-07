@@ -28,6 +28,8 @@ declare @NumeroEstacionFin as Integer
 declare @ClienteIni as Integer
 declare @ClienteFin as Integer
 declare @Estacion as Integer
+declare @EmpleadoIni as Integer
+declare @EmpleadoFin as Integer
 
 select @FechaIni=:FechaIni
 select @FechaFin=:FechaFin
@@ -59,3 +61,5 @@ select @NumeroEstacionFin=:NumeroEstacionFin
 select @ClienteIni=:ClienteIni
 select @ClienteFin=:ClienteFin
 select @Estacion=:Estacion
+select @EmpleadoIni =:EmpleadoIni
+select @EmpleadoFin =:EmpleadoFin

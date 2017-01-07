@@ -85,6 +85,7 @@ var
 
 procedure TfrmBitacoraServicioEst.ActionNuevo(Action: TBasicAction);
 begin
+  Panel3.Enabled:= True;
   NUMFOLIO:=DM.Servidor.FolioActual('FolioBitacoraEstacion', '');
   lblNumFolio.Caption:= inttostr(NUMFOLIO);
 
@@ -107,7 +108,6 @@ begin
   Jpg := TPicture.Create;
   S := TMemoryStream.Create;
   image1.Picture.Graphic.SaveToStream(S);
-
   cdsBitacoraServ.FieldByName('BITACORAID').AsInteger:= DM.Folio('BITACORAID','');
   cdsBitacoraServ.FieldByName('USUARIOID').AsInteger:= DM.EmpleadoID;
   cdsBitacoraServ.FieldByName('FECHA').AsDateTime:= cxDateEdit1.Date;
@@ -117,7 +117,7 @@ begin
   cdsBitacoraServ.FieldByName('OBSERVACIONES').AsString:= Memo4.Lines.Text;
   cdsBitacoraServ.FieldByName('ESTACIONID').AsInteger:= DM.Estacion;
   cdsBitacoraServ.FieldByName('FECHAHORA').AsDateTime:= cxDateEdit2.Date;
-  cdsBitacoraServ.FieldByName('FOLIO').AsInteger:= NUMFOLIO;
+  cdsBitacoraServ.FieldByName('FOLIO').AsInteger:= DM.Servidor.Folio('FolioBitacoraEstacion', '');;
   cdsBitacoraServ.FieldByName('FIRMA').LoadFromStream(S);
 
   cdsBitacoraServ.Post;
@@ -128,6 +128,13 @@ procedure TfrmBitacoraServicioEst.cdsBitacoraServAfterPost(
 begin
   inherited;
   cdsBitacoraServ.ApplyUpdates();
+
+  Memo1.Lines.Text:= '';
+  Memo2.Lines.Text:= '';
+  Memo4.Lines.Text:= '';
+  Image1.Picture.Assign(nil);
+  cxDateEdit2.Date:= now();
+  Panel3.Enabled:= False;
 end;
 
 procedure TfrmBitacoraServicioEst.FormCreate(Sender: TObject);
@@ -135,8 +142,8 @@ var
   panelwidth:integer;
 begin
   inherited;
-  //TAMAÑOS DE PANELS PARA CENTRAR//
-  //panelwidth:= ROUND(Panel1.Width / 2);
+
+  Panel3.Enabled:= False;
   cxDateEdit1.Date:= now();
 
   panelwidth:= (ROUND((ufrmPrincipal.frmPrincipal.pnlPrincipal.Width - Panel3.Width) / 2));

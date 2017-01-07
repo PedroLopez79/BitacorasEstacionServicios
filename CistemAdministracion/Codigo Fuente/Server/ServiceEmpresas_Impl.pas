@@ -177,6 +177,8 @@ begin
   AgregaParametro('ClienteIni', datInteger);
   AgregaParametro('ClienteFin', datInteger);
   AgregaParametro ('Estacion',datInteger);
+  AgregaParametro('EmpleadoIni',datInteger);
+  AgregaParametro('EmpleadoFin',datInteger);
   {AgregaParametro('SecuenciaIni',datInteger);
   AgregaParametro('SecuenciaFin',datInteger);
   AgregaParametro('Factura',datInteger);
@@ -197,8 +199,6 @@ begin
   AgregaParametro('FacturasdeCompras',datInteger);
   AgregaParametro('MontoFacturado',datFloat);
   AgregaParametro('Turno',datInteger);
-  AgregaParametro('EmpleadoIni',datInteger);
-  AgregaParametro('EmpleadoFin',datInteger);
   AgregaParametro('EstacionIni',datInteger);
   AgregaParametro('EstacionFin',datInteger);}
 
@@ -241,6 +241,8 @@ begin
   DataSet.ParamByName('ClienteIni').AsInteger:=Parametros.ClienteIni;
   DataSet.ParamByName('ClienteFin').AsInteger:=Parametros.ClienteFin;
   Dataset.ParamByName('Estacion').AsInteger:=Parametros.Estacion;
+  DataSet.ParamByName('EmpleadoIni').AsInteger:=Parametros.EmpleadoIni;
+  DataSet.ParamByName('EmpleadoFin').AsInteger:=Parametros.EmpleadoFin;
   {Dataset.ParamByName('SecuenciaIni').AsInteger:=Parametros.SecuenciaIni;
   Dataset.ParamByName('SecuenciaFin').AsInteger:=Parametros.SecuenciaFin;
   Dataset.ParamByName('Factura').AsInteger:=Parametros.Factura;
@@ -261,8 +263,6 @@ begin
   DataSet.ParamByName('FacturasdeCompras').AsInteger:=Parametros.FacturasdeCompras;
   DataSet.ParamByName('MontoFacturado').AsFloat:=Parametros.MontoFacturado;
   DataSet.ParamByName('Turno').AsFloat:=Parametros.Turno;
-  DataSet.ParamByName('EmpleadoIni').AsInteger:=Parametros.EmpleadoIni;
-  DataSet.ParamByName('EmpleadoFin').AsInteger:=Parametros.EmpleadoFin;
   DataSet.ParamByName('EstacionIni').AsInteger:=Parametros.EstacionIni;
   DataSet.ParamByName('EstacionFin').Asinteger:=Parametros.EstacionFin; }
 

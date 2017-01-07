@@ -82,7 +82,6 @@ object frmPrincipal: TfrmPrincipal
     Align = alClient
     PanelStyle.Active = True
     TabOrder = 1
-    ExplicitTop = 149
     Height = 422
     Width = 800
   end
@@ -103,7 +102,6 @@ object frmPrincipal: TfrmPrincipal
     TabOrder = 6
     TabStop = False
     object rtbAcciones: TdxRibbonTab
-      Active = True
       Caption = 'Acciones'
       Groups = <
         item
@@ -136,6 +134,7 @@ object frmPrincipal: TfrmPrincipal
       Index = 3
     end
     object RibbonTab3: TdxRibbonTab
+      Active = True
       Caption = 'Configurar'
       Groups = <
         item
@@ -259,11 +258,11 @@ object frmPrincipal: TfrmPrincipal
       ItemLinks = <
         item
           Visible = True
-          ItemName = 'btnUsuarios'
+          ItemName = 'btnReprotes'
         end
         item
           Visible = True
-          ItemName = 'btnReprotes'
+          ItemName = 'btnUsuarios'
         end>
       OneOnRow = True
       Row = 0
@@ -624,6 +623,40 @@ object frmPrincipal: TfrmPrincipal
       Visible = ivAlways
       LargeImageIndex = 75
     end
+    object btnGenerales: TdxBarLargeButton
+      Tag = 2
+      Caption = 'Informe Bitacora'
+      Category = 0
+      Enabled = False
+      Hint = 'Informe Bitacora'
+      Visible = ivAlways
+      LargeImageIndex = 64
+    end
+    object btnEstaciones: TdxBarLargeButton
+      Tag = 3
+      Caption = 'Estacion'
+      Category = 0
+      Enabled = False
+      Hint = 'Estacion'
+      Visible = ivAlways
+      LargeImageIndex = 16
+    end
+    object btnUsuarios: TdxBarLargeButton
+      Tag = 5
+      Caption = 'Usuarios'
+      Category = 0
+      Hint = 'Usuarios'
+      Visible = ivAlways
+      LargeImageIndex = 14
+    end
+    object btnReprotes: TdxBarLargeButton
+      Tag = 4
+      Caption = 'Reportes'
+      Category = 0
+      Hint = 'Reportes'
+      Visible = ivAlways
+      LargeImageIndex = 15
+    end
     object btnFacturas: TdxBarLargeButton
       Tag = 1
       Caption = 'Facturas'
@@ -758,14 +791,6 @@ object frmPrincipal: TfrmPrincipal
       Visible = ivAlways
       LargeImageIndex = 5
     end
-    object btnEstaciones: TdxBarLargeButton
-      Tag = 5
-      Caption = 'Estacion'
-      Category = 2
-      Hint = 'Estacion'
-      Visible = ivAlways
-      LargeImageIndex = 16
-    end
     object btnProductos: TdxBarLargeButton
       Tag = 13
       Caption = 'Productos'
@@ -866,22 +891,6 @@ object frmPrincipal: TfrmPrincipal
       Visible = ivAlways
       LargeImageIndex = 4
     end
-    object btnUsuarios: TdxBarLargeButton
-      Tag = 4
-      Caption = 'Usuarios'
-      Category = 3
-      Hint = 'Usuarios'
-      Visible = ivAlways
-      LargeImageIndex = 14
-    end
-    object btnReprotes: TdxBarLargeButton
-      Tag = 3
-      Caption = 'Reportes'
-      Category = 3
-      Hint = 'Reportes'
-      Visible = ivAlways
-      LargeImageIndex = 15
-    end
     object btnSistema: TdxBarLargeButton
       Tag = 25
       Caption = 'Propiedades del Sistema'
@@ -953,14 +962,6 @@ object frmPrincipal: TfrmPrincipal
       Hint = 'Inventarios'
       Visible = ivAlways
       LargeImageIndex = 20
-    end
-    object btnGenerales: TdxBarLargeButton
-      Tag = 2
-      Caption = 'Informe Bitacora'
-      Category = 4
-      Hint = 'Informe Bitacora'
-      Visible = ivAlways
-      LargeImageIndex = 64
     end
     object btnEspecificos: TdxBarLargeButton
       Tag = 10

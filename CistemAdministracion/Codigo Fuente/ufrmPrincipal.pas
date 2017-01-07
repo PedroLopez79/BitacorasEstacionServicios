@@ -167,9 +167,9 @@ const
   TotalModulos = 5;
   Modulos: Array[1..TotalModulos] of string = ('BitacoraServicios',
                                                'Generales',
+                                               'Estaciones',
                                                'Reportes',
-                                               'Usuarios',
-                                               'Estaciones');
+                                               'Usuarios');
 
 {$R *.dfm}
 
