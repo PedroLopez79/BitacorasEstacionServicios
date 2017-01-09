@@ -2166,6 +2166,10 @@ object frmParametros: TfrmParametros
         Name = 'USERPASSWORD'
         DataType = datString
         Size = 10
+      end
+      item
+        Name = 'FIRMADEFAULT'
+        DataType = datBlob
       end>
     LogicalName = 'dbo.usuarios'
     Params = <>

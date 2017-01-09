@@ -66,7 +66,7 @@ type
     tblUsuariosUsuario: TBooleanField;
     tblUsuariosUsuarioID: TIntegerField;
     tblUsuariosNombre: TStringField;
-    DataSource1: TDataSource;
+    dsUsuarios: TDataSource;
     cdsUsuarios: TDACDSDataTable;
     cxGrid1: TcxGrid;
     cxGrid1DBTableView1: TcxGridDBTableView;

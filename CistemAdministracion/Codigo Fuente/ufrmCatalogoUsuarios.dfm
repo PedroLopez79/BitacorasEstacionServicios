@@ -144,10 +144,6 @@ inherited frmCatalogoUsuarios: TfrmCatalogoUsuarios
     object cxTabSheet3: TcxTabSheet
       Caption = 'Permisos'
       ImageIndex = 15
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object tlAccesos: TcxTreeList
         Left = 0
         Top = 0
@@ -228,6 +224,10 @@ inherited frmCatalogoUsuarios: TfrmCatalogoUsuarios
         Name = 'USERPASSWORD'
         DataType = datString
         Size = 10
+      end
+      item
+        Name = 'FIRMADEFAULT'
+        DataType = datBlob
       end>
     LogicalName = 'dbo.usuarios'
     RemoteDataAdapter = DM.RemoteDataAdapter

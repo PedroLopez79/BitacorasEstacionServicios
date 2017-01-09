@@ -1,37 +1,41 @@
 inherited frmBitacoraServicioEst: TfrmBitacoraServicioEst
   Caption = 'frmBitacoraServicioEst'
-  ClientHeight = 542
+  ClientHeight = 591
   ClientWidth = 781
+  ExplicitTop = -147
   ExplicitWidth = 781
-  ExplicitHeight = 542
+  ExplicitHeight = 591
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
     Width = 41
-    Height = 542
+    Height = 591
     Align = alLeft
     Caption = '----'
     TabOrder = 0
+    ExplicitHeight = 542
   end
   object Panel2: TPanel
     Left = 756
     Top = 0
     Width = 25
-    Height = 542
+    Height = 591
     Align = alRight
     Caption = '----'
     TabOrder = 1
+    ExplicitHeight = 542
   end
   object Panel3: TPanel
     Left = 41
     Top = 0
     Width = 715
-    Height = 542
+    Height = 591
     Align = alClient
     Caption = '.'
     TabOrder = 2
+    ExplicitHeight = 542
     object Label4: TLabel
       Left = 590
       Top = 24
@@ -216,19 +220,35 @@ inherited frmBitacoraServicioEst: TfrmBitacoraServicioEst
     end
     object Panel5: TPanel
       Left = 1
-      Top = 418
+      Top = 432
       Width = 713
-      Height = 123
+      Height = 158
       Align = alBottom
       BevelOuter = bvNone
       Color = clGray
       ParentBackground = False
       TabOrder = 0
+      ExplicitLeft = 6
+      ExplicitTop = 436
+      object Label15: TLabel
+        Left = 223
+        Top = 127
+        Width = 4
+        Height = 19
+        Color = clRed
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clRed
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
       object Panel4: TPanel
         Left = 5
         Top = 4
-        Width = 626
-        Height = 113
+        Width = 316
+        Height = 115
         BevelKind = bkTile
         BevelOuter = bvNone
         Color = clWhite
@@ -237,8 +257,8 @@ inherited frmBitacoraServicioEst: TfrmBitacoraServicioEst
         object Image1: TImage
           Left = 0
           Top = 0
-          Width = 622
-          Height = 109
+          Width = 312
+          Height = 111
           Align = alClient
           OnMouseDown = Image1MouseDown
           OnMouseMove = Image1MouseMove
@@ -246,7 +266,6 @@ inherited frmBitacoraServicioEst: TfrmBitacoraServicioEst
           ExplicitLeft = 1
           ExplicitTop = 1
           ExplicitWidth = 472
-          ExplicitHeight = 111
         end
       end
       object Button1: TButton
@@ -260,22 +279,65 @@ inherited frmBitacoraServicioEst: TfrmBitacoraServicioEst
       end
       object Button2: TButton
         Left = 637
-        Top = 85
+        Top = 89
         Width = 71
         Height = 30
         Caption = 'Guardar'
         TabOrder = 2
         OnClick = Button2Click
       end
+      object Panel7: TPanel
+        Left = 327
+        Top = 4
+        Width = 304
+        Height = 115
+        BevelKind = bkTile
+        BevelOuter = bvNone
+        Color = clWhite
+        ParentBackground = False
+        TabOrder = 3
+        object DBImage1: TDBImage
+          Left = 0
+          Top = 0
+          Width = 300
+          Height = 111
+          Align = alClient
+          DataField = 'FIRMADEFAULT'
+          DataSource = dsUsuario
+          TabOrder = 0
+          ExplicitLeft = 64
+          ExplicitWidth = 185
+          ExplicitHeight = 105
+        end
+      end
+      object Button3: TButton
+        Left = 637
+        Top = 37
+        Width = 71
+        Height = 30
+        Caption = 'Cargar Firma'
+        TabOrder = 4
+        OnClick = Button3Click
+      end
+      object Button4: TButton
+        Left = 5
+        Top = 120
+        Width = 212
+        Height = 38
+        Caption = 'Guardar Firma como Predeterminada ?'
+        TabOrder = 5
+        OnClick = Button4Click
+      end
     end
     object Panel6: TPanel
       Left = 1
-      Top = 373
+      Top = 388
       Width = 713
-      Height = 45
+      Height = 44
       Align = alBottom
       BevelOuter = bvLowered
       TabOrder = 6
+      ExplicitTop = 422
       object Label2: TLabel
         Left = 141
         Top = 3
@@ -315,26 +377,39 @@ inherited frmBitacoraServicioEst: TfrmBitacoraServicioEst
         Font.Style = [fsBold]
         ParentFont = False
       end
+      object Label14: TLabel
+        Left = 329
+        Top = 23
+        Width = 273
+        Height = 19
+        Caption = 'Firma predeterminada del empleado'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
     end
     object Memo1: TMemo
       Left = 24
       Top = 190
       Width = 169
-      Height = 177
+      Height = 147
       TabOrder = 2
     end
     object Memo2: TMemo
-      Left = 208
+      Left = 217
       Top = 190
       Width = 153
-      Height = 177
+      Height = 147
       TabOrder = 3
     end
     object Memo4: TMemo
       Left = 544
       Top = 190
       Width = 153
-      Height = 177
+      Height = 147
       TabOrder = 5
     end
     object cxDateEdit1: TcxDateEdit
@@ -381,6 +456,10 @@ inherited frmBitacoraServicioEst: TfrmBitacoraServicioEst
         Name = 'USERPASSWORD'
         DataType = datString
         Size = 10
+      end
+      item
+        Name = 'FIRMADEFAULT'
+        DataType = datBlob
       end>
     LogicalName = 'dbo.usuarios'
     Params = <>

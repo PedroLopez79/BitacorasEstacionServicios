@@ -11,7 +11,7 @@ uses
   cxLookAndFeelPainters, cxPC, Vcl.StdCtrls, Vcl.DBCtrls, Data.DB, uDAFields,
   uDADataTable, uROComponent, uDAScriptingProvider, uDAMemDataTable,
   Vcl.ComCtrls, cxContainer, cxEdit, dxCore, cxDateUtils, cxTextEdit,
-  cxMaskEdit, cxDropDownEdit, cxCalendar;
+  cxMaskEdit, cxDropDownEdit, cxCalendar, uROTypes;
 
 type
   TfrmBitacoraServicioEst = class(TfrmCustomModule)
@@ -52,6 +52,12 @@ type
     cxDateEdit2: TcxDateEdit;
     cdsBitacoraServ: TDAMemDataTable;
     dsBitacoraServ: TDADataSource;
+    Panel7: TPanel;
+    Label14: TLabel;
+    Button3: TButton;
+    Button4: TButton;
+    Label15: TLabel;
+    DBImage1: TDBImage;
     procedure Image1MouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     procedure Image1MouseMove(Sender: TObject; Shift: TShiftState; X,
@@ -62,6 +68,8 @@ type
     procedure FormCreate(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure cdsBitacoraServAfterPost(DataTable: TDADataTable);
+    procedure Button4Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     { Private declarations }
     procedure ActionNuevo(Action: TBasicAction);
@@ -76,18 +84,17 @@ var
 
 implementation
 
-uses Modules, ufrmPrincipal, uDM, dmActions;
+uses Modules, ufrmPrincipal, uDM, dmActions, DateUtils;
 var
   Bandera: Boolean;
-  NUMFOLIO: Integer;
+  GuardaFirmaDefault: Boolean;
 
 {$R *.dfm}
 
 procedure TfrmBitacoraServicioEst.ActionNuevo(Action: TBasicAction);
 begin
   Panel3.Enabled:= True;
-  NUMFOLIO:=DM.Servidor.FolioActual('FolioBitacoraEstacion', '');
-  lblNumFolio.Caption:= inttostr(NUMFOLIO);
+  lblNumFolio.Caption:= formatdatetime('ddmmyyyy', cxDateEdit1.Date);
 
   cdsBitacoraServ.Append;
   Memo1.SetFocus;
@@ -103,11 +110,26 @@ procedure TfrmBitacoraServicioEst.Button2Click(Sender: TObject);
 var
   Jpg : TPicture;
   S : TMemoryStream;
+  SD: TROBinaryMemoryStream;
+  resultado:String;
 begin
   inherited;
   Jpg := TPicture.Create;
   S := TMemoryStream.Create;
+  SD:= TROBinaryMemoryStream.Create;
+
   image1.Picture.Graphic.SaveToStream(S);
+  image1.Picture.Graphic.SaveToStream(SD);
+
+  if (GuardaFirmaDefault) then
+  begin
+     //Actualiza campo firmadefault del empleado
+     resultado:=DM.Servidor.ActualizaFirmaDefault(DM.EmpleadoID, SD);
+
+     if resultado <> 'OK' then
+        label15.Caption:= resultado;
+  end;
+
   cdsBitacoraServ.FieldByName('BITACORAID').AsInteger:= DM.Folio('BITACORAID','');
   cdsBitacoraServ.FieldByName('USUARIOID').AsInteger:= DM.EmpleadoID;
   cdsBitacoraServ.FieldByName('FECHA').AsDateTime:= cxDateEdit1.Date;
@@ -117,10 +139,23 @@ begin
   cdsBitacoraServ.FieldByName('OBSERVACIONES').AsString:= Memo4.Lines.Text;
   cdsBitacoraServ.FieldByName('ESTACIONID').AsInteger:= DM.Estacion;
   cdsBitacoraServ.FieldByName('FECHAHORA').AsDateTime:= cxDateEdit2.Date;
-  cdsBitacoraServ.FieldByName('FOLIO').AsInteger:= DM.Servidor.Folio('FolioBitacoraEstacion', '');;
+  cdsBitacoraServ.FieldByName('FOLIO').AsString:= lblNumFolio.Caption;
   cdsBitacoraServ.FieldByName('FIRMA').LoadFromStream(S);
 
   cdsBitacoraServ.Post;
+end;
+
+procedure TfrmBitacoraServicioEst.Button3Click(Sender: TObject);
+begin
+  inherited;
+  image1.Picture.Graphic:=DBImage1.Picture.Graphic;
+end;
+
+procedure TfrmBitacoraServicioEst.Button4Click(Sender: TObject);
+begin
+  inherited;
+  GuardaFirmaDefault:= True;
+  Button4.Caption:= 'OK';
 end;
 
 procedure TfrmBitacoraServicioEst.cdsBitacoraServAfterPost(
@@ -135,6 +170,10 @@ begin
   Image1.Picture.Assign(nil);
   cxDateEdit2.Date:= now();
   Panel3.Enabled:= False;
+
+  Button4.Caption:= 'Guardar Firma como Predeterminada ?';
+
+  cdsUsuario.Refresh;
 end;
 
 procedure TfrmBitacoraServicioEst.FormCreate(Sender: TObject);
@@ -142,6 +181,7 @@ var
   panelwidth:integer;
 begin
   inherited;
+  GuardaFirmaDefault:= False;
 
   Panel3.Enabled:= False;
   cxDateEdit1.Date:= now();

@@ -20,7 +20,7 @@ uses
   {Used RODLs:} DataAbstract4_Intf,
   {Generated:} LibraryEmpresas_Intf, uDABin2DataStreamer, Forms,
   uDAScriptingProvider, uDABusinessProcessor, uROComponent,
-  uDAStreamableComponent, uDASchema, ActiveX,
+  uDAStreamableComponent, uDASchema, ActiveX, uROStream,
   {RSA-MD5} libeay32, uDAEngine, uDASDACDriver, uROMessage, uROBinMessage;
 
 type
@@ -128,6 +128,7 @@ type
                                         const FacturaID: Integer; const Vigencia: Boolean; const Enviado: Boolean; const NoCertificado: AnsiString;
                                         const NoAprobacion: AnsiString; const FechaAprobacion: DateTime);
     function CERsNUM(const DIR: AnsiString): AnsiString;
+    function ActualizaFirmaDefault(const UsuarioID: Integer; const FIRMA: Binary): AnsiString;
   end;
 
 implementation
@@ -391,6 +392,36 @@ begin
   cmd.ParamByName('Ticket').AsInteger:=Ticket;
   cmd.ParamByName('Referencia').AsString:=Referencia;
   cmd.Execute;
+end;
+
+function TServiceEmpresas.ActualizaFirmaDefault(const UsuarioID: Integer;
+  const FIRMA: Binary): AnsiString;
+var
+  cmd: IDADataset;
+  respuesta: String;
+
+  SD: TROStream;
+begin
+  SD:= TROStream.Create(FIRMA,false);
+
+  cmd:= Schema.NewDataset(Connection,'spActualizaFirmaDefault');
+
+  //FIRMA.Assign(stream);
+  try
+
+  cmd.ParamByName('UsuarioID').AsInteger:= UsuarioID;
+  cmd.ParamByName('FIRMADEFAULT').LoadFromStream(SD);
+
+  cmd.Execute;
+
+  respuesta:= 'OK';
+
+  except on E : Exception do
+    respuesta:= E.ClassName+' error raised, with message : '+E.Message;
+  end;
+
+  result:= respuesta;
+
 end;
 
 procedure TServiceEmpresas.ActualizaLiquidacionCorte(const Liquidacion,

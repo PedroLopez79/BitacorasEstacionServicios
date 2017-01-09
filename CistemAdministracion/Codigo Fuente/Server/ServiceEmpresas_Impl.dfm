@@ -41,6 +41,10 @@ object ServiceEmpresas: TServiceEmpresas
               item
                 DatasetField = 'USERPASSWORD'
                 TableField = 'USERPASSWORD'
+              end
+              item
+                DatasetField = 'FIRMADEFAULT'
+                TableField = 'FIRMADEFAULT'
               end>
           end>
         Name = 'dbo.usuarios'
@@ -70,6 +74,10 @@ object ServiceEmpresas: TServiceEmpresas
             Name = 'USERPASSWORD'
             DataType = datString
             Size = 10
+          end
+          item
+            Name = 'FIRMADEFAULT'
+            DataType = datBlob
           end>
       end
       item
@@ -1694,6 +1702,38 @@ object ServiceEmpresas: TServiceEmpresas
             Name = 'FOLIO'
             DataType = datInteger
           end>
+      end
+      item
+        Params = <
+          item
+            Name = 'FIRMADEFAULT'
+            DataType = datBlob
+            BlobType = dabtBlob
+            Value = ''
+            ParamType = daptInput
+          end
+          item
+            Name = 'UsuarioID'
+            DataType = datInteger
+            Value = ''
+            ParamType = daptInput
+          end>
+        Statements = <
+          item
+            Connection = 'BitacoraEstacionServ'
+            ConnectionType = 'SDAC'
+            Default = True
+            TargetTable = 'dbo.USUARIO'
+            SQL = 
+              'UPDATE USUARIO'#10'set FIRMADEFAULT = :FIRMADEFAULT,'#10'    CODIGO = '#39'P' +
+              'ETER'#39#10'where USUARIO.IDEMPLEADO = :UsuarioID'
+            StatementType = stSQL
+            ColumnMappings = <>
+          end>
+        Name = 'spActualizaFirmaDefault'
+        BusinessRulesClient.CompileOnServer = False
+        BusinessRulesClient.RunOnClientAndServer = False
+        Fields = <>
       end>
     JoinDataTables = <>
     UnionDataTables = <>

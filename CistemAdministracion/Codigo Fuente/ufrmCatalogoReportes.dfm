@@ -473,7 +473,7 @@ inherited frmCatalogoReportes: TfrmCatalogoReportes
           Navigator.Buttons.CustomButtons = <>
           OnEditing = cxGrid1DBTableView1Editing
           OnEditChanged = cxGrid1DBTableView1EditChanged
-          DataController.DataSource = DataSource1
+          DataController.DataSource = dsUsuarios
           DataController.Summary.DefaultGroupSummaryItems = <>
           DataController.Summary.FooterSummaryItems = <
             item
@@ -592,6 +592,8 @@ inherited frmCatalogoReportes: TfrmCatalogoReportes
         Font.Name = 'COURIER NEW'
         Font.Style = []
         HiddenCaret = False
+        Lines.Strings = (
+          '')
         MarkerList.UseDefaultMarkerImageIndex = False
         MarkerList.DefaultMarkerImageIndex = -1
         MarkerList.ImageTransparentColor = 33554432
@@ -714,6 +716,8 @@ inherited frmCatalogoReportes: TfrmCatalogoReportes
         Font.Name = 'COURIER NEW'
         Font.Style = []
         HiddenCaret = False
+        Lines.Strings = (
+          '')
         MarkerList.UseDefaultMarkerImageIndex = False
         MarkerList.DefaultMarkerImageIndex = -1
         MarkerList.ImageTransparentColor = 33554432
@@ -1046,7 +1050,7 @@ inherited frmCatalogoReportes: TfrmCatalogoReportes
       FieldName = 'Nombre'
     end
   end
-  object DataSource1: TDataSource
+  object dsUsuarios: TDataSource
     DataSet = tblUsuarios
     Left = 360
     Top = 472
@@ -1076,6 +1080,10 @@ inherited frmCatalogoReportes: TfrmCatalogoReportes
         Name = 'USERPASSWORD'
         DataType = datString
         Size = 10
+      end
+      item
+        Name = 'FIRMADEFAULT'
+        DataType = datBlob
       end>
     LogicalName = 'dbo.usuarios'
     Params = <>
@@ -1083,7 +1091,7 @@ inherited frmCatalogoReportes: TfrmCatalogoReportes
     RemoteUpdatesOptions = []
     StreamingOptions = [soDisableEventsWhileStreaming]
     IndexDefs = <>
-    Left = 361
-    Top = 519
+    Left = 409
+    Top = 471
   end
 end

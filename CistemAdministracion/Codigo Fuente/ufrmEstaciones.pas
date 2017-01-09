@@ -29,18 +29,12 @@ type
     LblNoEstacion: TcxLabel;
     LblDireccion: TcxLabel;
     LblRFC: TcxLabel;
-    LblClavePemex: TcxLabel;
     LblHost: TcxLabel;
     LblNombre: TcxLabel;
     TxtNombre: TcxDBTextEdit;
     TxtDireccion: TcxDBTextEdit;
     TxtRFC: TcxDBTextEdit;
-    TxtClavePemex: TcxDBTextEdit;
     TxtHost: TcxDBTextEdit;
-    LblNodeBombas: TcxLabel;
-    TxtNoBombas: TcxDBTextEdit;
-    cxDBTextEdit1: TcxDBTextEdit;
-    cxLabel1: TcxLabel;
     LblCuentaContable: TcxLabel;
     TxtCuentaContable: TcxDBTextEdit;
     TxtIva: TcxDBTextEdit;
@@ -52,23 +46,14 @@ type
     dbgCatalogoDBTableView1Nombre: TcxGridDBColumn;
     dbgCatalogoDBTableView1RazonSocial: TcxGridDBColumn;
     dbgCatalogoDBTableView1RFC: TcxGridDBColumn;
-    dbgCatalogoDBTableView1ClavePemex: TcxGridDBColumn;
-    dbgCatalogoDBTableView1NoBombas: TcxGridDBColumn;
     dbgCatalogoDBTableView1Colonia: TcxGridDBColumn;
     dbgCatalogoDBTableView1Ciudad: TcxGridDBColumn;
     dbgCatalogoDBTableView1CodigoPostal: TcxGridDBColumn;
     dbgCatalogoDBTableView1Host: TcxGridDBColumn;
     dbgCatalogoDBTableView1CuentaContable: TcxGridDBColumn;
     dbgCatalogoDBTableView1Impuesto: TcxGridDBColumn;
-    dbgCatalogoDBTableView1ClienteSagarpa: TcxGridDBColumn;
-    dbgCatalogoDBTableView1ClienteSagarpaPemex: TcxGridDBColumn;
-    cxDBTextEdit3: TcxDBTextEdit;
-    cxLabel3: TcxLabel;
-    cxDBCheckBox1: TcxDBCheckBox;
     procedure cdsCatalogoNewRecord(DataTable: TDADataTable);
     procedure TxtIvaExit(Sender: TObject);
-    procedure TxtClavePemexExit(Sender: TObject);
-    procedure TxtNoBombasExit(Sender: TObject);
     procedure TxtRFCExit(Sender: TObject);
   private
     { Private declarations }
@@ -91,17 +76,6 @@ begin
   TxtNoEstacion.SetFocus;
 end;
 
-procedure TFrmEstaciones.TxtClavePemexExit(Sender: TObject);
-begin
-  inherited;
-  if not isNumeric(txtClavePemex.Text) then
-  begin
-    showMessage('No Es Un Numero');
-    //txtClavePemex.Clear;
-    txtClavePemex.SetFocus;
-  end;
-end;
-
 procedure TFrmEstaciones.TxtIvaExit(Sender: TObject);
 begin
   inherited;
@@ -110,17 +84,6 @@ begin
     showMessage('No Es Un Numero');
     txtIVa.Clear;
     txtIva.SetFocus;
-  end;
-end;
-
-procedure TFrmEstaciones.TxtNoBombasExit(Sender: TObject);
-begin
-  inherited;
-  if not isNumeric(txtNoBombas.Text) then
-  begin
-    showMessage('No Es Un Numero');
-    //txtFolio.Clear;
-    txtNoBombas.SetFocus;
   end;
 end;
 

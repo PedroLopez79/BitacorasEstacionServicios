@@ -164,10 +164,13 @@ implementation
 uses dmImagenes, uDM, UtileriasComun, dmActions, Modules;
 
 const
-  TotalModulos = 5;
+  TotalModulos = 8;
   Modulos: Array[1..TotalModulos] of string = ('BitacoraServicios',
                                                'Generales',
                                                'Estaciones',
+                                               '',
+                                               '',
+                                               '',
                                                'Reportes',
                                                'Usuarios');
 

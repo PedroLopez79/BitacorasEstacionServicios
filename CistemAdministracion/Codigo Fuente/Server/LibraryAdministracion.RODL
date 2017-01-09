@@ -753,6 +753,16 @@
 </Parameter>
 </Parameters>
 </Operation>
+<Operation Name="ActualizaFirmaDefault" UID="{93445154-B3C2-42D4-8840-14711D7FE297}">
+<Parameters>
+<Parameter Name="Result" DataType="AnsiString" Flag="Result">
+</Parameter>
+<Parameter Name="UsuarioID" DataType="Integer" Flag="In" >
+</Parameter>
+<Parameter Name="FIRMA" DataType="Binary" Flag="In" >
+</Parameter>
+</Parameters>
+</Operation>
 </Operations>
 </Interface>
 </Interfaces>

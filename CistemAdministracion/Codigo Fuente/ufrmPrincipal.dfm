@@ -102,6 +102,7 @@ object frmPrincipal: TfrmPrincipal
     TabOrder = 6
     TabStop = False
     object rtbAcciones: TdxRibbonTab
+      Active = True
       Caption = 'Acciones'
       Groups = <
         item
@@ -134,8 +135,7 @@ object frmPrincipal: TfrmPrincipal
       Index = 3
     end
     object RibbonTab3: TdxRibbonTab
-      Active = True
-      Caption = 'Configurar'
+      Caption = 'Configuracion'
       Groups = <
         item
           ToolbarName = 'tbConfigurar'
@@ -642,17 +642,19 @@ object frmPrincipal: TfrmPrincipal
       LargeImageIndex = 16
     end
     object btnUsuarios: TdxBarLargeButton
-      Tag = 5
+      Tag = 8
       Caption = 'Usuarios'
       Category = 0
+      Enabled = False
       Hint = 'Usuarios'
       Visible = ivAlways
       LargeImageIndex = 14
     end
     object btnReprotes: TdxBarLargeButton
-      Tag = 4
+      Tag = 7
       Caption = 'Reportes'
       Category = 0
+      Enabled = False
       Hint = 'Reportes'
       Visible = ivAlways
       LargeImageIndex = 15

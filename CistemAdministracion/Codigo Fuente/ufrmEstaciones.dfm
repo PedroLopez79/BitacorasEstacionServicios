@@ -17,7 +17,7 @@ inherited FrmEstaciones: TFrmEstaciones
           end
           object dbgCatalogoDBTableView1EmpresaID: TcxGridDBColumn
             Caption = 'Empresa'
-            DataBinding.FieldName = 'EmpresaID'
+            DataBinding.FieldName = 'IDESTACION'
           end
           object dbgCatalogoDBTableView1Nombre: TcxGridDBColumn
             DataBinding.FieldName = 'Nombre'
@@ -27,12 +27,6 @@ inherited FrmEstaciones: TFrmEstaciones
           end
           object dbgCatalogoDBTableView1RFC: TcxGridDBColumn
             DataBinding.FieldName = 'RFC'
-          end
-          object dbgCatalogoDBTableView1ClavePemex: TcxGridDBColumn
-            DataBinding.FieldName = 'ClavePemex'
-          end
-          object dbgCatalogoDBTableView1NoBombas: TcxGridDBColumn
-            DataBinding.FieldName = 'NoBombas'
           end
           object dbgCatalogoDBTableView1Colonia: TcxGridDBColumn
             DataBinding.FieldName = 'Colonia'
@@ -51,12 +45,6 @@ inherited FrmEstaciones: TFrmEstaciones
           end
           object dbgCatalogoDBTableView1Impuesto: TcxGridDBColumn
             DataBinding.FieldName = 'Impuesto'
-          end
-          object dbgCatalogoDBTableView1ClienteSagarpa: TcxGridDBColumn
-            DataBinding.FieldName = 'ClienteSagarpa'
-          end
-          object dbgCatalogoDBTableView1ClienteSagarpaPemex: TcxGridDBColumn
-            DataBinding.FieldName = 'ClienteSagarpaPemex'
           end
         end
       end
@@ -82,7 +70,7 @@ inherited FrmEstaciones: TFrmEstaciones
           Left = 16
           Top = 38
           Hint = ''
-          DataBinding.DataField = 'EmpresaID'
+          DataBinding.DataField = 'IDESTACION'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
           Properties.ReadOnly = False
@@ -119,7 +107,7 @@ inherited FrmEstaciones: TFrmEstaciones
           Transparent = True
         end
         object LblRFC: TcxLabel
-          Left = 416
+          Left = 16
           Top = 140
           Hint = ''
           Caption = 'R.F.C.'
@@ -130,21 +118,9 @@ inherited FrmEstaciones: TFrmEstaciones
           StyleHot.LookAndFeel.NativeStyle = True
           Transparent = True
         end
-        object LblClavePemex: TcxLabel
-          Left = 232
-          Top = 140
-          Hint = ''
-          Caption = 'Clave Pemex'
-          Style.BorderStyle = ebsNone
-          Style.LookAndFeel.NativeStyle = True
-          StyleDisabled.LookAndFeel.NativeStyle = True
-          StyleFocused.LookAndFeel.NativeStyle = True
-          StyleHot.LookAndFeel.NativeStyle = True
-          Transparent = True
-        end
         object LblHost: TcxLabel
-          Left = 232
-          Top = 179
+          Left = 183
+          Top = 139
           Hint = ''
           Caption = 'Host'
           Style.BorderStyle = ebsNone
@@ -197,7 +173,7 @@ inherited FrmEstaciones: TFrmEstaciones
           Width = 561
         end
         object TxtRFC: TcxDBTextEdit
-          Left = 416
+          Left = 16
           Top = 156
           Hint = ''
           DataBinding.DataField = 'RFC'
@@ -208,27 +184,12 @@ inherited FrmEstaciones: TFrmEstaciones
           StyleDisabled.LookAndFeel.NativeStyle = False
           StyleFocused.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.NativeStyle = False
-          TabOrder = 6
+          TabOrder = 4
           Width = 161
         end
-        object TxtClavePemex: TcxDBTextEdit
-          Left = 232
-          Top = 156
-          Hint = ''
-          DataBinding.DataField = 'ClavePemex'
-          DataBinding.DataSource = dsCatalogo
-          Properties.CharCase = ecUpperCase
-          Style.BorderStyle = ebsUltraFlat
-          Style.LookAndFeel.NativeStyle = False
-          StyleDisabled.LookAndFeel.NativeStyle = False
-          StyleFocused.LookAndFeel.NativeStyle = False
-          StyleHot.LookAndFeel.NativeStyle = False
-          TabOrder = 5
-          Width = 169
-        end
         object TxtHost: TcxDBTextEdit
-          Left = 232
-          Top = 196
+          Left = 183
+          Top = 156
           Hint = ''
           DataBinding.DataField = 'Host'
           DataBinding.DataSource = dsCatalogo
@@ -238,62 +199,8 @@ inherited FrmEstaciones: TFrmEstaciones
           StyleDisabled.LookAndFeel.NativeStyle = False
           StyleFocused.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.NativeStyle = False
-          TabOrder = 8
+          TabOrder = 5
           Width = 169
-        end
-        object LblNodeBombas: TcxLabel
-          Left = 16
-          Top = 179
-          Hint = ''
-          Caption = 'No. de Bombas'
-          Style.BorderStyle = ebsNone
-          Style.LookAndFeel.NativeStyle = True
-          StyleDisabled.LookAndFeel.NativeStyle = True
-          StyleFocused.LookAndFeel.NativeStyle = True
-          StyleHot.LookAndFeel.NativeStyle = True
-          Transparent = True
-        end
-        object TxtNoBombas: TcxDBTextEdit
-          Left = 16
-          Top = 196
-          Hint = ''
-          DataBinding.DataField = 'NoBombas'
-          DataBinding.DataSource = dsCatalogo
-          Properties.CharCase = ecUpperCase
-          Style.BorderStyle = ebsUltraFlat
-          Style.LookAndFeel.NativeStyle = False
-          StyleDisabled.LookAndFeel.NativeStyle = False
-          StyleFocused.LookAndFeel.NativeStyle = False
-          StyleHot.LookAndFeel.NativeStyle = False
-          TabOrder = 7
-          Width = 77
-        end
-        object cxDBTextEdit1: TcxDBTextEdit
-          Left = 16
-          Top = 156
-          Hint = ''
-          DataBinding.DataField = 'Ciudad'
-          DataBinding.DataSource = dsCatalogo
-          Properties.CharCase = ecUpperCase
-          Style.BorderStyle = ebsUltraFlat
-          Style.LookAndFeel.NativeStyle = False
-          StyleDisabled.LookAndFeel.NativeStyle = False
-          StyleFocused.LookAndFeel.NativeStyle = False
-          StyleHot.LookAndFeel.NativeStyle = False
-          TabOrder = 4
-          Width = 201
-        end
-        object cxLabel1: TcxLabel
-          Left = 16
-          Top = 140
-          Hint = ''
-          Caption = 'Ciudad'
-          Style.BorderStyle = ebsNone
-          Style.LookAndFeel.NativeStyle = True
-          StyleDisabled.LookAndFeel.NativeStyle = True
-          StyleFocused.LookAndFeel.NativeStyle = True
-          StyleHot.LookAndFeel.NativeStyle = True
-          Transparent = True
         end
         object LblCuentaContable: TcxLabel
           Left = 232
@@ -315,7 +222,7 @@ inherited FrmEstaciones: TFrmEstaciones
           StyleDisabled.LookAndFeel.NativeStyle = False
           StyleFocused.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.NativeStyle = False
-          TabOrder = 11
+          TabOrder = 8
           Width = 169
         end
         object TxtIva: TcxDBTextEdit
@@ -330,7 +237,7 @@ inherited FrmEstaciones: TFrmEstaciones
           StyleDisabled.LookAndFeel.NativeStyle = False
           StyleFocused.LookAndFeel.NativeStyle = False
           StyleHot.LookAndFeel.NativeStyle = False
-          TabOrder = 10
+          TabOrder = 7
           Width = 140
         end
         object LblImpuento: TcxLabel
@@ -368,57 +275,25 @@ inherited FrmEstaciones: TFrmEstaciones
           TabOrder = 2
           Width = 561
         end
-        object cxDBTextEdit3: TcxDBTextEdit
-          Left = 16
-          Top = 284
-          Hint = ''
-          DataBinding.DataField = 'ISR'
-          DataBinding.DataSource = dsCatalogo
-          Properties.CharCase = ecUpperCase
-          Style.BorderStyle = ebsUltraFlat
-          Style.LookAndFeel.NativeStyle = False
-          StyleDisabled.LookAndFeel.NativeStyle = False
-          StyleFocused.LookAndFeel.NativeStyle = False
-          StyleHot.LookAndFeel.NativeStyle = False
-          TabOrder = 22
-          Width = 77
-        end
-        object cxLabel3: TcxLabel
-          Left = 16
-          Top = 268
-          Hint = ''
-          Caption = 'Porcentaje ISR'
-          Style.BorderStyle = ebsNone
-          Transparent = True
-        end
-        object cxDBCheckBox1: TcxDBCheckBox
-          Left = 232
-          Top = 288
-          Hint = ''
-          Caption = 'Iva Retenido ?'
-          DataBinding.DataField = 'IvaRetenido'
-          DataBinding.DataSource = dsCatalogo
-          TabOrder = 24
-          Width = 97
-        end
       end
     end
   end
   inherited cdsCatalogo: TDAMemDataTable
     Fields = <
       item
-        Name = 'EMPRESAID'
+        Name = 'IDESTACION'
         DataType = datInteger
+        Required = True
       end
       item
-        Name = 'Nombre'
+        Name = 'NOMBRE'
         DataType = datString
-        Size = 70
+        Size = 100
       end
       item
-        Name = 'RazonSocial'
+        Name = 'RAZONSOCIAL'
         DataType = datString
-        Size = 70
+        Size = 100
       end
       item
         Name = 'RFC'
@@ -426,60 +301,170 @@ inherited FrmEstaciones: TFrmEstaciones
         Size = 30
       end
       item
-        Name = 'ClavePemex'
+        Name = 'HOST'
+        DataType = datString
+        Size = 30
+      end
+      item
+        Name = 'CUENTACONTABLE'
+        DataType = datString
+        Size = 20
+      end
+      item
+        Name = 'IMPUESTO'
+        DataType = datFloat
+      end
+      item
+        Name = 'CALLE'
+        DataType = datString
+        Size = 60
+      end
+      item
+        Name = 'COLONIA'
+        DataType = datString
+        Size = 30
+      end
+      item
+        Name = 'NOEXTERIOR'
         DataType = datString
         Size = 10
       end
       item
-        Name = 'NoBombas'
-        DataType = datInteger
-      end
-      item
-        Name = 'Colonia'
-        DataType = datString
-        Size = 80
-      end
-      item
-        Name = 'Ciudad'
-        DataType = datString
-        Size = 30
-      end
-      item
-        Name = 'CodigoPostal'
+        Name = 'NOINTERIOR'
         DataType = datString
         Size = 10
       end
       item
-        Name = 'Host'
+        Name = 'CODIGOPOSTAL'
+        DataType = datString
+        Size = 10
+      end
+      item
+        Name = 'MUNICIPIO'
         DataType = datString
         Size = 30
       end
       item
-        Name = 'CuentaContable'
+        Name = 'LOCALIDAD'
         DataType = datString
         Size = 30
       end
       item
-        Name = 'Impuesto'
-        DataType = datFloat
+        Name = 'ESTADO'
+        DataType = datString
+        Size = 30
       end
       item
-        Name = 'ClienteSagarpa'
+        Name = 'EXCALLE'
+        DataType = datString
+        Size = 60
+      end
+      item
+        Name = 'EXCOLONIA'
+        DataType = datString
+        Size = 30
+      end
+      item
+        Name = 'EXNOEXTERIOR'
+        DataType = datString
+        Size = 10
+      end
+      item
+        Name = 'EXNOINTERIOR'
+        DataType = datString
+        Size = 10
+      end
+      item
+        Name = 'EXCODIGOPOSTAL'
+        DataType = datString
+        Size = 10
+      end
+      item
+        Name = 'EXMUNICIPIO'
+        DataType = datString
+        Size = 30
+      end
+      item
+        Name = 'EXLOCALIDAD'
+        DataType = datString
+        Size = 30
+      end
+      item
+        Name = 'EXESTADO'
+        DataType = datString
+        Size = 30
+      end
+      item
+        Name = 'NOAPROBACION'
         DataType = datInteger
       end
       item
-        Name = 'ClienteSagarpaPemex'
+        Name = 'FECHAAPROBACION'
         DataType = datInteger
       end
       item
-        Name = 'IvaRetenido'
-        DataType = datBoolean
+        Name = 'NOAPROBACIONES'
+        DataType = datString
+        Size = 150
       end
       item
-        Name = 'ISR'
-        DataType = datFloat
+        Name = 'VERSIONCFD'
+        DataType = datInteger
+      end
+      item
+        Name = 'REGIMENFISCAL'
+        DataType = datString
+        Size = 150
+      end
+      item
+        Name = 'CODIGOFACTURA'
+        DataType = datString
+        Size = 2
+      end
+      item
+        Name = 'FORMATOFACTURAWEB'
+        DataType = datString
+        Size = 100
+      end
+      item
+        Name = 'SERIEENLINEA'
+        DataType = datString
+        Size = 5
+      end
+      item
+        Name = 'TELEFONO'
+        DataType = datString
+        Size = 20
+      end
+      item
+        Name = 'IDESTACIONBANCARIA'
+        DataType = datInteger
+      end
+      item
+        Name = 'SERIEBANCARIA'
+        DataType = datString
+        Size = 5
+      end
+      item
+        Name = 'LOGOESTACION'
+        DataType = datBlob
+      end
+      item
+        Name = 'PAIS'
+        DataType = datString
+        Size = 100
+      end
+      item
+        Name = 'EXPAIS'
+        DataType = datString
+        Size = 100
+      end
+      item
+        Name = 'EXREFERENCIA'
+        DataType = datString
+        Size = 100
       end>
-    LogicalName = 'dbo.Empresas'
+    LogicalName = 'dbo.ESTACION'
     RemoteDataAdapter = DM.RemoteDataAdapter
     OnNewRecord = cdsCatalogoNewRecord
   end
