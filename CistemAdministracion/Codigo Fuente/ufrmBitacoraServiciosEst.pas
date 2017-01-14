@@ -11,7 +11,7 @@ uses
   cxLookAndFeelPainters, cxPC, Vcl.StdCtrls, Vcl.DBCtrls, Data.DB, uDAFields,
   uDADataTable, uROComponent, uDAScriptingProvider, uDAMemDataTable,
   Vcl.ComCtrls, cxContainer, cxEdit, dxCore, cxDateUtils, cxTextEdit,
-  cxMaskEdit, cxDropDownEdit, cxCalendar, uROTypes;
+  cxMaskEdit, cxDropDownEdit, cxCalendar, uROTypes, Vcl.ExtDlgs;
 
 type
   TfrmBitacoraServicioEst = class(TfrmCustomModule)
@@ -58,6 +58,8 @@ type
     Button4: TButton;
     Label15: TLabel;
     DBImage1: TDBImage;
+    Button5: TButton;
+    OpenPictureDialog1: TOpenPictureDialog;
     procedure Image1MouseDown(Sender: TObject; Button: TMouseButton;
       Shift: TShiftState; X, Y: Integer);
     procedure Image1MouseMove(Sender: TObject; Shift: TShiftState; X,
@@ -70,6 +72,7 @@ type
     procedure cdsBitacoraServAfterPost(DataTable: TDADataTable);
     procedure Button4Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
   private
     { Private declarations }
     procedure ActionNuevo(Action: TBasicAction);
@@ -156,6 +159,23 @@ begin
   inherited;
   GuardaFirmaDefault:= True;
   Button4.Caption:= 'OK';
+end;
+
+procedure TfrmBitacoraServicioEst.Button5Click(Sender: TObject);
+var
+  S : TMemoryStream;
+begin
+  inherited;
+  if OpenPictureDialog1.Execute then
+    { First check if the file exists. }
+    if FileExists(OpenPictureDialog1.FileName) then
+    begin
+      S := TMemoryStream.Create;
+      image1.Picture.LoadFromFile(OpenPictureDialog1.FileName);
+    end
+    else
+      { Otherwise raise an exception. }
+      raise Exception.Create('Archivo no Existe.');
 end;
 
 procedure TfrmBitacoraServicioEst.cdsBitacoraServAfterPost(

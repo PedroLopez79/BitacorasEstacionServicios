@@ -15,7 +15,6 @@ inherited frmBitacoraServicioEst: TfrmBitacoraServicioEst
     Align = alLeft
     Caption = '----'
     TabOrder = 0
-    ExplicitHeight = 542
   end
   object Panel2: TPanel
     Left = 756
@@ -25,7 +24,6 @@ inherited frmBitacoraServicioEst: TfrmBitacoraServicioEst
     Align = alRight
     Caption = '----'
     TabOrder = 1
-    ExplicitHeight = 542
   end
   object Panel3: TPanel
     Left = 41
@@ -35,7 +33,6 @@ inherited frmBitacoraServicioEst: TfrmBitacoraServicioEst
     Align = alClient
     Caption = '.'
     TabOrder = 2
-    ExplicitHeight = 542
     object Label4: TLabel
       Left = 590
       Top = 24
@@ -228,8 +225,6 @@ inherited frmBitacoraServicioEst: TfrmBitacoraServicioEst
       Color = clGray
       ParentBackground = False
       TabOrder = 0
-      ExplicitLeft = 6
-      ExplicitTop = 436
       object Label15: TLabel
         Left = 223
         Top = 127
@@ -305,9 +300,6 @@ inherited frmBitacoraServicioEst: TfrmBitacoraServicioEst
           DataField = 'FIRMADEFAULT'
           DataSource = dsUsuario
           TabOrder = 0
-          ExplicitLeft = 64
-          ExplicitWidth = 185
-          ExplicitHeight = 105
         end
       end
       object Button3: TButton
@@ -328,6 +320,15 @@ inherited frmBitacoraServicioEst: TfrmBitacoraServicioEst
         TabOrder = 5
         OnClick = Button4Click
       end
+      object Button5: TButton
+        Left = 517
+        Top = 120
+        Width = 114
+        Height = 38
+        Caption = 'Cargar Archivo...'
+        TabOrder = 6
+        OnClick = Button5Click
+      end
     end
     object Panel6: TPanel
       Left = 1
@@ -337,7 +338,6 @@ inherited frmBitacoraServicioEst: TfrmBitacoraServicioEst
       Align = alBottom
       BevelOuter = bvLowered
       TabOrder = 6
-      ExplicitTop = 422
       object Label2: TLabel
         Left = 141
         Top = 3
@@ -735,13 +735,18 @@ inherited frmBitacoraServicioEst: TfrmBitacoraServicioEst
     StreamingOptions = [soDisableEventsWhileStreaming]
     AfterPost = cdsBitacoraServAfterPost
     IndexDefs = <>
-    Left = 464
-    Top = 328
+    Left = 328
+    Top = 344
   end
   object dsBitacoraServ: TDADataSource
     DataSet = cdsBitacoraServ.Dataset
     DataTable = cdsBitacoraServ
-    Left = 520
-    Top = 328
+    Left = 384
+    Top = 344
+  end
+  object OpenPictureDialog1: TOpenPictureDialog
+    Filter = 'BMP Image File (*.bmp)|*.bmp'
+    Left = 582
+    Top = 342
   end
 end
