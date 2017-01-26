@@ -240,7 +240,7 @@ const
 var
   i : Byte;
 begin
-  Caption:='Bitacora 1.0';
+  Caption:='Cistem Administracion 1.0';
   Application.UpdateFormatSettings:=False;
   {for i:=1 to 12 do
   begin

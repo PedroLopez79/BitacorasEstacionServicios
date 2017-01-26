@@ -266,7 +266,7 @@ begin
       Result:=Aux.EmpleadoID;
       if Svr <> '' then
         Estacion:=StrToInt(Svr);
-      frmPrincipal.Caption:=Format('%d - Servicios y Utilerias 1.0', [Estacion]);
+      frmPrincipal.Caption:=Format('%d - Cistem Empresas 1.0', [Estacion]);
     end;
   finally
     Aux.Free;
