@@ -252,7 +252,7 @@ var
   Aux: LibraryEmpresas_Intf.TLoginInfo;
 begin
   Result:=-1;
-  
+
 
   AsignaServidor(LeerRegistro('Server', '127.0.0.1'));
   AsignaServidorFlotillas(LeerRegistro('ServerFlotillas', '127.0.0.1'));

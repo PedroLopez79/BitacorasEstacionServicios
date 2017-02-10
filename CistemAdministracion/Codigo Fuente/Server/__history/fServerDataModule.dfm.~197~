@@ -1,0 +1,74 @@
+object ServerDataModule: TServerDataModule
+  OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  Height = 207
+  Width = 352
+  object Server: TROIndyHTTPServer
+    Dispatchers = <
+      item
+        Name = 'Message'
+        Message = Message
+        Enabled = True
+        PathInfo = 'Bin'
+      end
+      item
+        Name = 'SOAPMessage'
+        Message = SOAPMessage
+        Enabled = True
+        PathInfo = 'SOAP'
+      end>
+    SendClientAccessPolicyXml = captAllowAll
+    IndyServer.Bindings = <>
+    IndyServer.DefaultPort = 8001
+    Port = 8001
+    Left = 32
+    Top = 8
+  end
+  object Message: TROBinMessage
+    Envelopes = <>
+    Left = 32
+    Top = 56
+  end
+  object ConnectionManager: TDAConnectionManager
+    Connections = <
+      item
+        Name = 'BITACORA'
+        ConnectionString = 
+          'SDAC?Server=PETERPC;Database=BitacoraEstacionServ;UserID=sa;Pass' +
+          'word=Cistem32;Schemas=1;Integrated Security=SSPI;'
+        ConnectionType = 'MSSQL'
+        Default = True
+      end>
+    DriverManager = DriverManager
+    PoolingEnabled = True
+    Left = 136
+    Top = 56
+  end
+  object DriverManager: TDADriverManager
+    DriverDirectory = '%SYSTEM%\'
+    TraceActive = False
+    TraceFlags = []
+    Left = 136
+    Top = 10
+  end
+  object ADODriver: TDAADODriver
+    Left = 256
+    Top = 8
+  end
+  object DataDictionary: TDADataDictionary
+    Fields = <>
+    Left = 32
+    Top = 104
+  end
+  object SessionManager: TROInMemorySessionManager
+    Left = 136
+    Top = 104
+  end
+  object SOAPMessage: TROSOAPMessage
+    Envelopes = <>
+    ServerTargetNamespace = 'http://tempuri.org/'
+    SerializationOptions = [xsoWriteMultiRefArray, xsoWriteMultiRefObject, xsoClientIdInWsdl, xsoDocument, xsoSplitServiceWsdls]
+    Left = 32
+    Top = 152
+  end
+end

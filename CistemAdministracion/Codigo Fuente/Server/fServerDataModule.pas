@@ -3,7 +3,8 @@ unit fServerDataModule;
 interface
 
 uses
-  SysUtils, Classes,
+  SysUtils, Classes, uROComInit,
+  uROComboService,
   uROClient, uROPoweredByRemObjectsButton, uROClientIntf, uROServer,
   uROBinMessage, uROIndyHTTPServer,
   uDAEngine, uDADriverManager, uDAClasses, uROSessions, uROIndyTCPServer, uDASDACDriver,
@@ -12,13 +13,13 @@ uses
 
 type
   TServerDataModule3 = class(TDataModule)
-    Server: TROIndyHTTPServer;
-    Message: TROBinMessage;
-    ConnectionManager3: TDAConnectionManager;
-    DriverManager: TDADriverManager;
-    SessionManager: TROInMemorySessionManager;
     DASDACDriver1: TDASDACDriver;
+    DriverManager: TDADriverManager;
+    ConnectionManager3: TDAConnectionManager;
+    Message: TROBinMessage;
     DataDictionary: TDADataDictionary;
+    SessionManager: TROInMemorySessionManager;
+    Server: TROIndyHTTPServer;
     
     procedure DataModuleCreate(Sender: TObject);
   private

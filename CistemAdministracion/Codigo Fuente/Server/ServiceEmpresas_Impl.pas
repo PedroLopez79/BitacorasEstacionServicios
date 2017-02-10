@@ -12,7 +12,7 @@ unit ServiceEmpresas_Impl;
 interface
 
 uses
-  {vcl:} Classes, SysUtils, 
+  {vcl:} Classes, SysUtils,
   {RemObjects:} uROXMLIntf, uROClientIntf, uROTypes, uROServer, uROServerIntf, uROSessions,
   {Required:} uRORemoteDataModule,
   {Data Abstract:} uDAClasses, uDADataTable, uDABinAdapter, uDAInterfaces, uDADataStreamer,
@@ -48,15 +48,15 @@ type
   protected
     { IServiceEmpresas methods }
     function AbreDataSetReporte(const SQL: AnsiString; const Parametros: TParametros): Binary;
-    procedure ActualizaCupon(const Barras: AnsiString; const DiaConsumo: Integer; const EjercicioConsumo: Integer; const FechaConsumo: DateTime; 
+    procedure ActualizaCupon(const Barras: AnsiString; const DiaConsumo: Integer; const EjercicioConsumo: Integer; const FechaConsumo: DateTime;
                              const PeriodoConsumo: Integer; const Secuencia: Integer; const Ticket: Integer; const Liquidacion: Integer);
-    procedure ActualizaCuponConReferencia(const Barras: AnsiString; const DiaConsumo: Integer; const EjercicioConsumo: Integer; const FechaConsumo: DateTime; 
+    procedure ActualizaCuponConReferencia(const Barras: AnsiString; const DiaConsumo: Integer; const EjercicioConsumo: Integer; const FechaConsumo: DateTime;
                                           const PeriodoConsumo: Integer; const Secuencia: Integer; const Ticket: Integer; const Referencia: AnsiString);
     procedure ActualizaLiquidacionCorte(const Liquidacion: Integer; const Secuencia: Integer; const AgrupacionID: Integer);
     procedure ActualizarStatusValeCredito(const CarteraValeCreditoID: Integer; const Status: AnsiString; const FacturaID: Integer);
-    procedure ActualizaStatusCupon(const Barras: AnsiString; const DiaConsumo: Integer; const EjercicioConsumo: Integer; const FechaConsumo: DateTime; 
+    procedure ActualizaStatusCupon(const Barras: AnsiString; const DiaConsumo: Integer; const EjercicioConsumo: Integer; const FechaConsumo: DateTime;
                                    const LiquidacionID: Integer; const PeriodoConsumo: Integer; const Secuencia: Integer);
-    function GeneraFactura(const EstacionID: Integer; const Serie: AnsiString; const FechaCorte: DateTime; const ClienteID: Integer; 
+    function GeneraFactura(const EstacionID: Integer; const Serie: AnsiString; const FechaCorte: DateTime; const ClienteID: Integer;
                            const UsuarioID: Integer): Integer;
     function BuscaReporte(const Nombre: AnsiString; const TipoTemplate: Integer): TReporte;
     function CambiaFolioFactura(const Serie: AnsiString; const Folio: Integer; const NewSerie: AnsiString; const NewFolio: Integer): AnsiString;
@@ -79,8 +79,8 @@ type
     procedure GuardarDatosLiquidacion(const DatosLiquidacion: TDatosLiquidacion);
     procedure GuardarDatosReciboPago(const DatosReciboPago: TDatosReciboPago);
     function GuardarFacturaExpress(const ClienteID: Integer; const Serie: AnsiString; const EstacionID: Integer; const TicketID: Integer): TFacturaExpress;
-    procedure InsertaDeposito(const DepositoID: Integer; const Cantidad: Double; const Usuario: Integer; const Fecha: DateTime; const Secuencia: Integer; 
-                              const EstacionID: Integer; const Descripcion: AnsiString; const Ejercicio: Integer; const Periodo: Integer; 
+    procedure InsertaDeposito(const DepositoID: Integer; const Cantidad: Double; const Usuario: Integer; const Fecha: DateTime; const Secuencia: Integer;
+                              const EstacionID: Integer; const Descripcion: AnsiString; const Ejercicio: Integer; const Periodo: Integer;
                               const Dia: Integer);
     procedure InsertaProductoPrecio(const ProductoID: Integer; const EstacionID: Integer; const Precio: Double);
     function Login(const Usuario: AnsiString; const Clave: AnsiString): TLoginInfo;
@@ -115,7 +115,7 @@ type
     function ValidaFolioFactura(const Serie: AnsiString; const Folio: Integer): Boolean;
     procedure PuntosGuardaCriterios(const PuntosCriterioID: Integer; const Datos: AnsiString);
     function DatosFacturaElectronica(const FacturaID: Integer; const EstacionID: Integer): TFacturaElectronica;
-    function LlavePrivaCertificado(const LlavePrivada: AnsiString; const Certificado: AnsiString; const GasolineroID: Integer; const Password: AnsiString; 
+    function LlavePrivaCertificado(const LlavePrivada: AnsiString; const Certificado: AnsiString; const GasolineroID: Integer; const Password: AnsiString;
                                    const EstacionID: Integer): AnsiString;
     function SELLOPEMs(const Texto: UnicodeString; const EstacionID: Integer): AnsiString;
     function CERs(const DIR: AnsiString): AnsiString;

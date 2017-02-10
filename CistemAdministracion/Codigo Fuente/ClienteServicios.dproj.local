@@ -10,8 +10,8 @@
     <Transaction>2007/01/03 01:23:10.327.dfm,C:\Proyectos\Cistem\CistemAdministracion\Codigo Fuente\ufrmPrincipal.dfm=</Transaction>
     <Transaction>2007/10/29 14:08:50.515.pas,C:\Proyectos\Cistem\CistemAdministracion\Codigo Fuente\Unit1.pas=C:\Proyectos\Cistem\CistemAdministracion\Codigo Fuente\ufrmWizardPadre.pas</Transaction>
     <Transaction>2007/10/29 14:08:50.515.dfm,C:\Proyectos\Cistem\CistemAdministracion\Codigo Fuente\Unit1.dfm=C:\Proyectos\Cistem\CistemAdministracion\Codigo Fuente\ufrmWizardPadre.dfm</Transaction>
-    <Transaction>2007/10/30 15:38:33.593.pas,C:\Proyectos\Cistem\CistemAdministracion\Codigo Fuente\ufrmWizardPadre.pas=</Transaction>
     <Transaction>2007/10/30 15:38:33.593.dfm,C:\Proyectos\Cistem\CistemAdministracion\Codigo Fuente\ufrmWizardPadre.dfm=</Transaction>
+    <Transaction>2007/10/30 15:38:33.593.pas,C:\Proyectos\Cistem\CistemAdministracion\Codigo Fuente\ufrmWizardPadre.pas=</Transaction>
     <Transaction>2007/11/17 12:05:07.000.pas,C:\Proyectos\Cistem\CistemAdministracion\Codigo Fuente\ufrmParametrosCorte.pas=</Transaction>
     <Transaction>2007/11/17 12:05:07.000.dfm,C:\Proyectos\Cistem\CistemAdministracion\Codigo Fuente\ufrmParametrosCorte.dfm=</Transaction>
     <Transaction>2007/11/17 12:05:36.515.dfm,C:\Proyectos\Cistem\CistemAdministracion\Codigo Fuente\ufrmParametrosCupon.dfm=</Transaction>
@@ -151,6 +151,6 @@
     <Transaction>2017/01/05 09:28:33.000.163,=C:\Users\RedPacifico\Documents\GitHub\BitacorasEstacionServicios\CistemAdministracion\Codigo Fuente\Unit1.pas</Transaction>
     <Transaction>2017/01/05 09:29:05.000.727,C:\Users\RedPacifico\Documents\GitHub\BitacorasEstacionServicios\CistemAdministracion\Codigo Fuente\ufrmBitacoraServiciosEst.pas=C:\Users\RedPacifico\Documents\GitHub\BitacorasEstacionServicios\CistemAdministracion\Codigo Fuente\Unit1.pas</Transaction>
     <Transaction>2017/01/05 09:29:05.000.727,C:\Users\RedPacifico\Documents\GitHub\BitacorasEstacionServicios\CistemAdministracion\Codigo Fuente\ufrmBitacoraServiciosEst.dfm=C:\Users\RedPacifico\Documents\GitHub\BitacorasEstacionServicios\CistemAdministracion\Codigo Fuente\Unit1.dfm</Transaction>
-    <Transaction>2017/01/09 15:49:11.827,C:\Users\RedPacifico\Documents\GitHub\BitacorasEstacionServicios\CistemAdministracion\Codigo Fuente\ClienteServicios.dproj=C:\Users\RedPacifico\Documents\GitHub\BitacorasEstacionServicios\CistemAdministracion\Codigo Fuente\CistemEmpresas.dproj</Transaction>
+    <Transaction>2017/01/09 15:49:11.000.827,C:\Users\RedPacifico\Documents\GitHub\BitacorasEstacionServicios\CistemAdministracion\Codigo Fuente\ClienteServicios.dproj=C:\Users\RedPacifico\Documents\GitHub\BitacorasEstacionServicios\CistemAdministracion\Codigo Fuente\CistemEmpresas.dproj</Transaction>
   </Transactions>
 </BorlandProject>

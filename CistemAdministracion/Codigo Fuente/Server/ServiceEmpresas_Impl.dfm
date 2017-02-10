@@ -1,7 +1,6 @@
 object ServiceEmpresas: TServiceEmpresas
   OldCreateOrder = True
   OnCreate = DataAbstractServiceCreate
-  SessionManager = ServerDataModule3.SessionManager
   ServiceSchema = Schema
   ServiceDataStreamer = DataStreamer
   ExportedDataTables = <>
@@ -10,7 +9,6 @@ object ServiceEmpresas: TServiceEmpresas
   Width = 332
   object Schema: TDASchema
     ConnectionManager = ServerDataModule3.ConnectionManager3
-    DataDictionary = ServerDataModule3.DataDictionary
     Datasets = <
       item
         Params = <>
@@ -1600,8 +1598,8 @@ object ServiceEmpresas: TServiceEmpresas
             SQL = 
               'SELECT '#9#10#9'"BITACORAID", "USUARIOID", "FECHA", '#10#9'"NOTA", "ACTIVID' +
               'AD", "FRECUENCIA", '#10#9'"OBSERVACIONES", "ESTACIONID", "FIRMA", '#10#9'"' +
-              'FECHAHORA", "FOLIO" '#10'FROM '#10#9'"dbo"."BITACORAESTACION" '#10'WHERE '#10#9'BI' +
-              'TACORAID = -1'
+              'FECHAHORA", "FOLIO", "FOTO1" '#10'FROM '#10#9'"dbo"."BITACORAESTACION" '#10'W' +
+              'HERE '#10#9'BITACORAID = -1'
             StatementType = stSQL
             ColumnMappings = <
               item
@@ -1647,6 +1645,10 @@ object ServiceEmpresas: TServiceEmpresas
               item
                 DatasetField = 'FOLIO'
                 TableField = 'FOLIO'
+              end
+              item
+                DatasetField = 'FOTO1'
+                TableField = 'FOTO1'
               end>
           end>
         Name = 'dbo.BITACORAESTACION'
@@ -1701,6 +1703,10 @@ object ServiceEmpresas: TServiceEmpresas
           item
             Name = 'FOLIO'
             DataType = datInteger
+          end
+          item
+            Name = 'FOTO1'
+            DataType = datBlob
           end>
       end
       item
@@ -1734,6 +1740,87 @@ object ServiceEmpresas: TServiceEmpresas
         BusinessRulesClient.CompileOnServer = False
         BusinessRulesClient.RunOnClientAndServer = False
         Fields = <>
+      end
+      item
+        Params = <
+          item
+            Name = 'USUARIOID'
+            DataType = datInteger
+            Value = ''
+            ParamType = daptInput
+          end>
+        Statements = <
+          item
+            Connection = 'GAUSS'
+            ConnectionType = 'MSSQL'
+            Default = True
+            TargetTable = 'dbo.USUARIO'
+            SQL = 
+              'SELECT '#9#10#9'"IDEMPLEADO", "CODIGO", "NOMBRE", '#10#9'"USERNAME", "USERP' +
+              'ASSWORD", "FIRMADEFAULT" '#10'FROM '#10#9'"dbo"."USUARIO" '#10'WHERE '#10#9'IDEMPL' +
+              'EADO = :USUARIOID'
+            StatementType = stSQL
+            ColumnMappings = <
+              item
+                DatasetField = 'IDEMPLEADO'
+                TableField = 'IDEMPLEADO'
+              end
+              item
+                DatasetField = 'CODIGO'
+                TableField = 'CODIGO'
+              end
+              item
+                DatasetField = 'NOMBRE'
+                TableField = 'NOMBRE'
+              end
+              item
+                DatasetField = 'USERNAME'
+                TableField = 'USERNAME'
+              end
+              item
+                DatasetField = 'USERPASSWORD'
+                TableField = 'USERPASSWORD'
+              end
+              item
+                DatasetField = 'FIRMADEFAULT'
+                TableField = 'FIRMADEFAULT'
+              end>
+          end>
+        Name = 'dbo.USUARIO'
+        BusinessRulesClient.CompileOnServer = False
+        BusinessRulesClient.RunOnClientAndServer = False
+        Fields = <
+          item
+            Name = 'IDEMPLEADO'
+            DataType = datInteger
+            Required = True
+          end
+          item
+            Name = 'CODIGO'
+            DataType = datString
+            Size = 10
+          end
+          item
+            Name = 'NOMBRE'
+            DataType = datString
+            Size = 70
+          end
+          item
+            Name = 'USERNAME'
+            DataType = datString
+            Size = 10
+            Required = True
+          end
+          item
+            Name = 'USERPASSWORD'
+            DataType = datString
+            Size = 10
+            Required = True
+          end
+          item
+            Name = 'FIRMADEFAULT'
+            DataType = datBlob
+          end>
       end>
     JoinDataTables = <>
     UnionDataTables = <>
