@@ -22,6 +22,7 @@ object frmBuscar: TfrmBuscar
     Top = 0
     Width = 619
     Height = 24
+    Hint = ''
     BarManager = frmPrincipal.dxBarManager1
     ColorSchemeName = 'Blue'
     ShowTabHeaders = False
@@ -35,30 +36,39 @@ object frmBuscar: TfrmBuscar
     Top = 24
     Width = 619
     Height = 393
-    ActivePage = tsBuscar
+    Hint = ''
     Align = alClient
-    Images = dmImages.Imagenes
     TabOrder = 1
-    TabPosition = tpBottom
-    ClientRectBottom = 363
-    ClientRectLeft = 3
-    ClientRectRight = 613
-    ClientRectTop = 3
+    Properties.ActivePage = tsBuscar
+    Properties.CustomButtons.Buttons = <>
+    Properties.Images = dmImages.Imagenes
+    Properties.TabPosition = tpBottom
+    ClientRectBottom = 368
+    ClientRectLeft = 4
+    ClientRectRight = 615
+    ClientRectTop = 4
     object tsBuscar: TcxTabSheet
       Caption = 'Buscar'
       ImageIndex = 0
+      ExplicitLeft = 3
+      ExplicitTop = 3
+      ExplicitWidth = 610
+      ExplicitHeight = 360
       object dbgBuscar: TcxGrid
         Left = 0
         Top = 66
-        Width = 610
-        Height = 294
+        Width = 611
+        Height = 298
+        Hint = ''
         Align = alClient
         TabOrder = 0
         LookAndFeel.Kind = lfUltraFlat
         LookAndFeel.NativeStyle = False
+        ExplicitWidth = 610
+        ExplicitHeight = 294
         object dbgBuscarDBTableView2: TcxGridDBTableView
           OnDblClick = dbgBuscarDBTableView2DblClick
-          NavigatorButtons.ConfirmDelete = False
+          Navigator.Buttons.CustomButtons = <>
           DataController.DataSource = dsBuscar
           DataController.Summary.DefaultGroupSummaryItems = <>
           DataController.Summary.FooterSummaryItems = <>
@@ -81,14 +91,17 @@ object frmBuscar: TfrmBuscar
       object cxGroupBox1: TcxGroupBox
         Left = 0
         Top = 0
+        Hint = ''
         Align = alTop
         Style.BorderStyle = ebsUltraFlat
         TabOrder = 1
+        ExplicitWidth = 610
         Height = 66
-        Width = 610
+        Width = 611
         object edtBusqueda: TcxTextEdit
           Left = 72
           Top = 32
+          Hint = ''
           Properties.CharCase = ecUpperCase
           Properties.MaxLength = 100
           Style.BorderStyle = ebsUltraFlat
@@ -100,6 +113,7 @@ object frmBuscar: TfrmBuscar
         object cxLabel1: TcxLabel
           Left = 16
           Top = 32
+          Hint = ''
           Caption = 'Busqueda'
           Style.BorderStyle = ebsNone
           Transparent = True
@@ -116,11 +130,11 @@ object frmBuscar: TfrmBuscar
     end
   end
   object cdsBuscar: TDACDSDataTable
-    RemoteUpdatesOptions = []
     Fields = <>
     Params = <>
-    StreamingOptions = [soDisableEventsWhileStreaming]
     RemoteDataAdapter = DM.RemoteDataAdapter
+    RemoteUpdatesOptions = []
+    StreamingOptions = [soDisableEventsWhileStreaming]
     IndexDefs = <>
     Left = 512
     Top = 264

@@ -3,16 +3,13 @@ inherited frmCatalogoDespachador: TfrmCatalogoDespachador
   PixelsPerInch = 96
   TextHeight = 13
   inherited pgcCatalogo: TcxPageControl
+    Properties.ActivePage = cxTabSheet2
     inherited cxTabSheet1: TcxTabSheet
       ExplicitLeft = 3
       ExplicitTop = 3
       ExplicitWidth = 616
       ExplicitHeight = 416
       inherited dbgCatalogo: TcxGrid
-        Width = 616
-        Height = 416
-        ExplicitWidth = 616
-        ExplicitHeight = 416
         inherited dbgCatalogoDBTableView1: TcxGridDBTableView
           object dbgCatalogoDBTableView1DespachadorID: TcxGridDBColumn
             DataBinding.FieldName = 'DespachadorID'
@@ -46,11 +43,14 @@ inherited frmCatalogoDespachador: TfrmCatalogoDespachador
       end
     end
     inherited cxTabSheet2: TcxTabSheet
+      ExplicitLeft = 3
+      ExplicitTop = 3
       ExplicitWidth = 616
       ExplicitHeight = 416
       object GrpBoxDatos: TcxGroupBox
         Left = 16
         Top = 8
+        Hint = ''
         Caption = ' Datos '
         Style.BorderStyle = ebsUltraFlat
         TabOrder = 0
@@ -59,6 +59,7 @@ inherited frmCatalogoDespachador: TfrmCatalogoDespachador
         object LblID: TcxLabel
           Left = 21
           Top = 30
+          Hint = ''
           Caption = 'Id Despachador'
           Style.BorderStyle = ebsNone
           Transparent = True
@@ -66,6 +67,7 @@ inherited frmCatalogoDespachador: TfrmCatalogoDespachador
         object LblNombre: TcxLabel
           Left = 141
           Top = 30
+          Hint = ''
           Caption = 'Nombre'
           Style.BorderStyle = ebsNone
           Transparent = True
@@ -73,6 +75,7 @@ inherited frmCatalogoDespachador: TfrmCatalogoDespachador
         object LblCalle: TcxLabel
           Left = 21
           Top = 77
+          Hint = ''
           Caption = 'Calle'
           Style.BorderStyle = ebsNone
           Transparent = True
@@ -80,6 +83,7 @@ inherited frmCatalogoDespachador: TfrmCatalogoDespachador
         object LblCiudad: TcxLabel
           Left = 284
           Top = 77
+          Hint = ''
           Caption = 'Ciudad'
           Style.BorderStyle = ebsNone
           Transparent = True
@@ -87,6 +91,7 @@ inherited frmCatalogoDespachador: TfrmCatalogoDespachador
         object LblTelefono: TcxLabel
           Left = 21
           Top = 133
+          Hint = ''
           Caption = 'Telefono'
           Style.BorderStyle = ebsNone
           Transparent = True
@@ -94,6 +99,7 @@ inherited frmCatalogoDespachador: TfrmCatalogoDespachador
         object txtId: TcxDBTextEdit
           Left = 21
           Top = 47
+          Hint = ''
           DataBinding.DataField = 'DespachadorID'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -106,6 +112,7 @@ inherited frmCatalogoDespachador: TfrmCatalogoDespachador
         object txtNombre: TcxDBTextEdit
           Left = 144
           Top = 47
+          Hint = ''
           DataBinding.DataField = 'Nombre'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -116,6 +123,7 @@ inherited frmCatalogoDespachador: TfrmCatalogoDespachador
         object txtCalle: TcxDBTextEdit
           Left = 21
           Top = 94
+          Hint = ''
           DataBinding.DataField = 'Domicilio'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -126,6 +134,7 @@ inherited frmCatalogoDespachador: TfrmCatalogoDespachador
         object txtCiudad: TcxDBTextEdit
           Left = 284
           Top = 94
+          Hint = ''
           DataBinding.DataField = 'Ciudad'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -136,6 +145,7 @@ inherited frmCatalogoDespachador: TfrmCatalogoDespachador
         object txtTelefono: TcxDBTextEdit
           Left = 21
           Top = 150
+          Hint = ''
           DataBinding.DataField = 'Telefono'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -146,6 +156,7 @@ inherited frmCatalogoDespachador: TfrmCatalogoDespachador
         object txtCuentaContable: TcxDBTextEdit
           Left = 284
           Top = 150
+          Hint = ''
           DataBinding.DataField = 'CuentaContable'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -156,6 +167,7 @@ inherited frmCatalogoDespachador: TfrmCatalogoDespachador
         object LblCuentaContable: TcxLabel
           Left = 284
           Top = 132
+          Hint = ''
           Caption = 'Cuenta Contable'
           Style.BorderStyle = ebsNone
           Transparent = True
@@ -163,6 +175,7 @@ inherited frmCatalogoDespachador: TfrmCatalogoDespachador
         object cxDBRadioGroup1: TcxDBRadioGroup
           Left = 288
           Top = 184
+          Hint = ''
           Caption = 'Estatus'
           DataBinding.DataField = 'Status'
           DataBinding.DataSource = dsCatalogo
@@ -184,6 +197,7 @@ inherited frmCatalogoDespachador: TfrmCatalogoDespachador
         object cxLabel1: TcxLabel
           Left = 21
           Top = 189
+          Hint = ''
           Caption = 'Numero de Nomina'
           Style.BorderStyle = ebsNone
           Transparent = True
@@ -191,6 +205,7 @@ inherited frmCatalogoDespachador: TfrmCatalogoDespachador
         object cxDBTextEdit1: TcxDBTextEdit
           Left = 21
           Top = 206
+          Hint = ''
           DataBinding.DataField = 'Nomina'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -202,6 +217,7 @@ inherited frmCatalogoDespachador: TfrmCatalogoDespachador
       object cxGroupBox1: TcxGroupBox
         Left = 16
         Top = 296
+        Hint = ''
         Caption = 'Cambiar Estacion'
         TabOrder = 1
         Height = 89
@@ -209,6 +225,7 @@ inherited frmCatalogoDespachador: TfrmCatalogoDespachador
         object LblEstacion: TcxLabel
           Left = 13
           Top = 29
+          Hint = ''
           Caption = 'Estaci'#243'n'
           Style.BorderStyle = ebsNone
           Transparent = True
@@ -216,6 +233,7 @@ inherited frmCatalogoDespachador: TfrmCatalogoDespachador
         object lookEstacion: TcxDBLookupComboBox
           Left = 13
           Top = 49
+          Hint = ''
           DataBinding.DataField = 'EstacionID'
           DataBinding.DataSource = dsCatalogo
           Properties.KeyFieldNames = 'EstacionID'
@@ -289,9 +307,9 @@ inherited frmCatalogoDespachador: TfrmCatalogoDespachador
         DataType = datInteger
         Required = True
       end>
+    LogicalName = 'dbo Despachador'
     RemoteDataAdapter = DM.RemoteDataAdapter
     OnNewRecord = cdsCatalogoNewRecord
-    LogicalName = 'dbo Despachador'
     Left = 456
     Top = 384
   end
@@ -304,7 +322,6 @@ inherited frmCatalogoDespachador: TfrmCatalogoDespachador
     Top = 384
   end
   object cdsEstacion: TDACDSDataTable
-    RemoteUpdatesOptions = []
     Fields = <
       item
         Name = 'EstacionID'
@@ -370,10 +387,11 @@ inherited frmCatalogoDespachador: TfrmCatalogoDespachador
         DataType = datFloat
         Required = True
       end>
-    Params = <>
-    StreamingOptions = [soDisableEventsWhileStreaming]
-    RemoteDataAdapter = DM.RemoteDataAdapter
     LogicalName = 'dbo Estacion'
+    Params = <>
+    RemoteDataAdapter = DM.RemoteDataAdapter
+    RemoteUpdatesOptions = []
+    StreamingOptions = [soDisableEventsWhileStreaming]
     IndexDefs = <>
     Left = 528
     Top = 192

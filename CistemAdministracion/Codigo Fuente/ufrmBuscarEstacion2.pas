@@ -17,7 +17,10 @@ uses
   dxSkinsdxRibbonPainter, cxLookAndFeelPainters, uDAInterfaces, cxLabel,
   cxTextEdit, cxContainer, cxGroupBox, cxPC, dxRibbon, cxLookAndFeels,
   dxSkinDarkRoom, dxSkinDarkSide, dxSkinFoggy, dxSkinPumpkin, dxSkinSeven,
-  dxSkinSharp, dxSkinSpringTime, dxSkinSummer2008;
+  dxSkinSharp, dxSkinSpringTime, dxSkinSummer2008, dxRibbonSkins,
+  dxSkinMetropolis, dxSkinMetropolisDark, dxSkinOffice2013DarkGray,
+  dxSkinOffice2013LightGray, dxSkinOffice2013White, cxPCdxBarPopupMenu,
+  cxNavigator, uDAFields, uROComponent;
 
 type
   TfrmBuscaEstaciones = class(TfrmBuscar)

@@ -17,7 +17,9 @@ uses
   dxSkinOffice2007Pink, dxSkinOffice2007Silver, dxSkinSilver, dxSkinStardust,
   dxSkinsDefaultPainters, dxSkinValentine, dxSkinXmas2008Blue,
   dxSkinscxPCPainter, cxLookAndFeelPainters, uDAInterfaces, uDAMemDataTable,
-  dxSkinSummer2008;
+  dxSkinSummer2008, dxSkinMetropolis, dxSkinMetropolisDark,
+  dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray, dxSkinOffice2013White,
+  cxPCdxBarPopupMenu, cxLookAndFeels, cxNavigator, uDAFields, uROComponent;
 
 type
   TfrmCatalogoDespachador = class(TfrmCatalogo)

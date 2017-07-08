@@ -17,7 +17,9 @@ uses
   uDADataTable, uDAScriptingProvider, uDAMemDataTable, cxGridLevel, cxClasses,
   cxControls, cxGridCustomView, cxGridCustomTableView, cxGridTableView,
   cxGridDBTableView, cxGrid, cxPC, cxLookAndFeels, dxSkinDarkRoom, dxSkinFoggy,
-  dxSkinSeven, dxSkinSharp;
+  dxSkinSeven, dxSkinSharp, dxSkinMetropolis, dxSkinMetropolisDark,
+  dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray, dxSkinOffice2013White,
+  cxPCdxBarPopupMenu, cxNavigator, uDAFields, uROComponent;
 
 type
   TfrmCatalogoArticulos = class(TfrmCatalogo)

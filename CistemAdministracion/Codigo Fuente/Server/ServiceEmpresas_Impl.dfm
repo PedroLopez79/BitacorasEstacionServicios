@@ -1821,6 +1821,488 @@ object ServiceEmpresas: TServiceEmpresas
             Name = 'FIRMADEFAULT'
             DataType = datBlob
           end>
+      end
+      item
+        Params = <>
+        Statements = <
+          item
+            Connection = 'BitacoraEstacionServ'
+            ConnectionType = 'MSSQL'
+            Default = True
+            TargetTable = 'dbo.EMPLEADO'
+            StatementType = stAutoSQL
+            ColumnMappings = <
+              item
+                DatasetField = 'IDEMPLEADO'
+                TableField = 'IDEMPLEADO'
+              end
+              item
+                DatasetField = 'NOMBRE'
+                TableField = 'NOMBRE'
+              end
+              item
+                DatasetField = 'CODIGOEMPLEADO'
+                TableField = 'CODIGOEMPLEADO'
+              end
+              item
+                DatasetField = 'DOMICILIO'
+                TableField = 'DOMICILIO'
+              end
+              item
+                DatasetField = 'CIUDAD'
+                TableField = 'CIUDAD'
+              end
+              item
+                DatasetField = 'TELEFONO'
+                TableField = 'TELEFONO'
+              end
+              item
+                DatasetField = 'CUENTACONTABLE'
+                TableField = 'CUENTACONTABLE'
+              end
+              item
+                DatasetField = 'FECHAALTA'
+                TableField = 'FECHAALTA'
+              end
+              item
+                DatasetField = 'FECHABAJA'
+                TableField = 'FECHABAJA'
+              end
+              item
+                DatasetField = 'IMSS'
+                TableField = 'IMSS'
+              end
+              item
+                DatasetField = 'STATUS'
+                TableField = 'STATUS'
+              end
+              item
+                DatasetField = 'FOTOEMPLEADO'
+                TableField = 'FOTOEMPLEADO'
+              end>
+          end>
+        Name = 'dbo.EMPLEADO'
+        BusinessRulesClient.CompileOnServer = False
+        BusinessRulesClient.RunOnClientAndServer = False
+        Fields = <
+          item
+            Name = 'IDEMPLEADO'
+            DataType = datInteger
+            Required = True
+          end
+          item
+            Name = 'NOMBRE'
+            DataType = datString
+            Size = 50
+          end
+          item
+            Name = 'CODIGOEMPLEADO'
+            DataType = datString
+            Size = 10
+          end
+          item
+            Name = 'DOMICILIO'
+            DataType = datString
+            Size = 100
+          end
+          item
+            Name = 'CIUDAD'
+            DataType = datString
+            Size = 100
+          end
+          item
+            Name = 'TELEFONO'
+            DataType = datString
+            Size = 20
+          end
+          item
+            Name = 'CUENTACONTABLE'
+            DataType = datString
+            Size = 20
+          end
+          item
+            Name = 'FECHAALTA'
+            DataType = datDateTime
+          end
+          item
+            Name = 'FECHABAJA'
+            DataType = datDateTime
+          end
+          item
+            Name = 'IMSS'
+            DataType = datString
+            Size = 150
+          end
+          item
+            Name = 'STATUS'
+            DataType = datBoolean
+          end
+          item
+            Name = 'FOTOEMPLEADO'
+            DataType = datBlob
+          end>
+      end
+      item
+        Params = <>
+        Statements = <
+          item
+            Connection = 'BitacoraEstacionServ'
+            ConnectionType = 'MSSQL'
+            Default = True
+            TargetTable = 'dbo.HORARIOEMPLEADO'
+            StatementType = stAutoSQL
+            ColumnMappings = <
+              item
+                DatasetField = 'IDHORARIO'
+                TableField = 'IDHORARIO'
+              end
+              item
+                DatasetField = 'IDEMPLEADO'
+                TableField = 'IDEMPLEADO'
+              end
+              item
+                DatasetField = 'FECHAALTA'
+                TableField = 'FECHAALTA'
+              end
+              item
+                DatasetField = 'HORAINICIO'
+                TableField = 'HORAINICIO'
+              end
+              item
+                DatasetField = 'HORAFINAL'
+                TableField = 'HORAFINAL'
+              end
+              item
+                DatasetField = 'REFERENCIA'
+                TableField = 'REFERENCIA'
+              end
+              item
+                DatasetField = 'NOMBREEMPLEADO'
+                TableField = 'NOMBREEMPLEADO'
+              end
+              item
+                DatasetField = 'IDESTACION'
+                TableField = 'IDESTACION'
+              end>
+          end>
+        Name = 'dbo.HORARIOEMPLEADO'
+        BusinessRulesClient.CompileOnServer = False
+        BusinessRulesClient.RunOnClientAndServer = False
+        Fields = <
+          item
+            Name = 'IDHORARIO'
+            DataType = datInteger
+            Required = True
+            InPrimaryKey = True
+          end
+          item
+            Name = 'IDEMPLEADO'
+            DataType = datInteger
+          end
+          item
+            Name = 'FECHAALTA'
+            DataType = datDateTime
+          end
+          item
+            Name = 'HORAINICIO'
+            DataType = datDateTime
+          end
+          item
+            Name = 'HORAFINAL'
+            DataType = datDateTime
+          end
+          item
+            Name = 'REFERENCIA'
+            DataType = datString
+            Size = 100
+          end
+          item
+            Name = 'NOMBREEMPLEADO'
+            DataType = datString
+            Size = 150
+          end
+          item
+            Name = 'IDESTACION'
+            DataType = datInteger
+          end>
+      end
+      item
+        Params = <>
+        Statements = <
+          item
+            Connection = 'BitacoraEstacionServ'
+            ConnectionType = 'MSSQL'
+            Default = True
+            TargetTable = 'dbo.PROGRAMAMANTENIMIENTO'
+            StatementType = stAutoSQL
+            ColumnMappings = <
+              item
+                DatasetField = 'IDPROGRAMAMANTENIMIENTO'
+                TableField = 'IDPROGRAMAMANTENIMIENTO'
+              end
+              item
+                DatasetField = 'CODIGO'
+                TableField = 'CODIGO'
+              end
+              item
+                DatasetField = 'CONCEPTO'
+                TableField = 'CONCEPTO'
+              end
+              item
+                DatasetField = 'IDTIPOMOVIMIENTO'
+                TableField = 'IDTIPOMOVIMIENTO'
+              end
+              item
+                DatasetField = 'FECHAMANTENIMIENTO'
+                TableField = 'FECHAMANTENIMIENTO'
+              end
+              item
+                DatasetField = 'PERIODICIDAD'
+                TableField = 'PERIODICIDAD'
+              end
+              item
+                DatasetField = 'IDESTACION'
+                TableField = 'IDESTACION'
+              end>
+          end>
+        Name = 'dbo.PROGRAMAMANTENIMIENTO'
+        BusinessRulesClient.CompileOnServer = False
+        BusinessRulesClient.RunOnClientAndServer = False
+        Fields = <
+          item
+            Name = 'IDPROGRAMAMANTENIMIENTO'
+            DataType = datInteger
+            Required = True
+            InPrimaryKey = True
+          end
+          item
+            Name = 'CODIGO'
+            DataType = datString
+            Size = 50
+          end
+          item
+            Name = 'CONCEPTO'
+            DataType = datString
+            Size = 100
+          end
+          item
+            Name = 'IDTIPOMOVIMIENTO'
+            DataType = datInteger
+          end
+          item
+            Name = 'FECHAMANTENIMIENTO'
+            DataType = datDateTime
+          end
+          item
+            Name = 'PERIODICIDAD'
+            DataType = datString
+            Size = 50
+          end
+          item
+            Name = 'IDESTACION'
+            DataType = datInteger
+          end>
+      end
+      item
+        Params = <>
+        Statements = <
+          item
+            Connection = 'BitacoraEstacionServ'
+            ConnectionType = 'MSSQL'
+            Default = True
+            TargetTable = 'dbo.TIPOMANTENIMIENTO'
+            StatementType = stAutoSQL
+            ColumnMappings = <
+              item
+                DatasetField = 'IDTIPOMANTENIMIENTO'
+                TableField = 'IDTIPOMANTENIMIENTO'
+              end
+              item
+                DatasetField = 'CONCEPTO'
+                TableField = 'CONCEPTO'
+              end>
+          end>
+        Name = 'dbo.TIPOMANTENIMIENTO'
+        BusinessRulesClient.CompileOnServer = False
+        BusinessRulesClient.RunOnClientAndServer = False
+        Fields = <
+          item
+            Name = 'IDTIPOMANTENIMIENTO'
+            DataType = datInteger
+            Required = True
+            InPrimaryKey = True
+          end
+          item
+            Name = 'CONCEPTO'
+            DataType = datString
+            Size = 100
+          end>
+      end
+      item
+        Params = <
+          item
+            Name = 'TIPO'
+            DataType = datMemo
+            Value = '1'
+            ParamType = daptInput
+          end
+          item
+            Name = 'IDESTACION'
+            DataType = datMemo
+            Value = '2601'
+            ParamType = daptInput
+          end>
+        Statements = <
+          item
+            Connection = 'BitacoraEstacionServ'
+            ConnectionType = 'MSSQL'
+            Default = True
+            SQL = 
+              'DECLARE @XML VARCHAR(MAX)'#10'DECLARE @IDESTACION INT'#10'DECLARE @TIPO ' +
+              'INT'#10'DECLARE @COUNT INT'#10#10'SET @TIPO = :TIPO'#10'SET @IDESTACION = :IDE' +
+              'STACION'#10#10#10'IF @TIPO = 1'#10'BEGIN'#10'SET @COUNT = (SELECT COUNT(PROGRAMA' +
+              'MANTENIMIENTO.IDPROGRAMAMANTENIMIENTO) FROM PROGRAMAMANTENIMIENT' +
+              'O'#10'INNER JOIN MANTENIMIENTOACTIVIDAD ON MANTENIMIENTOACTIVIDAD.ID' +
+              'PROGRAMAMANTENIMIENTO = PROGRAMAMANTENIMIENTO.IDPROGRAMAMANTENIM' +
+              'IENTO'#10'INNER JOIN TIPOMANTENIMIENTO ON TIPOMANTENIMIENTO.IDTIPOMA' +
+              'NTENIMIENTO = PROGRAMAMANTENIMIENTO.IDTIPOMOVIMIENTO'#10'WHERE PROGR' +
+              'AMAMANTENIMIENTO.IDESTACION = @IDESTACION)'#10'SET @XML ='#10'(SELECT TO' +
+              'P 50 PROGRAMAMANTENIMIENTO.IDPROGRAMAMANTENIMIENTO, PROGRAMAMANT' +
+              'ENIMIENTO.CODIGO, PROGRAMAMANTENIMIENTO.CONCEPTO, TIPOMANTENIMIE' +
+              'NTO.CONCEPTO TIPOMANTO,'#10'       MANTENIMIENTOACTIVIDAD.FECHAAREAL' +
+              'IZARMANTENIMIENTO, MANTENIMIENTOACTIVIDAD.STATUS FROM PROGRAMAMA' +
+              'NTENIMIENTO'#10'INNER JOIN MANTENIMIENTOACTIVIDAD ON MANTENIMIENTOAC' +
+              'TIVIDAD.IDPROGRAMAMANTENIMIENTO = PROGRAMAMANTENIMIENTO.IDPROGRA' +
+              'MAMANTENIMIENTO'#10'INNER JOIN TIPOMANTENIMIENTO ON TIPOMANTENIMIENT' +
+              'O.IDTIPOMANTENIMIENTO = PROGRAMAMANTENIMIENTO.IDTIPOMOVIMIENTO'#10'W' +
+              'HERE PROGRAMAMANTENIMIENTO.IDESTACION = @IDESTACION'#10'FOR XML RAW ' +
+              '('#39'SERVICES'#39'), ELEMENTS)'#10'END'#10#10'IF @TIPO = 2'#10'BEGIN'#10'SET @COUNT = (SE' +
+              'LECT COUNT(PROGRAMAMANTENIMIENTO.IDPROGRAMAMANTENIMIENTO) FROM P' +
+              'ROGRAMAMANTENIMIENTO'#10'INNER JOIN MANTENIMIENTOACTIVIDAD ON MANTEN' +
+              'IMIENTOACTIVIDAD.IDPROGRAMAMANTENIMIENTO = PROGRAMAMANTENIMIENTO' +
+              '.IDPROGRAMAMANTENIMIENTO'#10'INNER JOIN TIPOMANTENIMIENTO ON TIPOMAN' +
+              'TENIMIENTO.IDTIPOMANTENIMIENTO = PROGRAMAMANTENIMIENTO.IDTIPOMOV' +
+              'IMIENTO'#10'WHERE PROGRAMAMANTENIMIENTO.IDESTACION = @IDESTACION)'#10'SE' +
+              'T @XML ='#10'(SELECT TOP 5 PROGRAMAMANTENIMIENTO.IDPROGRAMAMANTENIMI' +
+              'ENTO, PROGRAMAMANTENIMIENTO.CODIGO, PROGRAMAMANTENIMIENTO.CONCEP' +
+              'TO, TIPOMANTENIMIENTO.CONCEPTO TIPOMANTO,'#10'       MANTENIMIENTOAC' +
+              'TIVIDAD.FECHAAREALIZARMANTENIMIENTO, MANTENIMIENTOACTIVIDAD.STAT' +
+              'US FROM PROGRAMAMANTENIMIENTO'#10'INNER JOIN MANTENIMIENTOACTIVIDAD ' +
+              'ON MANTENIMIENTOACTIVIDAD.IDPROGRAMAMANTENIMIENTO = PROGRAMAMANT' +
+              'ENIMIENTO.IDPROGRAMAMANTENIMIENTO'#10'INNER JOIN TIPOMANTENIMIENTO O' +
+              'N TIPOMANTENIMIENTO.IDTIPOMANTENIMIENTO = PROGRAMAMANTENIMIENTO.' +
+              'IDTIPOMOVIMIENTO'#10'WHERE PROGRAMAMANTENIMIENTO.IDESTACION = @IDEST' +
+              'ACION ORDER BY MANTENIMIENTOACTIVIDAD.FECHAAREALIZARMANTENIMIENT' +
+              'O DESC'#10'FOR XML RAW ('#39'SERVICES'#39'), ELEMENTS)'#10'END'#10#10'IF @TIPO = 3'#10'BEG' +
+              'IN'#10'SET @COUNT = (SELECT COUNT(PROGRAMAMANTENIMIENTO.IDPROGRAMAMA' +
+              'NTENIMIENTO) FROM PROGRAMAMANTENIMIENTO'#10'INNER JOIN MANTENIMIENTO' +
+              'ACTIVIDAD ON MANTENIMIENTOACTIVIDAD.IDPROGRAMAMANTENIMIENTO = PR' +
+              'OGRAMAMANTENIMIENTO.IDPROGRAMAMANTENIMIENTO'#10'INNER JOIN TIPOMANTE' +
+              'NIMIENTO ON TIPOMANTENIMIENTO.IDTIPOMANTENIMIENTO = PROGRAMAMANT' +
+              'ENIMIENTO.IDTIPOMOVIMIENTO'#10'WHERE PROGRAMAMANTENIMIENTO.IDESTACIO' +
+              'N = @IDESTACION AND MONTH(MANTENIMIENTOACTIVIDAD.FECHAAREALIZARM' +
+              'ANTENIMIENTO) = MONTH(GETDATE())'#10'                               ' +
+              '                      AND DAY(MANTENIMIENTOACTIVIDAD.FECHAAREALI' +
+              'ZARMANTENIMIENTO) = DAY(GETDATE())'#10#9#9#9#9#9#9#9#9#9#9#9#9#9' AND YEAR(MANTEN' +
+              'IMIENTOACTIVIDAD.FECHAAREALIZARMANTENIMIENTO) = YEAR(GETDATE()))' +
+              #10'SET @XML ='#10'(SELECT PROGRAMAMANTENIMIENTO.IDPROGRAMAMANTENIMIENT' +
+              'O, PROGRAMAMANTENIMIENTO.CODIGO, PROGRAMAMANTENIMIENTO.CONCEPTO,' +
+              ' TIPOMANTENIMIENTO.CONCEPTO TIPOMANTO,'#10'       MANTENIMIENTOACTIV' +
+              'IDAD.FECHAAREALIZARMANTENIMIENTO, MANTENIMIENTOACTIVIDAD.STATUS ' +
+              'FROM PROGRAMAMANTENIMIENTO'#10'INNER JOIN MANTENIMIENTOACTIVIDAD ON ' +
+              'MANTENIMIENTOACTIVIDAD.IDPROGRAMAMANTENIMIENTO = PROGRAMAMANTENI' +
+              'MIENTO.IDPROGRAMAMANTENIMIENTO'#10'INNER JOIN TIPOMANTENIMIENTO ON T' +
+              'IPOMANTENIMIENTO.IDTIPOMANTENIMIENTO = PROGRAMAMANTENIMIENTO.IDT' +
+              'IPOMOVIMIENTO'#10'WHERE PROGRAMAMANTENIMIENTO.IDESTACION = @IDESTACI' +
+              'ON AND MONTH(MANTENIMIENTOACTIVIDAD.FECHAAREALIZARMANTENIMIENTO)' +
+              ' = MONTH(GETDATE())'#10'                                            ' +
+              '         AND DAY(MANTENIMIENTOACTIVIDAD.FECHAAREALIZARMANTENIMIE' +
+              'NTO) = DAY(GETDATE())'#10#9#9#9#9#9#9#9#9#9#9#9#9#9' AND YEAR(MANTENIMIENTOACTIVI' +
+              'DAD.FECHAAREALIZARMANTENIMIENTO) = YEAR(GETDATE())'#10'FOR XML RAW (' +
+              #39'SERVICES'#39'), ELEMENTS)'#10'END'#10#10'SELECT CAST(@COUNT AS VARCHAR(100)) ' +
+              '+ @XML AS XML'
+            StatementType = stSQL
+            ColumnMappings = <
+              item
+                DatasetField = 'XML'
+                TableField = 'XML'
+              end>
+          end>
+        Name = 'spObtenActividadesProgramadas'
+        BusinessRulesClient.CompileOnServer = False
+        BusinessRulesClient.RunOnClientAndServer = False
+        Fields = <
+          item
+            Name = 'XML'
+            DataType = datMemo
+          end>
+      end
+      item
+        Params = <
+          item
+            Name = 'EstacionID'
+            DataType = datInteger
+            Value = '2601'
+            ParamType = daptInput
+          end>
+        Statements = <
+          item
+            Connection = 'BitacoraEstacionServ'
+            ConnectionType = 'MSSQL'
+            Default = True
+            SQL = 
+              'DECLARE @IDEMPLEADO INT'#10'DECLARE @FOTOEMPLEADO VARBINARY(MAX)'#10'DEC' +
+              'LARE @FOTOBASE64 VARCHAR(MAX)'#10'DECLARE @COUNT INT'#10#10'SET @COUNT = (' +
+              'SELECT COUNT(HORARIOEMPLEADO.IDEMPLEADO)'#10'              FROM HORA' +
+              'RIOEMPLEADO INNER JOIN EMPLEADO ON EMPLEADO.IDEMPLEADO = HORARIO' +
+              'EMPLEADO.IDEMPLEADO'#10'              WHERE HORARIOEMPLEADO.IDESTACI' +
+              'ON = :EstacionID)'#10'              '#10'CREATE TABLE #HORARIOEMPLEADO'#10'(' +
+              'IDEMPLEADO INT,'#10' HORAINICIO VARCHAR(100),     '#10' HORAFINAL VARCHA' +
+              'R(100),'#10' REFERENCIA VARCHAR(100),'#10' IDESTACION INT,'#10' NOMBREEMPLEA' +
+              'DO VARCHAR(100),'#10' FOTOEMPLEADO varbinary(MAX),'#10' FOTOBASE64 VARCH' +
+              'AR(MAX))    '#10#10'INSERT INTO #HORARIOEMPLEADO'#10'SELECT HORARIOEMPLEAD' +
+              'O.IDEMPLEADO, '#10'       LTRIM(RIGHT(convert(VARCHAR(20), HORARIOEM' +
+              'PLEADO.HORAINICIO, 100),7)) HORAINICIO,'#10#9'   LTRIM(RIGHT(convert(' +
+              'VARCHAR(20), HORARIOEMPLEADO.HORAFINAL, 100),7))  HORAFINAL,'#10'HOR' +
+              'ARIOEMPLEADO.REFERENCIA, HORARIOEMPLEADO.IDESTACION, HORARIOEMPL' +
+              'EADO.NOMBREEMPLEADO,'#10'EMPLEADO.FOTOEMPLEADO, '#39#39#10'FROM HORARIOEMPLE' +
+              'ADO INNER JOIN EMPLEADO ON EMPLEADO.IDEMPLEADO = HORARIOEMPLEADO' +
+              '.IDEMPLEADO'#10'WHERE HORARIOEMPLEADO.IDESTACION = :EstacionID'#10#10'DECL' +
+              'ARE CMIEMPLEADO CURSOR FOR'#10'SELECT     IDEMPLEADO'#10'FROM         #H' +
+              'ORARIOEMPLEADO'#10'OPEN CMIEMPLEADO'#10'FETCH NEXT FROM CMIEMPLEADO INTO' +
+              ' @IDEMPLEADO'#10'    WHILE (@@FETCH_STATUS = 0)'#10#9'BEGIN'#10#9#9'SET @FOTOEM' +
+              'PLEADO = (SELECT #HORARIOEMPLEADO.FOTOEMPLEADO FROM #HORARIOEMPL' +
+              'EADO WHERE #HORARIOEMPLEADO.IDEMPLEADO = @IDEMPLEADO)'#10#10#9#9'SET @FO' +
+              'TOBASE64 = (SELECT '#10'                          CAST('#39#39' AS XML).va' +
+              'lue('#39'xs:base64Binary(sql:variable("@FOTOEMPLEADO"))'#39','#39'VARCHAR(MA' +
+              'X)'#39') AS FOTOB64'#10'                          FROM #HORARIOEMPLEADO'#10 +
+              '                          WHERE #HORARIOEMPLEADO.IDEMPLEADO = @I' +
+              'DEMPLEADO)'#10#10'        UPDATE #HORARIOEMPLEADO'#10#9#9'SET FOTOBASE64 = @' +
+              'FOTOBASE64 WHERE #HORARIOEMPLEADO.IDEMPLEADO = @IDEMPLEADO'#10#10#9#9'SE' +
+              'T @FOTOEMPLEADO = NULL'#10#9#9'FETCH NEXT FROM CMIEMPLEADO INTO @IDEMP' +
+              'LEADO      '#10'    END'#10'    CLOSE CMIEMPLEADO'#10'    DEALLOCATE CMIEMPL' +
+              'EADO '#10#10'DECLARE @XML VARCHAR(MAX)'#10#10'SET @XML = (SELECT #HORARIOEMP' +
+              'LEADO.IDEMPLEADO, #HORARIOEMPLEADO.HORAINICIO, #HORARIOEMPLEADO.' +
+              'HORAFINAL, #HORARIOEMPLEADO.IDESTACION,'#10'       #HORARIOEMPLEADO.' +
+              'NOMBREEMPLEADO, #HORARIOEMPLEADO.REFERENCIA, #HORARIOEMPLEADO.FO' +
+              'TOBASE64 FROM #HORARIOEMPLEADO'#10'FOR XML RAW ('#39'SERVICES'#39'), ELEMENT' +
+              'S)'#10#10'SELECT CAST(@COUNT AS VARCHAR(100)) + @XML AS XML'#10#10'DROP TABL' +
+              'E #HORARIOEMPLEADO'
+            StatementType = stSQL
+            ColumnMappings = <
+              item
+                DatasetField = 'XML'
+                TableField = 'XML'
+              end>
+          end>
+        Name = 'spObtenFotosEmpleado'
+        BusinessRulesClient.CompileOnServer = False
+        BusinessRulesClient.RunOnClientAndServer = False
+        Fields = <
+          item
+            Name = 'XML'
+            DataType = datInteger
+          end>
       end>
     JoinDataTables = <>
     UnionDataTables = <>
@@ -2056,6 +2538,50 @@ object ServiceEmpresas: TServiceEmpresas
             ColumnMappings = <>
           end>
         Name = 'Update_dbo Reporte'
+      end
+      item
+        Params = <
+          item
+            Name = 'IDPROGRAMAMANTENIMIENTO'
+            Value = ''
+            ParamType = daptInput
+          end
+          item
+            Name = 'IDESTACION'
+            Value = ''
+            ParamType = daptInput
+          end>
+        Statements = <
+          item
+            Connection = 'BitacoraEstacionServ'
+            ConnectionType = 'MSSQL'
+            Default = True
+            SQL = 
+              'DECLARE @IDMANTENIMIENTOACTIVIDAD INT'#10'DECLARE @IDPROGRAMAMANTENI' +
+              'MIENTO INT'#10'DECLARE @IDESTACION INT'#10'DECLARE @FECHA DATETIME'#10'DECLA' +
+              'RE @PERIODICIDAD VARCHAR(30)'#10#10'SET @IDPROGRAMAMANTENIMIENTO = :ID' +
+              'PROGRAMAMANTENIMIENTO'#10'SET @IDESTACION = :IDESTACION'#10#10'SET @PERIOD' +
+              'ICIDAD = (SELECT PERIODICIDAD FROM PROGRAMAMANTENIMIENTO WHERE I' +
+              'DPROGRAMAMANTENIMIENTO = @IDPROGRAMAMANTENIMIENTO AND IDESTACION' +
+              ' = @IDESTACION)'#10'SET @FECHA = (SELECT FECHAMANTENIMIENTO FROM PRO' +
+              'GRAMAMANTENIMIENTO WHERE IDPROGRAMAMANTENIMIENTO = @IDPROGRAMAMA' +
+              'NTENIMIENTO AND IDESTACION = @IDESTACION)'#10'SET @IDMANTENIMIENTOAC' +
+              'TIVIDAD = (SELECT ISNULL(MAX(IDMANTENIMIENTOACTIVIDAD),0)+1 FROM' +
+              ' MANTENIMIENTOACTIVIDAD)'#10#10'SELECT @IDMANTENIMIENTOACTIVIDAD'#10#10'IF (' +
+              '@PERIODICIDAD = '#39'DIARIO'#39')'#10#9'SET @FECHA = DATEADD(day, 1, @FECHA)'#10 +
+              #10'IF (@PERIODICIDAD = '#39'SEMANAL'#39')'#10#9'SET @FECHA = DATEADD(day, 7, @F' +
+              'ECHA)'#10#10'IF (@PERIODICIDAD = '#39'MENSUAL'#39')'#10#9'SET @FECHA = DATEADD(mont' +
+              'h, 1, @FECHA)'#10#10'IF (@PERIODICIDAD = '#39'TRIMESTRAL'#39')'#10#9'SET @FECHA = D' +
+              'ATEADD(month, 3, @FECHA)'#10#10'IF (@PERIODICIDAD = '#39'CUATRIMESTRAL'#39')'#10#9 +
+              'SET @FECHA = DATEADD(month, 4, @FECHA)'#10#10'IF (@PERIODICIDAD = '#39'SEM' +
+              'ESTRAL'#39')'#10#9'SET @FECHA = DATEADD(month, 6, @FECHA)'#10#10'IF (@PERIODICI' +
+              'DAD = '#39'ANUAL'#39')'#10#9'SET @FECHA = DATEADD(month, 12, @FECHA)'#10#10'INSERT ' +
+              'INTO MANTENIMIENTOACTIVIDAD'#10'SELECT @IDMANTENIMIENTOACTIVIDAD, @I' +
+              'DPROGRAMAMANTENIMIENTO, @FECHA, '#39'PENDIENTE'#39
+            StatementType = stSQL
+            ColumnMappings = <>
+          end>
+        Name = 'cmdProgramaMantenimiento'
       end>
     RelationShips = <
       item

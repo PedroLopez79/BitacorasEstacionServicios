@@ -58,7 +58,12 @@ uses
   uPSI_ExportaDataSet in 'CistemComun\CodigoFuente\uPSI_ExportaDataSet.pas',
   UtileriasComun in 'CistemComun\CodigoFuente\UtileriasComun.pas',
   Modules in 'CistemComun\CodigoFuente\Modules.pas',
-  ufrmBitacoraServiciosEst in 'ufrmBitacoraServiciosEst.pas' {frmBitacoraServicioEst};
+  ufrmBitacoraServiciosEst in 'ufrmBitacoraServiciosEst.pas' {frmBitacoraServicioEst},
+  ufrmHorariosPersonal in 'ufrmHorariosPersonal.pas' {frmHorariosPersonal},
+  ufrmProgramaMantenimiento in 'ufrmProgramaMantenimiento.pas' {frmProgramaMantenimiento},
+  ufrmTipoMantenimiento in 'ufrmTipoMantenimiento.pas' {frmTipoMantenimiento},
+  ufmEmpleados in 'ufmEmpleados.pas' {frmEmpleados},
+  ufrmCropImage in 'ufrmCropImage.pas' {frmcropimage};
 
 {$R *.res}
 
@@ -74,6 +79,7 @@ begin
   end;
 
   Application.CreateForm(TDM, DM);
+  //Application.CreateForm(Tfrmcropimage, frmcropimage);
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.CreateForm(TdmImages, dmImages);
   Application.CreateForm(TdmAppActions, dmAppActions);

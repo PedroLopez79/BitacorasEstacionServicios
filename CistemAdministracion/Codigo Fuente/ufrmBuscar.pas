@@ -17,7 +17,9 @@ uses
   dxSkinSilver, dxSkinStardust, dxSkinSummer2008, dxSkinValentine,
   dxSkinXmas2008Blue, cxLookAndFeelPainters, cxLookAndFeels, dxSkinDarkRoom,
   dxSkinDarkSide, dxSkinFoggy, dxSkinPumpkin, dxSkinSeven, dxSkinSharp,
-  dxSkinSpringTime;
+  dxSkinSpringTime, dxRibbonSkins, dxSkinMetropolis, dxSkinMetropolisDark,
+  dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray, dxSkinOffice2013White,
+  cxPCdxBarPopupMenu, cxNavigator, uDAFields, uROComponent;
 
 type
   TfrmBuscar = class(TdxCustomRibbonForm)

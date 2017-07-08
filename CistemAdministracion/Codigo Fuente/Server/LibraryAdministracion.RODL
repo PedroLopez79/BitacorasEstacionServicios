@@ -763,6 +763,32 @@
 </Parameter>
 </Parameters>
 </Operation>
+<Operation Name="obtendatosempleados" UID="{74C63BD7-3379-4C96-B667-C3C26775AE8C}">
+<Parameters>
+<Parameter Name="Result" DataType="AnsiString" Flag="Result">
+</Parameter>
+<Parameter Name="EstacionID" DataType="AnsiString" Flag="In" >
+</Parameter>
+</Parameters>
+</Operation>
+<Operation Name="ProgramaMantenimiento" UID="{45A8D3CC-4062-4622-9AE6-8EAF080E3F21}">
+<Parameters>
+<Parameter Name="IDPROGRAMAMANTENIMIENTO" DataType="Integer" Flag="In" >
+</Parameter>
+<Parameter Name="IDESTACION" DataType="Integer" Flag="In" >
+</Parameter>
+</Parameters>
+</Operation>
+<Operation Name="obtendatosActividadesProgramadas" UID="{1866ADF0-3020-4B55-ABDC-4CB4C54AD933}">
+<Parameters>
+<Parameter Name="Result" DataType="AnsiString" Flag="Result">
+</Parameter>
+<Parameter Name="IDESTACION" DataType="Integer" Flag="In" >
+</Parameter>
+<Parameter Name="TIPO" DataType="Integer" Flag="In" >
+</Parameter>
+</Parameters>
+</Operation>
 </Operations>
 </Interface>
 </Interfaces>

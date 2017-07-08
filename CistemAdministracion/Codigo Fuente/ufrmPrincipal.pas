@@ -140,6 +140,13 @@ type
     RibbonTab1: TdxRibbonTab;
     dxBarManager1Bar1: TdxBar;
     dxBarLargeButton28: TdxBarLargeButton;
+    dxBarLargeButton29: TdxBarLargeButton;
+    dxBarLargeButton30: TdxBarLargeButton;
+    dxBarManager1Bar2: TdxBar;
+    dxBarLargeButton31: TdxBarLargeButton;
+    dxBarLargeButton32: TdxBarLargeButton;
+    dxBarButton1: TdxBarButton;
+    dxBarLargeButton33: TdxBarLargeButton;
     procedure btnLogoutClick(Sender: TObject);
     procedure btnSalirClick(Sender: TObject);
     procedure tmrPrincipalTimer(Sender: TObject);
@@ -164,15 +171,19 @@ implementation
 uses dmImagenes, uDM, UtileriasComun, dmActions, Modules;
 
 const
-  TotalModulos = 8;
+  TotalModulos = 12;
   Modulos: Array[1..TotalModulos] of string = ('BitacoraServicios',
                                                'Generales',
                                                'Estaciones',
                                                '',
                                                '',
                                                '',
+                                               'ProgramaMantenimiento',
+                                               'TipoMantenimiento',
                                                'Reportes',
-                                               'Usuarios');
+                                               'Usuarios',
+                                               'HorariosPersonal',
+                                               'Empleados');
 
 {$R *.dfm}
 

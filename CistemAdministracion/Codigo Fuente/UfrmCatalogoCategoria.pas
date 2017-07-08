@@ -10,7 +10,10 @@ uses
   uDACDSDataTable, cxGridLevel, cxClasses, cxControls, cxGridCustomView,
   cxGridCustomTableView, cxGridTableView, cxGridDBTableView, cxGrid, cxPC,
   dxSkinsCore, dxSkinsDefaultPainters, dxSkinscxPCPainter, uDAInterfaces,
-  uDAMemDataTable;
+  uDAMemDataTable, dxSkinMetropolis, dxSkinMetropolisDark,
+  dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray, dxSkinOffice2013White,
+  cxPCdxBarPopupMenu, cxLookAndFeels, cxLookAndFeelPainters, cxNavigator,
+  uDAFields, uROComponent;
 
 type
   TfrmCatalogoCategoria = class(TfrmCatalogo)

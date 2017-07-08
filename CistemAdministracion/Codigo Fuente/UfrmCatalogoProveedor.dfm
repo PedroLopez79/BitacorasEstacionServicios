@@ -5,8 +5,6 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
   inherited pgcCatalogo: TcxPageControl
     inherited cxTabSheet1: TcxTabSheet
       inherited dbgCatalogo: TcxGrid
-        Width = 616
-        Height = 416
         inherited dbgCatalogoDBTableView1: TcxGridDBTableView
           object dbgCatalogoDBTableView1ProveedorId: TcxGridDBColumn
             DataBinding.FieldName = 'ProveedorId'
@@ -51,11 +49,14 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
       end
     end
     inherited cxTabSheet2: TcxTabSheet
-      ExplicitWidth = 625
-      ExplicitHeight = 425
+      ExplicitLeft = 3
+      ExplicitTop = 3
+      ExplicitWidth = 616
+      ExplicitHeight = 416
       object GrpBoxDatos: TcxGroupBox
         Left = 17
         Top = 5
+        Hint = ''
         Caption = ' Datos '
         Style.BorderStyle = ebsUltraFlat
         TabOrder = 0
@@ -64,6 +65,7 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
         object LblId: TcxLabel
           Left = 16
           Top = 18
+          Hint = ''
           Caption = 'ID Proveedor'
           Style.BorderStyle = ebsNone
           Style.LookAndFeel.NativeStyle = True
@@ -75,6 +77,7 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
         object LblCiudd: TcxLabel
           Left = 248
           Top = 154
+          Hint = ''
           Caption = 'Ciudad'
           Style.BorderStyle = ebsNone
           Style.LookAndFeel.NativeStyle = True
@@ -86,6 +89,7 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
         object LblNombre: TcxLabel
           Left = 16
           Top = 61
+          Hint = ''
           Caption = 'Nombre'
           Style.BorderStyle = ebsNone
           Style.LookAndFeel.NativeStyle = True
@@ -97,6 +101,7 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
         object LblCalle: TcxLabel
           Left = 16
           Top = 108
+          Hint = ''
           Caption = 'Calle'
           Style.BorderStyle = ebsNone
           Style.LookAndFeel.NativeStyle = True
@@ -108,6 +113,7 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
         object LblColonia: TcxLabel
           Left = 16
           Top = 154
+          Hint = ''
           Caption = 'Colonia'
           Style.BorderStyle = ebsNone
           Style.LookAndFeel.NativeStyle = True
@@ -119,6 +125,7 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
         object LblTelefono: TcxLabel
           Left = 248
           Top = 202
+          Hint = ''
           Caption = 'Telefono'
           Style.BorderStyle = ebsNone
           Style.LookAndFeel.NativeStyle = True
@@ -130,6 +137,7 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
         object LblRfc: TcxLabel
           Left = 16
           Top = 202
+          Hint = ''
           Caption = 'R.F.C.'
           Style.BorderStyle = ebsNone
           Style.LookAndFeel.NativeStyle = True
@@ -141,6 +149,7 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
         object LblFax: TcxLabel
           Left = 16
           Top = 250
+          Hint = ''
           Caption = 'Fax'
           Style.BorderStyle = ebsNone
           Style.LookAndFeel.NativeStyle = True
@@ -152,6 +161,7 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
         object LblEmail: TcxLabel
           Left = 248
           Top = 250
+          Hint = ''
           Caption = 'E-mail'
           Style.BorderStyle = ebsNone
           Style.LookAndFeel.NativeStyle = True
@@ -163,6 +173,7 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
         object TxtId: TcxDBTextEdit
           Left = 16
           Top = 34
+          Hint = ''
           DataBinding.DataField = 'ProveedorId'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -174,6 +185,7 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
         object TxtNombre: TcxDBTextEdit
           Left = 16
           Top = 78
+          Hint = ''
           DataBinding.DataField = 'Nombre'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -184,6 +196,7 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
         object TxtCalle: TcxDBTextEdit
           Left = 16
           Top = 124
+          Hint = ''
           DataBinding.DataField = 'Calle'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -194,6 +207,7 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
         object TxtColonia: TcxDBTextEdit
           Left = 16
           Top = 170
+          Hint = ''
           DataBinding.DataField = 'Colonia'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -204,6 +218,7 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
         object TxtCiudad: TcxDBTextEdit
           Left = 248
           Top = 170
+          Hint = ''
           DataBinding.DataField = 'Ciudad'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -214,6 +229,7 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
         object TxtRfc: TcxDBTextEdit
           Left = 16
           Top = 218
+          Hint = ''
           DataBinding.DataField = 'RFC'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -224,6 +240,7 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
         object TxtTelefono: TcxDBTextEdit
           Left = 248
           Top = 218
+          Hint = ''
           DataBinding.DataField = 'Telefono'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -235,6 +252,7 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
           AlignWithMargins = True
           Left = 16
           Top = 266
+          Hint = ''
           DataBinding.DataField = 'Fax'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -245,6 +263,7 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
         object TxtEmail: TcxDBTextEdit
           Left = 248
           Top = 266
+          Hint = ''
           DataBinding.DataField = 'Email'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -255,6 +274,7 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
         object LblCuentaContable: TcxLabel
           Left = 16
           Top = 295
+          Hint = ''
           Caption = 'Cuenta Contable'
           Style.BorderStyle = ebsNone
           Style.LookAndFeel.NativeStyle = True
@@ -267,6 +287,7 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
         object TxtCuentaContable: TcxDBTextEdit
           Left = 16
           Top = 311
+          Hint = ''
           DataBinding.DataField = 'CuentaContable'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -277,6 +298,7 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
         object txtDiasPlazo: TcxDBTextEdit
           Left = 248
           Top = 311
+          Hint = ''
           DataBinding.DataField = 'DiasPlazo'
           DataBinding.DataSource = dsCatalogo
           Properties.Alignment.Horz = taRightJustify
@@ -287,6 +309,7 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
         object cxLabel1: TcxLabel
           Left = 248
           Top = 295
+          Hint = ''
           Caption = 'Dias de Plazo'
           Style.BorderStyle = ebsNone
           Style.LookAndFeel.NativeStyle = True
@@ -370,9 +393,9 @@ inherited frmCatalogoProveedor: TfrmCatalogoProveedor
         DataType = datString
         Size = 20
       end>
+    LogicalName = 'dbo Proveedor'
     RemoteDataAdapter = DM.RemoteDataAdapter
     OnNewRecord = cdsCatalogoNewRecord
-    LogicalName = 'dbo Proveedor'
   end
   inherited dsCatalogo: TDADataSource
     DataSet = cdsCatalogo.Dataset

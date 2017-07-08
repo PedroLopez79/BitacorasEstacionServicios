@@ -1,11 +1,13 @@
 inherited frmCatalogoCategoria: TfrmCatalogoCategoria
   Caption = 'frmCatalogoCategoria'
-  ExplicitWidth = 320
-  ExplicitHeight = 240
   PixelsPerInch = 96
   TextHeight = 13
   inherited pgcCatalogo: TcxPageControl
     inherited cxTabSheet1: TcxTabSheet
+      ExplicitLeft = 3
+      ExplicitTop = 3
+      ExplicitWidth = 616
+      ExplicitHeight = 416
       inherited dbgCatalogo: TcxGrid
         inherited dbgCatalogoDBTableView1: TcxGridDBTableView
           object dbgCatalogoDBTableView1CategoriaID: TcxGridDBColumn
@@ -18,11 +20,14 @@ inherited frmCatalogoCategoria: TfrmCatalogoCategoria
       end
     end
     inherited cxTabSheet2: TcxTabSheet
-      ExplicitWidth = 625
-      ExplicitHeight = 424
+      ExplicitLeft = 3
+      ExplicitTop = 3
+      ExplicitWidth = 616
+      ExplicitHeight = 416
       object GrpBoxDatos: TcxGroupBox
         Left = 18
         Top = 14
+        Hint = ''
         Caption = ' Datos '
         Style.BorderStyle = ebsUltraFlat
         Style.LookAndFeel.Kind = lfUltraFlat
@@ -39,6 +44,7 @@ inherited frmCatalogoCategoria: TfrmCatalogoCategoria
         object TxtId: TcxDBTextEdit
           Left = 34
           Top = 50
+          Hint = ''
           DataBinding.DataField = 'CategoriaID'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -54,6 +60,7 @@ inherited frmCatalogoCategoria: TfrmCatalogoCategoria
         object TxtCategoria: TcxDBTextEdit
           Left = 34
           Top = 101
+          Hint = ''
           DataBinding.DataField = 'Nombre'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -69,6 +76,7 @@ inherited frmCatalogoCategoria: TfrmCatalogoCategoria
         object LblId: TcxLabel
           Left = 34
           Top = 32
+          Hint = ''
           Caption = 'ID'
           Style.BorderStyle = ebsNone
           Style.LookAndFeel.NativeStyle = True
@@ -79,6 +87,7 @@ inherited frmCatalogoCategoria: TfrmCatalogoCategoria
         object LblCategoria: TcxLabel
           Left = 34
           Top = 83
+          Hint = ''
           Caption = 'Categoria'
           Style.BorderStyle = ebsNone
           Style.LookAndFeel.NativeStyle = True
@@ -102,10 +111,10 @@ inherited frmCatalogoCategoria: TfrmCatalogoCategoria
         DataType = datString
         Size = 30
       end>
+    LogicalName = 'dbo Categoria'
     RemoteDataAdapter = DM.RemoteDataAdapter
     BeforePost = cdsCatalogoBeforePost
     OnNewRecord = cdsCatalogoNewRecord
-    LogicalName = 'dbo Categoria'
   end
   inherited dsCatalogo: TDADataSource
     DataSet = cdsCatalogo.Dataset

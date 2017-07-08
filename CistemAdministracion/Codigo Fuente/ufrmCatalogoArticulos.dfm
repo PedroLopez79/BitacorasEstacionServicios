@@ -1,20 +1,15 @@
 inherited frmCatalogoArticulos: TfrmCatalogoArticulos
   Caption = 'frmCatalogoArticulos'
-  ExplicitWidth = 320
-  ExplicitHeight = 240
   PixelsPerInch = 96
   TextHeight = 13
   inherited pgcCatalogo: TcxPageControl
+    Properties.ActivePage = cxTabSheet2
     inherited cxTabSheet1: TcxTabSheet
       ExplicitLeft = 3
       ExplicitTop = 3
       ExplicitWidth = 616
       ExplicitHeight = 416
       inherited dbgCatalogo: TcxGrid
-        Width = 616
-        Height = 416
-        ExplicitWidth = 616
-        ExplicitHeight = 416
         inherited dbgCatalogoDBTableView1: TcxGridDBTableView
           object dbgCatalogoDBTableView1ArticuloID: TcxGridDBColumn
             DataBinding.FieldName = 'ArticuloID'
@@ -43,6 +38,7 @@ inherited frmCatalogoArticulos: TfrmCatalogoArticulos
       object cxGroupBox1: TcxGroupBox
         Left = 24
         Top = 24
+        Hint = ''
         Caption = 'Datos'
         TabOrder = 0
         Height = 209
@@ -50,6 +46,7 @@ inherited frmCatalogoArticulos: TfrmCatalogoArticulos
         object LblNombre: TcxLabel
           Left = 21
           Top = 21
+          Hint = ''
           Caption = 'Nombre'
           Style.BorderStyle = ebsNone
           Transparent = True
@@ -57,6 +54,7 @@ inherited frmCatalogoArticulos: TfrmCatalogoArticulos
         object cxDBTextEdit1: TcxDBTextEdit
           Left = 21
           Top = 42
+          Hint = ''
           DataBinding.DataField = 'Nombre'
           DataBinding.DataSource = dsCatalogo
           TabOrder = 1
@@ -65,6 +63,7 @@ inherited frmCatalogoArticulos: TfrmCatalogoArticulos
         object cxDBTextEdit2: TcxDBTextEdit
           Left = 21
           Top = 98
+          Hint = ''
           DataBinding.DataField = 'Costo'
           DataBinding.DataSource = dsCatalogo
           TabOrder = 2
@@ -73,6 +72,7 @@ inherited frmCatalogoArticulos: TfrmCatalogoArticulos
         object cxLabel1: TcxLabel
           Left = 21
           Top = 79
+          Hint = ''
           Caption = 'Costo'
           Style.BorderStyle = ebsNone
           Transparent = True
@@ -80,6 +80,7 @@ inherited frmCatalogoArticulos: TfrmCatalogoArticulos
         object cxDBTextEdit3: TcxDBTextEdit
           Left = 20
           Top = 154
+          Hint = ''
           DataBinding.DataField = 'Puntos'
           DataBinding.DataSource = dsCatalogo
           TabOrder = 4
@@ -88,6 +89,7 @@ inherited frmCatalogoArticulos: TfrmCatalogoArticulos
         object cxLabel2: TcxLabel
           Left = 20
           Top = 133
+          Hint = ''
           Caption = 'Puntos'
           Style.BorderStyle = ebsNone
           Transparent = True
@@ -114,9 +116,9 @@ inherited frmCatalogoArticulos: TfrmCatalogoArticulos
         Name = 'Puntos'
         DataType = datInteger
       end>
+    LogicalName = 'dbo Articulos'
     RemoteDataAdapter = DM.RemoteDataAdapter
     OnNewRecord = cdsCatalogoNewRecord
-    LogicalName = 'dbo Articulos'
   end
   inherited dsCatalogo: TDADataSource
     DataSet = cdsCatalogo.Dataset

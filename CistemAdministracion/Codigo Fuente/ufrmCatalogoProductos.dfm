@@ -9,10 +9,6 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
       ExplicitWidth = 616
       ExplicitHeight = 416
       inherited dbgCatalogo: TcxGrid
-        Width = 616
-        Height = 416
-        ExplicitWidth = 616
-        ExplicitHeight = 416
         inherited dbgCatalogoDBTableView1: TcxGridDBTableView
           object dbgCatalogoDBTableView1ProductoID: TcxGridDBColumn
             DataBinding.FieldName = 'ProductoID'
@@ -36,11 +32,14 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
       end
     end
     inherited cxTabSheet2: TcxTabSheet
-      ExplicitWidth = 625
-      ExplicitHeight = 424
+      ExplicitLeft = 3
+      ExplicitTop = 3
+      ExplicitWidth = 616
+      ExplicitHeight = 416
       object GrpBoxDatos: TcxGroupBox
         Left = 3
         Top = 0
+        Hint = ''
         Style.LookAndFeel.NativeStyle = False
         StyleDisabled.LookAndFeel.NativeStyle = False
         StyleFocused.LookAndFeel.NativeStyle = False
@@ -51,6 +50,7 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         object LblNoProducto: TcxLabel
           Left = 16
           Top = 24
+          Hint = ''
           Caption = 'Producto'
           Style.BorderStyle = ebsNone
           Transparent = True
@@ -58,6 +58,7 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         object TxtNoProducto: TcxDBTextEdit
           Left = 16
           Top = 40
+          Hint = ''
           TabStop = False
           DataBinding.DataField = 'ProductoID'
           DataBinding.DataSource = dsCatalogo
@@ -75,11 +76,13 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         object cxLabel2: TcxLabel
           Left = -64
           Top = 560
+          Hint = ''
           Caption = 'cxLabel1'
         end
         object LblNombre: TcxLabel
           Left = 120
           Top = 24
+          Hint = ''
           Caption = 'Nombre'
           Style.BorderStyle = ebsNone
           Transparent = True
@@ -87,6 +90,7 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         object LblCategoria: TcxLabel
           Left = 312
           Top = 64
+          Hint = ''
           Caption = 'Categoria'
           Style.BorderStyle = ebsNone
           Transparent = True
@@ -94,6 +98,7 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         object LblPrecio: TcxLabel
           Left = 16
           Top = 144
+          Hint = ''
           Caption = 'Precio Venta'
           Style.BorderStyle = ebsNone
           Transparent = True
@@ -101,6 +106,7 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         object LblClavePemex: TcxLabel
           Left = 16
           Top = 104
+          Hint = ''
           Caption = 'Clave Pemex'
           Style.BorderStyle = ebsNone
           Transparent = True
@@ -108,6 +114,7 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         object TxtNombre: TcxDBTextEdit
           Left = 120
           Top = 40
+          Hint = ''
           DataBinding.DataField = 'Nombre'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -122,6 +129,7 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         object TxtPrecio: TcxDBTextEdit
           Left = 16
           Top = 160
+          Hint = ''
           DataBinding.DataField = 'PrecioVenta'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -136,6 +144,7 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         object TxtClavePemex: TcxDBTextEdit
           Left = 16
           Top = 120
+          Hint = ''
           DataBinding.DataField = 'ClavePemex'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -150,6 +159,7 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         object cxDBCheckBox1: TcxDBCheckBox
           Left = 16
           Top = 240
+          Hint = ''
           Caption = 'Producto Activo'
           DataBinding.DataField = 'Status'
           DataBinding.DataSource = dsCatalogo
@@ -161,6 +171,7 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         object TxtCodigoBarras: TcxDBTextEdit
           Left = 120
           Top = 80
+          Hint = ''
           DataBinding.DataField = 'Barras'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -175,6 +186,7 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         object LblCodigoBarras: TcxLabel
           Left = 120
           Top = 64
+          Hint = ''
           Caption = 'Codigo de Barras'
           Style.BorderStyle = ebsNone
           Style.TransparentBorder = False
@@ -183,6 +195,7 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         object cxDBTextEdit1: TcxDBTextEdit
           Left = 192
           Top = 160
+          Hint = ''
           DataBinding.DataField = 'Costo'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -197,6 +210,7 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         object LblPrecioCompra: TcxLabel
           Left = 192
           Top = 144
+          Hint = ''
           Caption = 'Costo'
           Style.BorderStyle = ebsNone
           Transparent = True
@@ -204,6 +218,7 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         object LblCuentaContableCompra: TcxLabel
           Left = 16
           Top = 192
+          Hint = ''
           Caption = 'Cuenta Contable Compra'
           Style.BorderStyle = ebsNone
           Transparent = True
@@ -211,6 +226,7 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         object TxtCuentaContableCompra: TcxDBTextEdit
           Left = 16
           Top = 208
+          Hint = ''
           DataBinding.DataField = 'CuentaContableCompra'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -226,6 +242,7 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         object TxtCuentaContableVenta: TcxDBTextEdit
           Left = 192
           Top = 208
+          Hint = ''
           DataBinding.DataField = 'CuentaContableVenta'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -240,6 +257,7 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         object cxLabel1: TcxLabel
           Left = 192
           Top = 192
+          Hint = ''
           Caption = 'Cuenta Contable Venta'
           Style.BorderStyle = ebsNone
           Transparent = True
@@ -247,6 +265,7 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         object LookUpCmboxNombre: TcxDBLookupComboBox
           Left = 312
           Top = 80
+          Hint = ''
           DataBinding.DataField = 'CategoriaID'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -267,6 +286,7 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         object cxDBTextEdit2: TcxDBTextEdit
           Left = 16
           Top = 80
+          Hint = ''
           DataBinding.DataField = 'Codigo'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -281,6 +301,7 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         object cxLabel3: TcxLabel
           Left = 16
           Top = 64
+          Hint = ''
           Caption = 'C'#243'digo'
           Style.BorderStyle = ebsNone
           Style.TransparentBorder = False
@@ -289,6 +310,7 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         object cxDBCheckBox2: TcxDBCheckBox
           Left = 16
           Top = 272
+          Hint = ''
           Caption = 'Inventariable?'
           DataBinding.DataField = 'Inventariable'
           DataBinding.DataSource = dsCatalogo
@@ -300,6 +322,7 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         object cxDBTextEdit3: TcxDBTextEdit
           Left = 376
           Top = 160
+          Hint = ''
           DataBinding.DataField = 'IEPS'
           DataBinding.DataSource = dsCatalogo
           Properties.CharCase = ecUpperCase
@@ -314,6 +337,7 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         object cxLabel4: TcxLabel
           Left = 376
           Top = 144
+          Hint = ''
           Caption = 'IEPS'
           Style.BorderStyle = ebsNone
           Transparent = True
@@ -391,15 +415,14 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         Name = 'IEPS'
         DataType = datFloat
       end>
+    LogicalName = 'dbo Producto'
     RemoteDataAdapter = DM.RemoteDataAdapter
     OnNewRecord = cdsCatalogoNewRecord
-    LogicalName = 'dbo Producto'
   end
   inherited dsCatalogo: TDADataSource
     DataSet = cdsCatalogo.Dataset
   end
   object cdsEmpresa: TDACDSDataTable
-    RemoteUpdatesOptions = []
     Fields = <
       item
         Name = 'EmpresaID'
@@ -474,10 +497,11 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         Name = 'IvaRetenido'
         DataType = datBoolean
       end>
-    Params = <>
-    StreamingOptions = [soDisableEventsWhileStreaming]
-    RemoteDataAdapter = DM.RemoteDataAdapter
     LogicalName = 'dbo Empresas'
+    Params = <>
+    RemoteDataAdapter = DM.RemoteDataAdapter
+    RemoteUpdatesOptions = []
+    StreamingOptions = [soDisableEventsWhileStreaming]
     IndexDefs = <>
     Left = 264
     Top = 336
@@ -489,7 +513,6 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
     Top = 368
   end
   object cdsProductoPrecio: TDACDSDataTable
-    RemoteUpdatesOptions = []
     Fields = <
       item
         Name = 'ProductoID'
@@ -508,13 +531,14 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         DataType = datFloat
         Required = True
       end>
-    Params = <>
     LogChanges = False
-    StreamingOptions = [soDisableEventsWhileStreaming]
-    RemoteDataAdapter = DM.RemoteDataAdapter
-    AfterPost = cdsCatalogoAfterPost
-    AfterDelete = cdsCatalogoAfterPost
     LogicalName = 'dbo ProductoPrecio'
+    Params = <>
+    RemoteDataAdapter = DM.RemoteDataAdapter
+    RemoteUpdatesOptions = []
+    StreamingOptions = [soDisableEventsWhileStreaming]
+    AfterDelete = cdsCatalogoAfterPost
+    AfterPost = cdsCatalogoAfterPost
     IndexDefs = <>
     Left = 376
     Top = 336
@@ -526,7 +550,6 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
     Top = 56
   end
   object cdsCategoria: TDACDSDataTable
-    RemoteUpdatesOptions = []
     Fields = <
       item
         Name = 'CategoriaID'
@@ -539,10 +562,11 @@ inherited frmCatalogoProducto: TfrmCatalogoProducto
         DataType = datString
         Size = 30
       end>
-    Params = <>
-    StreamingOptions = [soDisableEventsWhileStreaming]
-    RemoteDataAdapter = DM.RemoteDataAdapter
     LogicalName = 'dbo Categoria'
+    Params = <>
+    RemoteDataAdapter = DM.RemoteDataAdapter
+    RemoteUpdatesOptions = []
+    StreamingOptions = [soDisableEventsWhileStreaming]
     IndexDefs = <>
     Left = 544
     Top = 56

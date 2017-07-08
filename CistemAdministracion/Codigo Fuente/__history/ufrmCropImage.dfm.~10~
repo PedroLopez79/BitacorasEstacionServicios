@@ -1,0 +1,48 @@
+inherited frmcropimage: Tfrmcropimage
+  Caption = 'frmcropimage'
+  ClientHeight = 500
+  ClientWidth = 652
+  Menu = MainMenu1
+  OnDestroy = FormDestroy
+  ExplicitWidth = 652
+  ExplicitHeight = 520
+  PixelsPerInch = 96
+  TextHeight = 13
+  object ScrollBox1: TScrollBox
+    Left = 0
+    Top = 0
+    Width = 652
+    Height = 500
+    Align = alClient
+    BorderStyle = bsNone
+    TabOrder = 0
+    object Image1: TImage
+      Left = 3
+      Top = 3
+      Width = 105
+      Height = 105
+      AutoSize = True
+      OnMouseDown = Image1MouseDown
+      OnMouseMove = Image1MouseMove
+      OnMouseUp = Image1MouseUp
+    end
+  end
+  object MainMenu1: TMainMenu
+    Left = 368
+    Top = 120
+    object Archivo1: TMenuItem
+      Caption = 'Archivo'
+      object CargarArchivo1: TMenuItem
+        Caption = 'Cargar Archivo'
+        OnClick = CargarArchivo1Click
+      end
+      object Guardar1: TMenuItem
+        Caption = 'Guardar'
+      end
+    end
+  end
+  object OpenPictureDialog1: TOpenPictureDialog
+    Left = 368
+    Top = 80
+  end
+end

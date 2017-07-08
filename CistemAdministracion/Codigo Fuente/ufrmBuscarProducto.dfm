@@ -1,16 +1,14 @@
 inherited FrmBuscarProducto: TFrmBuscarProducto
   Caption = 'Buscar Producto'
-  ExplicitWidth = 625
   ExplicitHeight = 445
   PixelsPerInch = 96
   TextHeight = 13
   inherited pgcBuscar: TcxPageControl
-    ClientRectBottom = 387
+    ClientRectBottom = 389
     inherited tsBuscar: TcxTabSheet
       TabVisible = False
-      ExplicitHeight = 384
       inherited dbgBuscar: TcxGrid
-        Height = 318
+        Height = 319
         ExplicitHeight = 318
         inherited dbgBuscarDBTableView2: TcxGridDBTableView
           object dbgBuscarDBTableView2ProductoID: TcxGridDBColumn
@@ -103,6 +101,7 @@ inherited FrmBuscarProducto: TFrmBuscarProducto
         Name = 'Puntos'
         DataType = datInteger
       end>
+    LogicalName = 'ObtenerProductoPorTipo'
     Params = <
       item
         Name = 'Tipo'
@@ -114,7 +113,6 @@ inherited FrmBuscarProducto: TFrmBuscarProducto
         Value = '4120'
         ParamType = daptInput
       end>
-    LogicalName = 'ObtenerProductoPorTipo'
   end
   inherited dsBuscar: TDADataSource
     DataSet = cdsBuscar.Dataset
