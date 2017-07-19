@@ -130,7 +130,6 @@ object frmPrincipal: TfrmPrincipal
       Index = 2
     end
     object dxRibbon1Tab1: TdxRibbonTab
-      Active = True
       Caption = 'Cat'#225'logos'
       Groups = <
         item
@@ -139,6 +138,7 @@ object frmPrincipal: TfrmPrincipal
       Index = 3
     end
     object RibbonTab3: TdxRibbonTab
+      Active = True
       Caption = 'Configuracion'
       Groups = <
         item
@@ -678,7 +678,7 @@ object frmPrincipal: TfrmPrincipal
       LargeImageIndex = 16
     end
     object btnUsuarios: TdxBarLargeButton
-      Tag = 9
+      Tag = 10
       Caption = 'Usuarios'
       Category = 0
       Enabled = False
@@ -687,7 +687,7 @@ object frmPrincipal: TfrmPrincipal
       LargeImageIndex = 14
     end
     object btnReprotes: TdxBarLargeButton
-      Tag = 10
+      Tag = 9
       Caption = 'Reportes'
       Category = 0
       Enabled = False

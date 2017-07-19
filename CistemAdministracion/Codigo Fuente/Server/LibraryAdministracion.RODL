@@ -789,6 +789,26 @@
 </Parameter>
 </Parameters>
 </Operation>
+<Operation Name="obtenNotificacionesDiarias" UID="{260CB6CB-5063-4FEB-AAC8-F12554EA6131}">
+<Parameters>
+<Parameter Name="Result" DataType="AnsiString" Flag="Result">
+</Parameter>
+<Parameter Name="IDESTACION" DataType="Integer" Flag="In" >
+</Parameter>
+</Parameters>
+</Operation>
+<Operation Name="registraactividadrealizada" UID="{90C0BF01-2E47-48B7-B562-C1F87F5BE088}">
+<Parameters>
+<Parameter Name="Result" DataType="AnsiString" Flag="Result">
+</Parameter>
+<Parameter Name="IDACTIVIDADMANTENIMIENTO" DataType="Integer" Flag="In" >
+</Parameter>
+<Parameter Name="NOTA" DataType="AnsiString" Flag="In" >
+</Parameter>
+<Parameter Name="STATUS" DataType="AnsiString" Flag="In" >
+</Parameter>
+</Parameters>
+</Operation>
 </Operations>
 </Interface>
 </Interfaces>
