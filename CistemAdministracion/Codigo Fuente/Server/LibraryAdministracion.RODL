@@ -777,6 +777,8 @@
 </Parameter>
 <Parameter Name="IDESTACION" DataType="Integer" Flag="In" >
 </Parameter>
+<Parameter Name="FECHA" DataType="DateTime" Flag="In" >
+</Parameter>
 </Parameters>
 </Operation>
 <Operation Name="obtendatosActividadesProgramadas" UID="{1866ADF0-3020-4B55-ABDC-4CB4C54AD933}">

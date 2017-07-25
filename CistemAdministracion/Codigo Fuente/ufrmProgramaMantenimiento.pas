@@ -68,7 +68,8 @@ procedure TfrmProgramaMantenimiento.cdsCatalogoAfterPost(
 begin
   inherited;
   DM.Servidor.ProgramaMantenimiento(cdsCatalogo.FieldByName('IDPROGRAMAMANTENIMIENTO').AsInteger,
-                                    cdsCatalogo.FieldByName('IDESTACION').AsInteger);
+                                    cdsCatalogo.FieldByName('IDESTACION').AsInteger,
+                                    cdsCatalogo.FieldByName('FECHAMANTENIMIENTO').AsDateTime);
 end;
 
 procedure TfrmProgramaMantenimiento.cdsCatalogoNewRecord(
