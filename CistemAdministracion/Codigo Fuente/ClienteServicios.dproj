@@ -91,7 +91,7 @@
                     <VersionInfo Name="MajorVer">1</VersionInfo>
                     <VersionInfo Name="MinorVer">0</VersionInfo>
                     <VersionInfo Name="Release">0</VersionInfo>
-                    <VersionInfo Name="Build">3</VersionInfo>
+                    <VersionInfo Name="Build">4</VersionInfo>
                     <VersionInfo Name="Debug">False</VersionInfo>
                     <VersionInfo Name="PreRelease">False</VersionInfo>
                     <VersionInfo Name="Special">False</VersionInfo>
@@ -103,7 +103,7 @@
                 <VersionInfoKeys>
                     <VersionInfoKeys Name="CompanyName">Cistem S.A. de C.V.</VersionInfoKeys>
                     <VersionInfoKeys Name="FileDescription">Cistem Empresas</VersionInfoKeys>
-                    <VersionInfoKeys Name="FileVersion">1.0.0.3</VersionInfoKeys>
+                    <VersionInfoKeys Name="FileVersion">1.0.0.4</VersionInfoKeys>
                     <VersionInfoKeys Name="InternalName"/>
                     <VersionInfoKeys Name="LegalCopyright"/>
                     <VersionInfoKeys Name="LegalTrademarks"/>
@@ -118,7 +118,7 @@
             </Delphi.Personality>
             <ModelSupport>False</ModelSupport>
             <Platforms>
-                <Platform value="Android">True</Platform>
+                <Platform value="Android" ActiveMobileDevice="rsxe5_android">True</Platform>
                 <Platform value="Win32">True</Platform>
                 <Platform value="Win64">False</Platform>
             </Platforms>

@@ -2,8 +2,7 @@ inherited ServerForm: TServerForm
   Left = 372
   Top = 277
   Caption = 'Servidor CistemAdministraci'#243'n 1.0'
-  ExplicitWidth = 424
-  ExplicitHeight = 222
+  OnCloseQuery = FormCloseQuery
   PixelsPerInch = 96
   TextHeight = 13
   inherited Image1: TImage

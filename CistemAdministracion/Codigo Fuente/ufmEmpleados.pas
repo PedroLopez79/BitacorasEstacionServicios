@@ -15,7 +15,7 @@ uses
   cxGridTableView, cxGridDBTableView, cxGrid, cxPC, cxContainer, cxMaskEdit,
   cxDropDownEdit, cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox, cxTextEdit,
   cxDBEdit, cxLabel, cxGroupBox, cxCalendar, cxCheckBox, cxImage, Vcl.StdCtrls,
-  ufrmCropImage, Vcl.ExtCtrls, Vcl.DBCtrls;
+  ufrmCropImage, Vcl.ExtCtrls, Vcl.DBCtrls, cxRadioGroup;
 
 type
   TfrmEmpleados = class(TfrmCatalogo)
@@ -55,6 +55,7 @@ type
     cxDBTextEdit2: TcxDBTextEdit;
     cxLabel3: TcxLabel;
     cxDBImage1: TcxDBImage;
+    cxDBRadioGroup1: TcxDBRadioGroup;
     procedure Button1Click(Sender: TObject);
     procedure cdsCatalogoNewRecord(DataTable: TDADataTable);
   private

@@ -9,9 +9,9 @@
 */
 
 #define uPSComponent_RPS_UnableToFindVariable 63728
-#define uPSCompiler_RPS_NotArrayProperty 63744
-#define uPSCompiler_RPS_NotProperty 63745
-#define uPSCompiler_RPS_UnknownProperty 63746
+#define uPSRuntime_RPS_NILInterfaceException 63744
+#define uPSRuntime_RPS_UnknownMethod 63745
+#define uPSDebugger_RPS_ExpectedReturnAddressStackBase 63746
 #define uPSPreProcessor_RPS_TooManyNestedInclude 63747
 #define uPSPreProcessor_RPS_IncludeNotFound 63748
 #define uPSPreProcessor_RPS_DefineTooManyParameters 63749
@@ -25,102 +25,102 @@
 #define uPSComponent_RPS_ScripEngineAlreadyRunning 63757
 #define uPSComponent_RPS_ScriptNotCompiled 63758
 #define uPSComponent_RPS_NotRunning 63759
-#define uPSCompiler_RPS_ClassTypeExpected 63760
-#define uPSCompiler_RPS_DivideByZero 63761
-#define uPSCompiler_RPS_MathError 63762
-#define uPSCompiler_RPS_UnsatisfiedForward 63763
-#define uPSCompiler_RPS_ForwardParameterMismatch 63764
-#define uPSCompiler_RPS_InvalidNumberOfParameter 63765
-#define uPSCompiler_RPS_UnknownError 63766
-#define uPSCompiler_RPS_Hint 63767
-#define uPSCompiler_RPS_VariableNotUsed 63768
-#define uPSCompiler_RPS_FunctionNotUsed 63769
-#define uPSCompiler_RPS_UnknownHint 63770
-#define uPSCompiler_RPS_Warning 63771
-#define uPSCompiler_RPS_CalculationAlwaysEvaluatesTo 63772
-#define uPSCompiler_RPS_IsNotNeeded 63773
-#define uPSCompiler_RPS_AbstractClass 63774
-#define uPSCompiler_RPS_UnknownWarning 63775
-#define uPSCompiler_RPS_NoResult 63776
-#define uPSCompiler_RPS_OpenRoundExpected 63777
-#define uPSCompiler_RPS_CommaExpected 63778
-#define uPSCompiler_RPS_ToExpected 63779
-#define uPSCompiler_RPS_IsExpected 63780
-#define uPSCompiler_RPS_OfExpected 63781
-#define uPSCompiler_RPS_CloseBlockExpected 63782
-#define uPSCompiler_RPS_VariableExpected 63783
-#define uPSCompiler_RPS_StringExpected 63784
-#define uPSCompiler_RPS_EndExpected 63785
-#define uPSCompiler_RPS_UnSetLabel 63786
-#define uPSCompiler_RPS_NotInLoop 63787
-#define uPSCompiler_RPS_InvalidJump 63788
-#define uPSCompiler_RPS_OpenBlockExpected 63789
-#define uPSCompiler_RPS_WriteOnlyProperty 63790
-#define uPSCompiler_RPS_ReadOnlyProperty 63791
-#define uPSCompiler_RPS_StringError 63792
-#define uPSCompiler_RPS_CharError 63793
-#define uPSCompiler_RPS_SyntaxError 63794
-#define uPSCompiler_RPS_EOF 63795
-#define uPSCompiler_RPS_SemiColonExpected 63796
-#define uPSCompiler_RPS_BeginExpected 63797
-#define uPSCompiler_RPS_PeriodExpected 63798
-#define uPSCompiler_RPS_DuplicateIdent 63799
-#define uPSCompiler_RPS_ColonExpected 63800
-#define uPSCompiler_RPS_UnknownType 63801
-#define uPSCompiler_RPS_CloseRoundExpected 63802
-#define uPSCompiler_RPS_TypeMismatch 63803
-#define uPSCompiler_RPS_InternalError 63804
-#define uPSCompiler_RPS_AssignmentExpected 63805
-#define uPSCompiler_RPS_ThenExpected 63806
-#define uPSCompiler_RPS_DoExpected 63807
-#define uPSRuntime_RPS_NILInterfaceException 63808
-#define uPSRuntime_RPS_UnknownMethod 63809
-#define uPSDebugger_RPS_ExpectedReturnAddressStackBase 63810
-#define uPSCompiler_RPS_OnUseEventOnly 63811
-#define uPSCompiler_RPS_UnableToRegisterFunction 63812
-#define uPSCompiler_RPS_UnableToRegisterConst 63813
-#define uPSCompiler_RPS_InvalidTypeForVar 63814
-#define uPSCompiler_RPS_InvalidType 63815
-#define uPSCompiler_RPS_UnableToRegisterType 63816
-#define uPSCompiler_RPS_UnknownInterface 63817
-#define uPSCompiler_RPS_ConstantValueMismatch 63818
-#define uPSCompiler_RPS_ConstantValueNotAssigned 63819
-#define uPSCompiler_RPS_Error 63820
-#define uPSCompiler_RPS_UnknownIdentifier 63821
-#define uPSCompiler_RPS_IdentifierExpected 63822
-#define uPSCompiler_RPS_CommentError 63823
-#define uPSRuntime_RPS_OutofRecordRange 63824
-#define uPSRuntime_RPS_NullPointerException 63825
-#define uPSRuntime_RPS_NullVariantError 63826
-#define uPSRuntime_RPS_OutOfMemory 63827
-#define uPSRuntime_RPS_InterfaceNotSupported 63828
-#define uPSRuntime_RPS_UnknownError 63829
-#define uPSRuntime_RPS_InvalidArray 63830
-#define uPSRuntime_RPS_UnknownProcedure 63831
-#define uPSRuntime_RPS_NotEnoughParameters 63832
-#define uPSRuntime_RPS_InvalidParameter 63833
-#define uPSRuntime_RPS_TooManyParameters 63834
-#define uPSRuntime_RPS_OutOfStringRange 63835
-#define uPSRuntime_RPS_CannotCastInterface 63836
-#define uPSRuntime_RPS_CannotCastObject 63837
-#define uPSRuntime_RPS_CapacityLength 63838
-#define uPSRuntime_RPS_CanOnlySendLastItem 63839
-#define uPSRuntime_RPS_InvalidType 63840
-#define uPSRuntime_RPS_InternalError 63841
-#define uPSRuntime_RPS_InvalidHeader 63842
-#define uPSRuntime_RPS_InvalidOpcode 63843
-#define uPSRuntime_RPS_InvalidOpcodeParameter 63844
-#define uPSRuntime_RPS_NoMainProc 63845
-#define uPSRuntime_RPS_OutOfGlobalVarsRange 63846
-#define uPSRuntime_RPS_OutOfProcRange 63847
-#define uPSRuntime_RPS_OutOfRange 63848
-#define uPSRuntime_RPS_OutOfStackRange 63849
-#define uPSRuntime_RPS_TypeMismatch 63850
-#define uPSRuntime_RPS_UnexpectedEof 63851
-#define uPSRuntime_RPS_VersionError 63852
-#define uPSRuntime_RPS_DivideByZero 63853
-#define uPSRuntime_RPS_MathError 63854
-#define uPSRuntime_RPS_CouldNotCallProc 63855
+#define uPSRuntime_RPS_OutofRecordRange 63760
+#define uPSRuntime_RPS_NullPointerException 63761
+#define uPSRuntime_RPS_NullVariantError 63762
+#define uPSRuntime_RPS_OutOfMemory 63763
+#define uPSRuntime_RPS_InterfaceNotSupported 63764
+#define uPSRuntime_RPS_UnknownError 63765
+#define uPSRuntime_RPS_InvalidArray 63766
+#define uPSRuntime_RPS_UnknownProcedure 63767
+#define uPSRuntime_RPS_NotEnoughParameters 63768
+#define uPSRuntime_RPS_InvalidParameter 63769
+#define uPSRuntime_RPS_TooManyParameters 63770
+#define uPSRuntime_RPS_OutOfStringRange 63771
+#define uPSRuntime_RPS_CannotCastInterface 63772
+#define uPSRuntime_RPS_CannotCastObject 63773
+#define uPSRuntime_RPS_CapacityLength 63774
+#define uPSRuntime_RPS_CanOnlySendLastItem 63775
+#define uPSRuntime_RPS_InvalidType 63776
+#define uPSRuntime_RPS_InternalError 63777
+#define uPSRuntime_RPS_InvalidHeader 63778
+#define uPSRuntime_RPS_InvalidOpcode 63779
+#define uPSRuntime_RPS_InvalidOpcodeParameter 63780
+#define uPSRuntime_RPS_NoMainProc 63781
+#define uPSRuntime_RPS_OutOfGlobalVarsRange 63782
+#define uPSRuntime_RPS_OutOfProcRange 63783
+#define uPSRuntime_RPS_OutOfRange 63784
+#define uPSRuntime_RPS_OutOfStackRange 63785
+#define uPSRuntime_RPS_TypeMismatch 63786
+#define uPSRuntime_RPS_UnexpectedEof 63787
+#define uPSRuntime_RPS_VersionError 63788
+#define uPSRuntime_RPS_DivideByZero 63789
+#define uPSRuntime_RPS_MathError 63790
+#define uPSRuntime_RPS_CouldNotCallProc 63791
+#define uPSCompiler_RPS_UnknownError 63792
+#define uPSCompiler_RPS_Hint 63793
+#define uPSCompiler_RPS_VariableNotUsed 63794
+#define uPSCompiler_RPS_FunctionNotUsed 63795
+#define uPSCompiler_RPS_UnknownHint 63796
+#define uPSCompiler_RPS_Warning 63797
+#define uPSCompiler_RPS_CalculationAlwaysEvaluatesTo 63798
+#define uPSCompiler_RPS_IsNotNeeded 63799
+#define uPSCompiler_RPS_AbstractClass 63800
+#define uPSCompiler_RPS_UnknownWarning 63801
+#define uPSCompiler_RPS_NotArrayProperty 63802
+#define uPSCompiler_RPS_NotProperty 63803
+#define uPSCompiler_RPS_UnknownProperty 63804
+#define uPSRuntime_RPS_Exception 63805
+#define uPSRuntime_RPS_NoError 63806
+#define uPSRuntime_RPS_CannotImport 63807
+#define uPSCompiler_RPS_CloseBlockExpected 63808
+#define uPSCompiler_RPS_VariableExpected 63809
+#define uPSCompiler_RPS_StringExpected 63810
+#define uPSCompiler_RPS_EndExpected 63811
+#define uPSCompiler_RPS_UnSetLabel 63812
+#define uPSCompiler_RPS_NotInLoop 63813
+#define uPSCompiler_RPS_InvalidJump 63814
+#define uPSCompiler_RPS_OpenBlockExpected 63815
+#define uPSCompiler_RPS_WriteOnlyProperty 63816
+#define uPSCompiler_RPS_ReadOnlyProperty 63817
+#define uPSCompiler_RPS_ClassTypeExpected 63818
+#define uPSCompiler_RPS_DivideByZero 63819
+#define uPSCompiler_RPS_MathError 63820
+#define uPSCompiler_RPS_UnsatisfiedForward 63821
+#define uPSCompiler_RPS_ForwardParameterMismatch 63822
+#define uPSCompiler_RPS_InvalidNumberOfParameter 63823
+#define uPSCompiler_RPS_PeriodExpected 63824
+#define uPSCompiler_RPS_DuplicateIdent 63825
+#define uPSCompiler_RPS_ColonExpected 63826
+#define uPSCompiler_RPS_UnknownType 63827
+#define uPSCompiler_RPS_CloseRoundExpected 63828
+#define uPSCompiler_RPS_TypeMismatch 63829
+#define uPSCompiler_RPS_InternalError 63830
+#define uPSCompiler_RPS_AssignmentExpected 63831
+#define uPSCompiler_RPS_ThenExpected 63832
+#define uPSCompiler_RPS_DoExpected 63833
+#define uPSCompiler_RPS_NoResult 63834
+#define uPSCompiler_RPS_OpenRoundExpected 63835
+#define uPSCompiler_RPS_CommaExpected 63836
+#define uPSCompiler_RPS_ToExpected 63837
+#define uPSCompiler_RPS_IsExpected 63838
+#define uPSCompiler_RPS_OfExpected 63839
+#define uPSCompiler_RPS_InvalidTypeForVar 63840
+#define uPSCompiler_RPS_InvalidType 63841
+#define uPSCompiler_RPS_UnableToRegisterType 63842
+#define uPSCompiler_RPS_UnknownInterface 63843
+#define uPSCompiler_RPS_ConstantValueMismatch 63844
+#define uPSCompiler_RPS_ConstantValueNotAssigned 63845
+#define uPSCompiler_RPS_Error 63846
+#define uPSCompiler_RPS_UnknownIdentifier 63847
+#define uPSCompiler_RPS_IdentifierExpected 63848
+#define uPSCompiler_RPS_CommentError 63849
+#define uPSCompiler_RPS_StringError 63850
+#define uPSCompiler_RPS_CharError 63851
+#define uPSCompiler_RPS_SyntaxError 63852
+#define uPSCompiler_RPS_EOF 63853
+#define uPSCompiler_RPS_SemiColonExpected 63854
+#define uPSCompiler_RPS_BeginExpected 63855
 #define cxTLStrs_scxTreeListHorizontalAlignmentCenterMenuItem 63856
 #define cxTLStrs_scxTreeListHorizontalAlignmentRightMenuItem 63857
 #define cxTLStrs_scxTreeListVerticalAlignmentMenuItem 63858
@@ -134,9 +134,9 @@
 #define cxTLStrs_scxTreeListDeletingConfirmationCaption 63866
 #define cxTLStrs_scxExportNotVisibleControl 63867
 #define uPSUtils_RPS_InvalidFloat 63868
-#define uPSRuntime_RPS_Exception 63869
-#define uPSRuntime_RPS_NoError 63870
-#define uPSRuntime_RPS_CannotImport 63871
+#define uPSCompiler_RPS_OnUseEventOnly 63869
+#define uPSCompiler_RPS_UnableToRegisterFunction 63870
+#define uPSCompiler_RPS_UnableToRegisterConst 63871
 #define cxTLStrs_scxTreeListMaxMenuItem 63872
 #define cxTLStrs_scxTreeListCountMenuItem 63873
 #define cxTLStrs_scxTreeListAvgMenuItem 63874
@@ -1804,9 +1804,9 @@
 STRINGTABLE
 BEGIN
 	uPSComponent_RPS_UnableToFindVariable,	L"Unable to find variable"
-	uPSCompiler_RPS_NotArrayProperty,	L"Not an array property"
-	uPSCompiler_RPS_NotProperty,	L"Not a property"
-	uPSCompiler_RPS_UnknownProperty,	L"Unknown Property"
+	uPSRuntime_RPS_NILInterfaceException,	L"Nil interface"
+	uPSRuntime_RPS_UnknownMethod,	L"Unknown method"
+	uPSDebugger_RPS_ExpectedReturnAddressStackBase,	L"Expected return address at stack base"
 	uPSPreProcessor_RPS_TooManyNestedInclude,	L"Too many nested include files while processing '%s' from '%s'"
 	uPSPreProcessor_RPS_IncludeNotFound,	L"Unable to find file '%s' used from '%s'"
 	uPSPreProcessor_RPS_DefineTooManyParameters,	L"Too many parameters at %d:%d"
@@ -1820,70 +1820,6 @@ BEGIN
 	uPSComponent_RPS_ScripEngineAlreadyRunning,	L"Script engine already running"
 	uPSComponent_RPS_ScriptNotCompiled,	L"Script is not compiled"
 	uPSComponent_RPS_NotRunning,	L"Not running"
-	uPSCompiler_RPS_ClassTypeExpected,	L"Class type expected"
-	uPSCompiler_RPS_DivideByZero,	L"Divide by Zero"
-	uPSCompiler_RPS_MathError,	L"Math Error"
-	uPSCompiler_RPS_UnsatisfiedForward,	L"Unsatisfied Forward %s"
-	uPSCompiler_RPS_ForwardParameterMismatch,	L"Forward Parameter Mismatch"
-	uPSCompiler_RPS_InvalidNumberOfParameter,	L"Invalid number of parameters"
-	uPSCompiler_RPS_UnknownError,	L"Unknown error"
-	uPSCompiler_RPS_Hint,	L"Hint"
-	uPSCompiler_RPS_VariableNotUsed,	L"Variable '%s' never used"
-	uPSCompiler_RPS_FunctionNotUsed,	L"Function '%s' never used"
-	uPSCompiler_RPS_UnknownHint,	L"Unknown hint"
-	uPSCompiler_RPS_Warning,	L"Warning"
-	uPSCompiler_RPS_CalculationAlwaysEvaluatesTo,	L"Calculation always evaluates to %s"
-	uPSCompiler_RPS_IsNotNeeded,	L"%s is not needed"
-	uPSCompiler_RPS_AbstractClass,	L"Abstract Class Construction"
-	uPSCompiler_RPS_UnknownWarning,	L"Unknown warning"
-	uPSCompiler_RPS_NoResult,	L"No result"
-	uPSCompiler_RPS_OpenRoundExpected,	L"opening parenthesis ('(')expected"
-	uPSCompiler_RPS_CommaExpected,	L"comma (',') expected"
-	uPSCompiler_RPS_ToExpected,	L"'TO' expected"
-	uPSCompiler_RPS_IsExpected,	L"is ('=') expected"
-	uPSCompiler_RPS_OfExpected,	L"'OF' expected"
-	uPSCompiler_RPS_CloseBlockExpected,	L"Closing square bracket (']') expected"
-	uPSCompiler_RPS_VariableExpected,	L"Variable Expected"
-	uPSCompiler_RPS_StringExpected,	L"String Expected"
-	uPSCompiler_RPS_EndExpected,	L"'END' expected"
-	uPSCompiler_RPS_UnSetLabel,	L"Label '%s' not set"
-	uPSCompiler_RPS_NotInLoop,	L"Not in a loop"
-	uPSCompiler_RPS_InvalidJump,	L"Invalid jump"
-	uPSCompiler_RPS_OpenBlockExpected,	L"Opening square brackets ('[') expected"
-	uPSCompiler_RPS_WriteOnlyProperty,	L"Write-only property"
-	uPSCompiler_RPS_ReadOnlyProperty,	L"Read-only property"
-	uPSCompiler_RPS_StringError,	L"String error"
-	uPSCompiler_RPS_CharError,	L"Char error"
-	uPSCompiler_RPS_SyntaxError,	L"Syntax error"
-	uPSCompiler_RPS_EOF,	L"Unexpected end of file"
-	uPSCompiler_RPS_SemiColonExpected,	L"Semicolon (';') expected"
-	uPSCompiler_RPS_BeginExpected,	L"'BEGIN' expected"
-	uPSCompiler_RPS_PeriodExpected,	L"period ('.') expected"
-	uPSCompiler_RPS_DuplicateIdent,	L"Duplicate identifier '%s'"
-	uPSCompiler_RPS_ColonExpected,	L"colon (':') expected"
-	uPSCompiler_RPS_UnknownType,	L"Unknown type '%s'"
-	uPSCompiler_RPS_CloseRoundExpected,	L"Closing parenthesis expected"
-	uPSCompiler_RPS_TypeMismatch,	L"Type mismatch"
-	uPSCompiler_RPS_InternalError,	L"Internal error (%s)"
-	uPSCompiler_RPS_AssignmentExpected,	L"Assignment expected"
-	uPSCompiler_RPS_ThenExpected,	L"'THEN' expected"
-	uPSCompiler_RPS_DoExpected,	L"'DO' expected"
-	uPSRuntime_RPS_NILInterfaceException,	L"Nil interface"
-	uPSRuntime_RPS_UnknownMethod,	L"Unknown method"
-	uPSDebugger_RPS_ExpectedReturnAddressStackBase,	L"Expected return address at stack base"
-	uPSCompiler_RPS_OnUseEventOnly,	L"This function can only be called from within the OnUses event"
-	uPSCompiler_RPS_UnableToRegisterFunction,	L"Unable to register function %s"
-	uPSCompiler_RPS_UnableToRegisterConst,	L"Unable to register constant %s"
-	uPSCompiler_RPS_InvalidTypeForVar,	L"Invalid type for variable %s"
-	uPSCompiler_RPS_InvalidType,	L"Invalid Type"
-	uPSCompiler_RPS_UnableToRegisterType,	L"Unable to register type %s"
-	uPSCompiler_RPS_UnknownInterface,	L"Unknown interface: %s"
-	uPSCompiler_RPS_ConstantValueMismatch,	L"Constant Value Type Mismatch"
-	uPSCompiler_RPS_ConstantValueNotAssigned,	L"Constant Value is not assigned"
-	uPSCompiler_RPS_Error,	L"Error"
-	uPSCompiler_RPS_UnknownIdentifier,	L"Unknown identifier '%s'"
-	uPSCompiler_RPS_IdentifierExpected,	L"Identifier expected"
-	uPSCompiler_RPS_CommentError,	L"Comment error"
 	uPSRuntime_RPS_OutofRecordRange,	L"Out of Record Fields Range"
 	uPSRuntime_RPS_NullPointerException,	L"Null Pointer Exception"
 	uPSRuntime_RPS_NullVariantError,	L"Null variant error"
@@ -1916,6 +1852,70 @@ BEGIN
 	uPSRuntime_RPS_DivideByZero,	L"divide by Zero"
 	uPSRuntime_RPS_MathError,	L"Math error"
 	uPSRuntime_RPS_CouldNotCallProc,	L"Could not call proc"
+	uPSCompiler_RPS_UnknownError,	L"Unknown error"
+	uPSCompiler_RPS_Hint,	L"Hint"
+	uPSCompiler_RPS_VariableNotUsed,	L"Variable '%s' never used"
+	uPSCompiler_RPS_FunctionNotUsed,	L"Function '%s' never used"
+	uPSCompiler_RPS_UnknownHint,	L"Unknown hint"
+	uPSCompiler_RPS_Warning,	L"Warning"
+	uPSCompiler_RPS_CalculationAlwaysEvaluatesTo,	L"Calculation always evaluates to %s"
+	uPSCompiler_RPS_IsNotNeeded,	L"%s is not needed"
+	uPSCompiler_RPS_AbstractClass,	L"Abstract Class Construction"
+	uPSCompiler_RPS_UnknownWarning,	L"Unknown warning"
+	uPSCompiler_RPS_NotArrayProperty,	L"Not an array property"
+	uPSCompiler_RPS_NotProperty,	L"Not a property"
+	uPSCompiler_RPS_UnknownProperty,	L"Unknown Property"
+	uPSRuntime_RPS_Exception,	L"Exception: %s"
+	uPSRuntime_RPS_NoError,	L"No Error"
+	uPSRuntime_RPS_CannotImport,	L"Cannot Import %s"
+	uPSCompiler_RPS_CloseBlockExpected,	L"Closing square bracket (']') expected"
+	uPSCompiler_RPS_VariableExpected,	L"Variable Expected"
+	uPSCompiler_RPS_StringExpected,	L"String Expected"
+	uPSCompiler_RPS_EndExpected,	L"'END' expected"
+	uPSCompiler_RPS_UnSetLabel,	L"Label '%s' not set"
+	uPSCompiler_RPS_NotInLoop,	L"Not in a loop"
+	uPSCompiler_RPS_InvalidJump,	L"Invalid jump"
+	uPSCompiler_RPS_OpenBlockExpected,	L"Opening square brackets ('[') expected"
+	uPSCompiler_RPS_WriteOnlyProperty,	L"Write-only property"
+	uPSCompiler_RPS_ReadOnlyProperty,	L"Read-only property"
+	uPSCompiler_RPS_ClassTypeExpected,	L"Class type expected"
+	uPSCompiler_RPS_DivideByZero,	L"Divide by Zero"
+	uPSCompiler_RPS_MathError,	L"Math Error"
+	uPSCompiler_RPS_UnsatisfiedForward,	L"Unsatisfied Forward %s"
+	uPSCompiler_RPS_ForwardParameterMismatch,	L"Forward Parameter Mismatch"
+	uPSCompiler_RPS_InvalidNumberOfParameter,	L"Invalid number of parameters"
+	uPSCompiler_RPS_PeriodExpected,	L"period ('.') expected"
+	uPSCompiler_RPS_DuplicateIdent,	L"Duplicate identifier '%s'"
+	uPSCompiler_RPS_ColonExpected,	L"colon (':') expected"
+	uPSCompiler_RPS_UnknownType,	L"Unknown type '%s'"
+	uPSCompiler_RPS_CloseRoundExpected,	L"Closing parenthesis expected"
+	uPSCompiler_RPS_TypeMismatch,	L"Type mismatch"
+	uPSCompiler_RPS_InternalError,	L"Internal error (%s)"
+	uPSCompiler_RPS_AssignmentExpected,	L"Assignment expected"
+	uPSCompiler_RPS_ThenExpected,	L"'THEN' expected"
+	uPSCompiler_RPS_DoExpected,	L"'DO' expected"
+	uPSCompiler_RPS_NoResult,	L"No result"
+	uPSCompiler_RPS_OpenRoundExpected,	L"opening parenthesis ('(')expected"
+	uPSCompiler_RPS_CommaExpected,	L"comma (',') expected"
+	uPSCompiler_RPS_ToExpected,	L"'TO' expected"
+	uPSCompiler_RPS_IsExpected,	L"is ('=') expected"
+	uPSCompiler_RPS_OfExpected,	L"'OF' expected"
+	uPSCompiler_RPS_InvalidTypeForVar,	L"Invalid type for variable %s"
+	uPSCompiler_RPS_InvalidType,	L"Invalid Type"
+	uPSCompiler_RPS_UnableToRegisterType,	L"Unable to register type %s"
+	uPSCompiler_RPS_UnknownInterface,	L"Unknown interface: %s"
+	uPSCompiler_RPS_ConstantValueMismatch,	L"Constant Value Type Mismatch"
+	uPSCompiler_RPS_ConstantValueNotAssigned,	L"Constant Value is not assigned"
+	uPSCompiler_RPS_Error,	L"Error"
+	uPSCompiler_RPS_UnknownIdentifier,	L"Unknown identifier '%s'"
+	uPSCompiler_RPS_IdentifierExpected,	L"Identifier expected"
+	uPSCompiler_RPS_CommentError,	L"Comment error"
+	uPSCompiler_RPS_StringError,	L"String error"
+	uPSCompiler_RPS_CharError,	L"Char error"
+	uPSCompiler_RPS_SyntaxError,	L"Syntax error"
+	uPSCompiler_RPS_EOF,	L"Unexpected end of file"
+	uPSCompiler_RPS_SemiColonExpected,	L"Semicolon (';') expected"
+	uPSCompiler_RPS_BeginExpected,	L"'BEGIN' expected"
 	cxTLStrs_scxTreeListHorizontalAlignmentCenterMenuItem,	L"Ce&nter"
 	cxTLStrs_scxTreeListHorizontalAlignmentRightMenuItem,	L"&Right"
 	cxTLStrs_scxTreeListVerticalAlignmentMenuItem,	L"Ver&tical Alignment"
@@ -1929,9 +1929,9 @@ BEGIN
 	cxTLStrs_scxTreeListDeletingConfirmationCaption,	L"Confirm"
 	cxTLStrs_scxExportNotVisibleControl,	L"Control must be visible for export"
 	uPSUtils_RPS_InvalidFloat,	L"Invalid float"
-	uPSRuntime_RPS_Exception,	L"Exception: %s"
-	uPSRuntime_RPS_NoError,	L"No Error"
-	uPSRuntime_RPS_CannotImport,	L"Cannot Import %s"
+	uPSCompiler_RPS_OnUseEventOnly,	L"This function can only be called from within the OnUses event"
+	uPSCompiler_RPS_UnableToRegisterFunction,	L"Unable to register function %s"
+	uPSCompiler_RPS_UnableToRegisterConst,	L"Unable to register constant %s"
 	cxTLStrs_scxTreeListMaxMenuItem,	L"Max"
 	cxTLStrs_scxTreeListCountMenuItem,	L"Count"
 	cxTLStrs_scxTreeListAvgMenuItem,	L"Average"

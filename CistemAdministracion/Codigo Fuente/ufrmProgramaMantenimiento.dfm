@@ -257,7 +257,7 @@ inherited frmProgramaMantenimiento: TfrmProgramaMantenimiento
       item
         Name = 'CONCEPTO'
         DataType = datString
-        Size = 100
+        Size = 500
       end
       item
         Name = 'IDTIPOMOVIMIENTO'

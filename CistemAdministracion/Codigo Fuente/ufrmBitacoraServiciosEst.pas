@@ -95,6 +95,7 @@ procedure TfrmBitacoraServicioEst.ActionNuevo(Action: TBasicAction);
 begin
   Panel3.Enabled:= True;
   lblNumFolio.Caption:= formatdatetime('ddmmyyyy', cxDateEdit1.Date);
+  cxDateEdit2.Date:= now();
 
   cdsBitacoraServ.Append;
   Memo1.SetFocus;

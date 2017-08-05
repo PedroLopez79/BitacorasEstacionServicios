@@ -769,6 +769,8 @@
 </Parameter>
 <Parameter Name="EstacionID" DataType="AnsiString" Flag="In" >
 </Parameter>
+<Parameter Name="Turno" DataType="AnsiString" Flag="In" >
+</Parameter>
 </Parameters>
 </Operation>
 <Operation Name="ProgramaMantenimiento" UID="{45A8D3CC-4062-4622-9AE6-8EAF080E3F21}">

@@ -13,7 +13,6 @@ uses
 
 type
   TServerDataModule3 = class(TDataModule)
-    DASDACDriver1: TDASDACDriver;
     DriverManager: TDADriverManager;
     ConnectionManager3: TDAConnectionManager;
     Message: TROBinMessage;

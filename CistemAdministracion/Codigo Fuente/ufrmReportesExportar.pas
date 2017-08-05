@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ufrmPantallaReportes, ComCtrls, dxSkinsCore, dxSkinsDefaultPainters,
   ImgList, uDAScriptingProvider, uDADataTable, uDACDSDataTable, cxControls,
-  cxContainer, cxListView, uPSComponent, dxSkinsdxRibbonPainter, uPSCompiler,
+  cxContainer, cxListView, dxSkinsdxRibbonPainter, uPSCompiler,
   uPSRuntime, ExportaDataSet, uDAMemDataTable, cxGraphics, cxLookAndFeels,
   cxLookAndFeelPainters, dxSkinBlack, dxSkinBlue, dxSkinCaramel, dxSkinCoffee,
   dxSkinDarkRoom, dxSkinDarkSide, dxSkinFoggy, dxSkinGlassOceans,
@@ -16,12 +16,14 @@ uses
   dxSkinPumpkin, dxSkinSeven, dxSkinSharp, dxSkinSilver, dxSkinSpringTime,
   dxSkinStardust, dxSkinSummer2008, dxSkinValentine, dxSkinXmas2008Blue,
   dxSkinMetropolis, dxSkinMetropolisDark, dxSkinOffice2013DarkGray,
-  dxSkinOffice2013LightGray, dxSkinOffice2013White, uROComponent, cxEdit;
+  dxSkinOffice2013LightGray, dxSkinOffice2013White, uROComponent, cxEdit,
+  uPSComponent;
 
 type
   TfrmReportesExportar = class(TfrmPantallaReportes)
-    PSScript1: TPSScript;
+
     sdArchivo: TSaveDialog;
+    PSScript1: TPSScript;
     procedure FormCreate(Sender: TObject);
     procedure lvReportesDblClick(Sender: TObject);
     procedure PSScript1Execute(Sender: TPSScript);

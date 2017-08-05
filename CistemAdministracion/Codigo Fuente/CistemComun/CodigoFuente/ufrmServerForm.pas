@@ -31,6 +31,7 @@ type
     procedure FormDestroy(Sender: TObject);
     procedure Image1Click(Sender: TObject);
     procedure tmrHideTimer(Sender: TObject);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
   private
     { Private declarations }
     IconData: TNotifyIconData;
@@ -53,6 +54,14 @@ implementation
 
 uses
   UtileriasComun;
+
+procedure TfrmServerForm.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+begin
+  if MessageDlg('Esta seguro que quiere salir?', mtconfirmation, [mbOK, mbNo], 0) = mrOk then
+  CanClose:= True
+  else
+  CanClose:= False;
+end;
 
 procedure TfrmServerForm.FormCreate(Sender: TObject);
 begin
@@ -115,7 +124,7 @@ end;
 
 procedure TfrmServerForm.Cerrar1Click(Sender: TObject);
 begin
-  Application.Terminate;
+  Close;
 end;
 
 procedure TfrmServerForm.RemueveIcono;
