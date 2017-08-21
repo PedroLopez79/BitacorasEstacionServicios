@@ -357,6 +357,14 @@ inherited frmHorariosPersonal: TfrmHorariosPersonal
       item
         Name = 'FOTOEMPLEADO'
         DataType = datBlob
+      end
+      item
+        Name = 'IDESTACION'
+        DataType = datInteger
+      end
+      item
+        Name = 'TURNO'
+        DataType = datInteger
       end>
     LogicalName = 'dbo.EMPLEADO'
     Params = <>

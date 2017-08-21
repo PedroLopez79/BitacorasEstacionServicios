@@ -25,32 +25,43 @@ inherited frmHorariosPersonal: TfrmHorariosPersonal
         ExplicitWidth = 632
         ExplicitHeight = 432
         inherited dbgCatalogoDBTableView1: TcxGridDBTableView
+          OnCellDblClick = dbgCatalogoDBTableView1CellDblClick
           object dbgCatalogoDBTableView1RecID: TcxGridDBColumn
             DataBinding.FieldName = 'RecID'
             Visible = False
           end
-          object dbgCatalogoDBTableView1IDHORARIO: TcxGridDBColumn
-            DataBinding.FieldName = 'IDHORARIO'
-            Width = 74
-          end
           object dbgCatalogoDBTableView1IDEMPLEADO: TcxGridDBColumn
+            Caption = '#Empleado'
             DataBinding.FieldName = 'IDEMPLEADO'
+            Width = 72
           end
           object dbgCatalogoDBTableView1NOMBREEMPLEADO: TcxGridDBColumn
+            Caption = 'Nombre Empleado'
             DataBinding.FieldName = 'NOMBREEMPLEADO'
-            Width = 336
+            Width = 257
           end
           object dbgCatalogoDBTableView1HORAINICIO: TcxGridDBColumn
+            Caption = 'Hora Inicio'
             DataBinding.FieldName = 'HORAINICIO'
+            PropertiesClassName = 'TcxTimeEditProperties'
           end
           object dbgCatalogoDBTableView1HORAFINAL: TcxGridDBColumn
+            Caption = 'Hora Final'
             DataBinding.FieldName = 'HORAFINAL'
+            PropertiesClassName = 'TcxTimeEditProperties'
           end
           object dbgCatalogoDBTableView1REFERENCIA: TcxGridDBColumn
+            Caption = 'Referencia'
             DataBinding.FieldName = 'REFERENCIA'
+            Width = 369
           end
           object dbgCatalogoDBTableView1FECHAALTA: TcxGridDBColumn
+            Caption = 'Fecha Alta'
             DataBinding.FieldName = 'FECHAALTA'
+          end
+          object dbgCatalogoDBTableViewIDESTACION: TcxGridDBColumn
+            Caption = '# Estacion'
+            DataBinding.FieldName = 'IDESTACION'
           end
         end
       end
@@ -281,6 +292,7 @@ inherited frmHorariosPersonal: TfrmHorariosPersonal
       end>
     LogicalName = 'dbo.HORARIOEMPLEADO'
     RemoteDataAdapter = DM.RemoteDataAdapter
+    BeforePost = cdsCatalogoBeforePost
     OnNewRecord = cdsCatalogoNewRecord
     Left = 464
   end

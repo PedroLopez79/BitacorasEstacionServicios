@@ -2067,16 +2067,18 @@ begin
 end;
 
 procedure TServiceEmpresas_Invoker.Invoke_obtendatosempleados(const __Instance:IInterface; const __Message:IROMessage; const __Transport:IROTransport; out __oResponseOptions:TROResponseOptions);
-{ function obtendatosempleados(const EstacionID: AnsiString): AnsiString; }
+{ function obtendatosempleados(const EstacionID: AnsiString; const Turno: AnsiString): AnsiString; }
 var
   EstacionID: AnsiString;
+  Turno: AnsiString;
   lResult: AnsiString;
 begin
   CheckRoles(__Instance, GetDefaultServiceRoles);
   try
     __Message.Read('EstacionID', TypeInfo(AnsiString), EstacionID, []);
+    __Message.Read('Turno', TypeInfo(AnsiString), Turno, []);
 
-    lResult := (__Instance as IServiceEmpresas).obtendatosempleados(EstacionID);
+    lResult := (__Instance as IServiceEmpresas).obtendatosempleados(EstacionID, Turno);
 
     __Message.InitializeResponseMessage(__Transport, 'LibraryEmpresas', 'ServiceEmpresas', 'obtendatosempleadosResponse');
     __Message.Write('Result', TypeInfo(AnsiString), lResult, []);

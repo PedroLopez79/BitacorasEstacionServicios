@@ -14,7 +14,7 @@ declare @TipoCalificacion as Integer
 declare @Usuario as Integer
 declare @Familia as Integer
 declare @Valor1 as Integer
-declare @Status as Integer
+declare @Status as varchar(500)
 declare @Serie as varchar(500)
 declare @Factura as Integer
 declare @FacturasCompras as Integer

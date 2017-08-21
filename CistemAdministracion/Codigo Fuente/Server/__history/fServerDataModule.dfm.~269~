@@ -3,10 +3,6 @@ object ServerDataModule3: TServerDataModule3
   OnCreate = DataModuleCreate
   Height = 207
   Width = 353
-  object DASDACDriver1: TDASDACDriver
-    Left = 248
-    Top = 8
-  end
   object DriverManager: TDADriverManager
     DriverDirectory = '%SYSTEM%\'
     TraceActive = False
@@ -19,8 +15,8 @@ object ServerDataModule3: TServerDataModule3
       item
         Name = 'BitacoraEstacionServ'
         ConnectionString = 
-          'SDAC?Server=PETERPC;Database=BitacoraEstacionServ;UserID=sa;Pass' +
-          'word=Cistem32;Schemas=1;Integrated Security=SSPI;'
+          'SDAC?Server=PETERALIENWARE;Database=BitacoraEstacionServ;UserID=' +
+          'sa;Password=Cistem32;Schemas=1;Integrated Security=SSPI;'
         ConnectionType = 'MSSQL'
         Default = True
       end>

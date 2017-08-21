@@ -115,8 +115,6 @@ type
     TxtSecuenciaIniLiquidacion: TcxTextEdit;
     TxtSecuenciaFinLiquidacion: TcxTextEdit;
     cxStatus: TcxGroupBox;
-    cxLabel3: TcxLabel;
-    txtStatus: TcxTextEdit;
     cxSecuencia: TcxGroupBox;
     cxLabel9: TcxLabel;
     cxLabel10: TcxLabel;
@@ -144,6 +142,7 @@ type
     cdsClientes: TDACDSDataTable;
     dsClientes: TDADataSource;
     dsEmpresa: TDADataSource;
+    rgStatus: TRadioGroup;
     procedure cxBtnClienteFinClick(Sender: TObject);
     procedure cxBtnClienteIniClick(Sender: TObject);
     procedure dbcEmpledoFinEnter(Sender: TObject);
@@ -206,7 +205,8 @@ begin
        //Parametros.Estacion:=cdsEstacion.FieldByName('EstacionID').AsInteger;
         Parametros.Estacion:=cxEstaciones.EditValue;//strtoint(txtEstacion.Text);
     if cxStatus.Visible=true then    //Status
-        Parametros.Status:=txtStatus.Text;
+       Parametros.Status:=  rgStatus.Items[rgStatus.ItemIndex];
+
     If cxPeriodo.Visible=true then   //Periodo
     begin
       Parametros.Ejercicio:=strtoint(FormatDateTime('yyyy',edtFechaInicial.EditValue));

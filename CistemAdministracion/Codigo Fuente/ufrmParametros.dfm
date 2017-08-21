@@ -949,25 +949,17 @@ object frmParametros: TfrmParametros
     TabOrder = 15
     Height = 66
     Width = 583
-    object cxLabel3: TcxLabel
-      Left = 31
-      Top = 33
-      Hint = ''
-      Caption = 'Status'
-      Style.BorderStyle = ebsNone
-      Style.LookAndFeel.NativeStyle = True
-      StyleDisabled.LookAndFeel.NativeStyle = True
-      StyleFocused.LookAndFeel.NativeStyle = True
-      StyleHot.LookAndFeel.NativeStyle = True
-      Transparent = True
-    end
-    object txtStatus: TcxTextEdit
-      Left = 104
-      Top = 32
-      Hint = ''
-      Properties.CharCase = ecUpperCase
-      TabOrder = 1
-      Width = 89
+    object rgStatus: TRadioGroup
+      Left = 14
+      Top = 16
+      Width = 265
+      Height = 41
+      Columns = 3
+      Items.Strings = (
+        'PENDIENTE'
+        'No Realizada'
+        'Realizada')
+      TabOrder = 0
     end
   end
   object cxSecuencia: TcxGroupBox
@@ -1101,8 +1093,8 @@ object frmParametros: TfrmParametros
     end
   end
   object btnAceptar: TcxButton
-    Left = 216
-    Top = 464
+    Left = 384
+    Top = 454
     Width = 82
     Height = 25
     Caption = 'Aceptar'
@@ -1160,8 +1152,8 @@ object frmParametros: TfrmParametros
     OnClick = btnAceptarClick
   end
   object btnCancelar: TcxButton
-    Left = 304
-    Top = 464
+    Left = 472
+    Top = 454
     Width = 82
     Height = 25
     Caption = 'Cancelar'
@@ -1325,13 +1317,13 @@ object frmParametros: TfrmParametros
       Top = 24
       Hint = ''
       Properties.CharCase = ecUpperCase
-      Properties.KeyFieldNames = 'EmpresaID'
+      Properties.KeyFieldNames = 'IDESTACION'
       Properties.ListColumns = <
         item
-          FieldName = 'EmpresaID'
+          FieldName = 'IDESTACION'
         end
         item
-          FieldName = 'Nombre'
+          FieldName = 'NOMBRE'
         end>
       Properties.ListSource = dsEmpresa
       Properties.MaxLength = 0

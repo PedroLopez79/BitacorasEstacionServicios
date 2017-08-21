@@ -2,7 +2,6 @@ inherited frmCatalogoReportes: TfrmCatalogoReportes
   Caption = ''
   ClientHeight = 584
   ClientWidth = 719
-  ExplicitTop = -123
   ExplicitWidth = 719
   ExplicitHeight = 584
   PixelsPerInch = 96
@@ -207,7 +206,7 @@ inherited frmCatalogoReportes: TfrmCatalogoReportes
         end
         object clbParametros: TcxCheckListBox
           Left = 16
-          Top = 197
+          Top = 200
           Width = 289
           Height = 180
           Hint = ''
@@ -250,7 +249,7 @@ inherited frmCatalogoReportes: TfrmCatalogoReportes
             end
             item
               Tag = 74
-              Text = 'Status Factura'
+              Text = 'Status'
             end
             item
               Tag = 75

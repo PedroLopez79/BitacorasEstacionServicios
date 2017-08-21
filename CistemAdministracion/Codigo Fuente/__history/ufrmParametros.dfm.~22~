@@ -729,10 +729,10 @@ object frmParametros: TfrmParametros
       Top = 48
       Hint = ''
       Properties.CharCase = ecUpperCase
-      Properties.KeyFieldNames = 'DespachadorID'
+      Properties.KeyFieldNames = 'IDEMPLEADO'
       Properties.ListColumns = <
         item
-          FieldName = 'DespachadorID'
+          FieldName = 'IDEMPLEADO'
         end
         item
           FieldName = 'Nombre'
@@ -749,10 +749,10 @@ object frmParametros: TfrmParametros
       Top = 48
       Hint = ''
       Properties.CharCase = ecUpperCase
-      Properties.KeyFieldNames = 'DespachadorID'
+      Properties.KeyFieldNames = 'IDEMPLEADO'
       Properties.ListColumns = <
         item
-          FieldName = 'DespachadorID'
+          FieldName = 'IDEMPLEADO'
         end
         item
           FieldName = 'Nombre'
@@ -2144,64 +2144,35 @@ object frmParametros: TfrmParametros
   object cdsEmpleados: TDACDSDataTable
     Fields = <
       item
-        Name = 'DespachadorID'
+        Name = 'IDEMPLEADO'
         DataType = datInteger
-        Required = True
-        InPrimaryKey = True
       end
       item
-        Name = 'Nombre'
-        DataType = datString
-        Size = 50
-        Required = True
-      end
-      item
-        Name = 'Codigo'
+        Name = 'CODIGO'
         DataType = datString
         Size = 10
       end
       item
-        Name = 'Domicilio'
+        Name = 'NOMBRE'
         DataType = datString
-        Size = 80
-        Required = True
+        Size = 70
       end
       item
-        Name = 'Ciudad'
+        Name = 'USERNAME'
         DataType = datString
-        Size = 30
+        Size = 10
       end
       item
-        Name = 'Telefono'
+        Name = 'USERPASSWORD'
         DataType = datString
-        Size = 20
+        Size = 10
       end
       item
-        Name = 'Status'
-        DataType = datBoolean
-      end
-      item
-        Name = 'FechaAlta'
-        DataType = datDateTime
-        Required = True
-      end
-      item
-        Name = 'CuentaContable'
-        DataType = datString
-        Size = 20
-      end
-      item
-        Name = 'EstacionID'
-        DataType = datInteger
-        Required = True
+        Name = 'FIRMADEFAULT'
+        DataType = datBlob
       end>
-    LogicalName = 'dbo DespachadorPorEstacion'
-    Params = <
-      item
-        Name = 'EstacionID'
-        Value = ''
-        ParamType = daptInput
-      end>
+    LogicalName = 'dbo.usuarios'
+    Params = <>
     RemoteDataAdapter = DM.RemoteDataAdapter
     RemoteUpdatesOptions = []
     StreamingOptions = [soDisableEventsWhileStreaming]

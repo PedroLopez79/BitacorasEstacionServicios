@@ -8,7 +8,7 @@ uses
   cxLookAndFeelPainters, cxTextEdit, cxDBEdit, cxCurrencyEdit, StdCtrls,
   cxButtons, cxDropDownEdit, cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox,
   cxMaskEdit, cxCalendar, cxLabel, cxControls, cxContainer, cxEdit, cxGroupBox,
-  LibraryAdministracion_Intf, cxClasses, dxRibbon, DB, uDAInterfaces,
+  LibraryEmpresas_Intf, cxClasses, dxRibbon, DB, uDAInterfaces,
   uDADataTable, uDAScriptingProvider, uDACDSDataTable, cxImageComboBox,
   cxSpinEdit, dxSkinsdxRibbonPainter, dxRibbonForm, ExtCtrls, dxSkinBlack,
   dxSkinBlue, dxSkinCaramel, dxSkinCoffee, dxSkinGlassOceans, dxSkiniMaginary,
@@ -17,7 +17,10 @@ uses
   dxSkinOffice2007Green, dxSkinOffice2007Pink, dxSkinOffice2007Silver,
   dxSkinSilver, dxSkinStardust, dxSkinSummer2008, dxSkinValentine,
   dxSkinXmas2008Blue, cxLookAndFeels, dxSkinDarkRoom, dxSkinDarkSide,
-  dxSkinFoggy, dxSkinPumpkin, dxSkinSeven, dxSkinSharp, dxSkinSpringTime;
+  dxSkinFoggy, dxSkinPumpkin, dxSkinSeven, dxSkinSharp, dxSkinSpringTime,
+  dxSkinMetropolis, dxSkinMetropolisDark, dxSkinOffice2013DarkGray,
+  dxSkinOffice2013LightGray, dxSkinOffice2013White, Vcl.ComCtrls, dxCore,
+  cxDateUtils, dxRibbonSkins, uDAFields, uROComponent;
 
 type
   TfrmParametros = class(TdxCustomRibbonForm)
@@ -140,6 +143,8 @@ type
     dxRibbon1: TdxRibbon;
     cdsClientes: TDACDSDataTable;
     dsClientes: TDADataSource;
+    dsEmpresa: TDADataSource;
+    rgStatus: TRadioGroup;
     procedure cxBtnClienteFinClick(Sender: TObject);
     procedure cxBtnClienteIniClick(Sender: TObject);
     procedure dbcEmpledoFinEnter(Sender: TObject);
@@ -413,16 +418,16 @@ end;
 
 procedure TfrmParametros.dbcEmpleadoIniEnter(Sender: TObject);
 begin
-  cdsEmpleados.Close;
-  cdsEmpleados.ParamByName('EstacionID').AsInteger:= strtoint(cxEstaciones.Text);
-  cdsEmpleados.Open;
+  //cdsEmpleados.Close;
+  //cdsEmpleados.ParamByName('EstacionID').AsInteger:= strtoint(cxEstaciones.Text);
+  //cdsEmpleados.Open;
 end;
 
 procedure TfrmParametros.dbcEmpledoFinEnter(Sender: TObject);
 begin
-  cdsEmpleados.Close;
-  cdsEmpleados.ParamByName('EstacionID').AsInteger:= strtoint(cxEstaciones.Text);
-  cdsEmpleados.Open;
+  //cdsEmpleados.Close;
+  //cdsEmpleados.ParamByName('EstacionID').AsInteger:= strtoint(cxEstaciones.Text);
+  //cdsEmpleados.Open;
 end;
 
 procedure TfrmParametros.edtBuscaClienteIniClick(Sender: TObject);
@@ -455,15 +460,15 @@ begin
   cdsEstaciones.Close;
   cdsEstaciones.Open;
   cdsEmpleados.Close;
-  cdsEmpleados.ParamByName('EstacionID').AsInteger:= DM.Estacion;
+  //cdsEmpleados.ParamByName('EstacionID').AsInteger:= DM.Estacion;
   cdsEmpleados.Open;
 
   edtFechaInicial.Date:=Trunc(Now);
   edtFechaFinal.Date:=Trunc(Now);
   cxEstaciones.EditValue:=DM.Estacion;
-  cdsAgrupacion.Close;
-  cdsAgrupacion.ParamByName('EstacionID').AsInteger:=DM.Estacion;
-  cdsAgrupacion.Open;
+  //cdsAgrupacion.Close;
+  //cdsAgrupacion.ParamByName('EstacionID').AsInteger:=DM.Estacion;
+  //cdsAgrupacion.Open;
 end;
 
 procedure TfrmParametros.LimpiaParametros;

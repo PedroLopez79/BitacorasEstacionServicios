@@ -12,6 +12,7 @@ inherited frmCatalogoReportes: TfrmCatalogoReportes
     Properties.ActivePage = cxTabSheet2
     OnPageChanging = pgcCatalogoPageChanging
     ExplicitWidth = 719
+    ExplicitHeight = 584
     ClientRectBottom = 554
     ClientRectRight = 713
     inherited cxTabSheet1: TcxTabSheet
@@ -46,7 +47,7 @@ inherited frmCatalogoReportes: TfrmCatalogoReportes
       ExplicitLeft = 3
       ExplicitTop = 3
       ExplicitWidth = 710
-      ExplicitHeight = 416
+      ExplicitHeight = 551
       object cxGroupBox1: TcxGroupBox
         Left = 32
         Top = 24
@@ -248,7 +249,7 @@ inherited frmCatalogoReportes: TfrmCatalogoReportes
             end
             item
               Tag = 74
-              Text = 'Status Factura'
+              Text = 'Status'
             end
             item
               Tag = 75
@@ -471,7 +472,7 @@ inherited frmCatalogoReportes: TfrmCatalogoReportes
           Navigator.Buttons.CustomButtons = <>
           OnEditing = cxGrid1DBTableView1Editing
           OnEditChanged = cxGrid1DBTableView1EditChanged
-          DataController.DataSource = DataSource1
+          DataController.DataSource = dsUsuarios
           DataController.Summary.DefaultGroupSummaryItems = <>
           DataController.Summary.FooterSummaryItems = <
             item
@@ -822,11 +823,11 @@ inherited frmCatalogoReportes: TfrmCatalogoReportes
         Size = 20
       end
       item
-        Name = 'Usuarios'
+        Name = 'USUARIOS'
         DataType = datString
-        Size = 80
+        Size = 1000
       end>
-    LogicalName = 'dbo Reporte'
+    LogicalName = 'dbo.Reporte'
     RemoteDataAdapter = DM.RemoteDataAdapter
     AfterScroll = cdsCatalogoAfterScroll
     BeforePost = cdsCatalogoBeforePost
@@ -958,8 +959,8 @@ inherited frmCatalogoReportes: TfrmCatalogoReportes
     DefaultExtension = '.sql'
     StylerName = 'SQL'
     Extensions = 'sql'
-    Left = 544
-    Top = 464
+    Left = 400
+    Top = 184
   end
   object rdReportes: TppDesigner
     Caption = 'Editor de Reportes'
@@ -978,8 +979,8 @@ inherited frmCatalogoReportes: TfrmCatalogoReportes
     WindowTop = 0
     WindowWidth = 800
     WindowState = wsMaximized
-    Left = 506
-    Top = 460
+    Left = 402
+    Top = 132
   end
   object odImportar: TOpenDialog
     DefaultExt = '.rcg'
@@ -1036,8 +1037,8 @@ inherited frmCatalogoReportes: TfrmCatalogoReportes
   object tblUsuarios: TdxMemData
     Indexes = <>
     SortOptions = []
-    Left = 432
-    Top = 512
+    Left = 360
+    Top = 424
     object tblUsuariosUsuario: TBooleanField
       FieldName = 'Usuario'
     end
@@ -1048,44 +1049,48 @@ inherited frmCatalogoReportes: TfrmCatalogoReportes
       FieldName = 'Nombre'
     end
   end
-  object DataSource1: TDataSource
+  object dsUsuarios: TDataSource
     DataSet = tblUsuarios
-    Left = 464
-    Top = 512
+    Left = 360
+    Top = 472
   end
   object cdsUsuarios: TDACDSDataTable
     Fields = <
       item
-        Name = 'UsuarioID'
+        Name = 'IDEMPLEADO'
         DataType = datInteger
-        Required = True
-        InPrimaryKey = True
       end
       item
-        Name = 'Nombre'
+        Name = 'CODIGO'
+        DataType = datString
+        Size = 10
+      end
+      item
+        Name = 'NOMBRE'
         DataType = datString
         Size = 70
-        Required = True
       end
       item
-        Name = 'Usuario'
+        Name = 'USERNAME'
         DataType = datString
-        Size = 15
-        Required = True
+        Size = 10
       end
       item
-        Name = 'Clave'
+        Name = 'USERPASSWORD'
         DataType = datString
-        Size = 8
-        Required = True
+        Size = 10
+      end
+      item
+        Name = 'FIRMADEFAULT'
+        DataType = datBlob
       end>
-    LogicalName = 'dbo Usuario'
+    LogicalName = 'dbo.usuarios'
     Params = <>
     RemoteDataAdapter = DM.RemoteDataAdapter
     RemoteUpdatesOptions = []
     StreamingOptions = [soDisableEventsWhileStreaming]
     IndexDefs = <>
-    Left = 497
-    Top = 511
+    Left = 409
+    Top = 471
   end
 end

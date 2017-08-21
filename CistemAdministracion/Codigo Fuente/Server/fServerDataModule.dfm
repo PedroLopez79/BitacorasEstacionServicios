@@ -15,8 +15,8 @@ object ServerDataModule3: TServerDataModule3
       item
         Name = 'BitacoraEstacionServ'
         ConnectionString = 
-          'SDAC?Server=PETERALIENWARE;Database=BitacoraEstacionServ;UserID=' +
-          'sa;Password=Cistem32;Schemas=1;Integrated Security=SSPI;'
+          'SDAC?Server=PETERALIENWARE;Database=BitacoraEstacionServ3;UserID' +
+          '=sa;Password=Cistem32;Schemas=1;Integrated Security=SSPI;'
         ConnectionType = 'MSSQL'
         Default = True
       end>

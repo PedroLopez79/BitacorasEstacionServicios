@@ -185,6 +185,7 @@ begin
   AgregaParametro ('Estacion',datInteger);
   AgregaParametro('EmpleadoIni',datInteger);
   AgregaParametro('EmpleadoFin',datInteger);
+  AgregaParametro('Status',datString);
   {AgregaParametro('SecuenciaIni',datInteger);
   AgregaParametro('SecuenciaFin',datInteger);
   AgregaParametro('Factura',datInteger);
@@ -249,6 +250,7 @@ begin
   Dataset.ParamByName('Estacion').AsInteger:=Parametros.Estacion;
   DataSet.ParamByName('EmpleadoIni').AsInteger:=Parametros.EmpleadoIni;
   DataSet.ParamByName('EmpleadoFin').AsInteger:=Parametros.EmpleadoFin;
+  DataSet.ParamByName('Status').AsString:=Parametros.Status;
   {Dataset.ParamByName('SecuenciaIni').AsInteger:=Parametros.SecuenciaIni;
   Dataset.ParamByName('SecuenciaFin').AsInteger:=Parametros.SecuenciaFin;
   Dataset.ParamByName('Factura').AsInteger:=Parametros.Factura;
@@ -261,7 +263,6 @@ begin
   DataSet.ParamByName('PeriodoFin').AsInteger:=Parametros.PeriodoFin;
   DataSet.ParamByName('DiaFin').AsInteger:=Parametros.DiaFin;
   DataSet.ParamByName('Sentencia').AsString:=Parametros.Secuencia;
-  DataSet.ParamByName('Status').AsString:=Parametros.Status;
   DataSet.ParamByName('Agrupacion').AsInteger:=Parametros.Agrupacion;
   DataSet.ParamByName('almacen').AsInteger:=Parametros.Almacen;
   Dataset.ParamByName('SecuenciaIniLiquidacion').AsInteger:=Parametros.SecuenciaIniLiquidacion;

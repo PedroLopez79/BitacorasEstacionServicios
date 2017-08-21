@@ -129,7 +129,7 @@ type
                                         const NoAprobacion: AnsiString; const FechaAprobacion: DateTime);
     function CERsNUM(const DIR: AnsiString): AnsiString;
     function ActualizaFirmaDefault(const UsuarioID: Integer; const FIRMA: Binary): AnsiString;
-    function obtendatosempleados(const EstacionID: AnsiString): AnsiString;
+    function obtendatosempleados(const EstacionID: AnsiString; const Turno: AnsiString): AnsiString;
     procedure ProgramaMantenimiento(const IDPROGRAMAMANTENIMIENTO: Integer; const IDESTACION: Integer; const FECHA: DateTime);
     function obtendatosActividadesProgramadas(const IDESTACION: Integer; const TIPO: Integer): AnsiString;
     function obtenNotificacionesDiarias(const IDESTACION: Integer): AnsiString;
@@ -2479,13 +2479,14 @@ begin
 end;
 
 function TServiceEmpresas.obtendatosempleados(
-  const EstacionID: AnsiString): AnsiString;
+  const EstacionID: AnsiString; const Turno: AnsiString): AnsiString;
 var
   ds: IDADataSet;
   res: String;
 begin
   ds:=Schema.NewDataset(Connection, 'spObtenFotosEmpleado');
   ds.ParamByName('EstacionID').AsInteger:= strtoint(EstacionID);
+  ds.ParamByName('Turno').AsInteger:= strtoint(Turno);
   ds.Open;
 
   if not ds.IsEmpty then
