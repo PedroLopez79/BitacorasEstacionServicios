@@ -20,7 +20,8 @@ uses
   dxSkinMetropolisDark, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
   dxSkinOffice2013White, cxClasses, uDAFields, uDADataAdapter,
   uROChannelAwareComponent, uROMessage, uROComponent, uROBaseConnection,
-  uROTransportChannel, uROBaseHTTPClient;
+  uROTransportChannel, uROBaseHTTPClient, uROBaseActiveEventChannel,
+  uROBaseSuperChannel, uROBaseSuperTCPChannel, uROSuperTCPChannel;
 
 type
   TDM = class(TDataModule)
@@ -60,6 +61,7 @@ type
     RAG: TRORemoteService;
     rdaF: TDARemoteDataAdapter;
     cdsF: TDACDSDataTable;
+    Channel1: TROSuperTCPChannel;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
@@ -159,8 +161,9 @@ procedure TDM.AsignaServidor(Svr: String);
 const
   URL = 'http://%s:%d/BIN';
 begin
-  Channel.Connected:=False;
-  Channel.TargetURL:=Format(URL, [Svr, PuertoAdministrativo]);
+  //Channel1.Connected:=False;
+  Channel1.Active:=False;
+  Channel1.TargetURL:=Format(URL, [Svr, PuertoAdministrativo]);
 end;
 
 procedure TDM.AsignaServidorFlotillas(Svr: String);
@@ -291,7 +294,7 @@ end;
 
 function TDM.Servidor: IServiceEmpresas;
 begin
-  Result:=CoServiceEmpresas.Create(Message, Channel);
+  Result:=CoServiceEmpresas.Create(Message, Channel1);
 end;
 
 function TDM.ShowModule(AModuleInfo: TModuleInfo): Boolean;

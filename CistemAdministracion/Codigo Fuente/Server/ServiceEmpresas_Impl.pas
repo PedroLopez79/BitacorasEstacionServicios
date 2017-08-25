@@ -1092,7 +1092,7 @@ begin
       cmdDetLiq.ParamByName('Referencia').AsString:=Format('SOBRANTE EN LIQUIDACION [%d]', [dsFaltantes.FieldByName('TurnoID').AsInteger]);
       cmdFyP.ParamByName('Abono').AsFloat:=Abs(Decimales(dsFaltantes.FieldByName('Diferencia').AsFloat, 2));
       cmdFyP.ParamByName('TipoFaltantePagoID').AsInteger:=2;
-      if ServerDataModule3.AplicaSobrantes then
+      if ServerDataModule.AplicaSobrantes then
         cmdFyP.Execute;
     end;
     cmdDetLiq.Execute;

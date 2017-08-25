@@ -19,7 +19,7 @@ object DM: TDM
   end
   object RemoteService: TRORemoteService
     ServiceName = 'ServiceEmpresas'
-    Channel = Channel
+    Channel = Channel1
     Message = Message
     Left = 40
     Top = 104
@@ -238,12 +238,12 @@ object DM: TDM
     ServerLocators = <>
     TargetURL = 'http://10.10.10.1:9001/BIN'
     TrustInvalidCA = False
-    Left = 144
+    Left = 176
     Top = 8
   end
   object MessageEstacion: TROBinMessage
     Envelopes = <>
-    Left = 144
+    Left = 176
     Top = 56
   end
   object cdsEstacion: TDACDSDataTable
@@ -350,7 +350,7 @@ object DM: TDM
     ServiceName = 'ServiceProxy'
     Channel = ChannelEstacion
     Message = MessageEstacion
-    Left = 144
+    Left = 176
     Top = 104
   end
   object AdapterCistemGas: TDARemoteDataAdapter
@@ -360,11 +360,11 @@ object DM: TDM
     GetScriptsCall.RemoteService = CistemGasService
     RemoteService = CistemGasService
     DataStreamer = DataCistemGas
-    Left = 144
+    Left = 176
     Top = 200
   end
   object DataCistemGas: TDABin2DataStreamer
-    Left = 144
+    Left = 176
     Top = 152
   end
   object ChannelFlotillas: TROWinInetHTTPChannel
@@ -502,5 +502,14 @@ object DM: TDM
     IndexDefs = <>
     Left = 264
     Top = 328
+  end
+  object Channel1: TROSuperTCPChannel
+    DispatchOptions = []
+    ServerLocators = <>
+    TargetUrl = 'supertcp://127.0.0.1:8001'
+    Host = '127.0.0.1'
+    Port = 8001
+    Left = 88
+    Top = 8
   end
 end

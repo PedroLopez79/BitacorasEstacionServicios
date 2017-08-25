@@ -1,6 +1,7 @@
 object ServiceEmpresas: TServiceEmpresas
   OldCreateOrder = True
   OnCreate = DataAbstractServiceCreate
+  SessionManager = ServerDataModule.SessionManager
   ServiceSchema = Schema
   ServiceDataStreamer = DataStreamer
   ExportedDataTables = <>
@@ -8,7 +9,7 @@ object ServiceEmpresas: TServiceEmpresas
   Height = 243
   Width = 332
   object Schema: TDASchema
-    ConnectionManager = ServerDataModule3.ConnectionManager3
+    ConnectionManager = ServerDataModule.ConnectionManager
     Datasets = <
       item
         Params = <>

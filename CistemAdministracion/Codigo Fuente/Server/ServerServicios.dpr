@@ -30,13 +30,13 @@ begin
   //begin
     if ROStartService('ServerAdministracion', 'ServerAdministracion') then
     begin
-      ROService.CreateForm(TServerDataModule3, ServerDataModule3);
+      ROService.CreateForm(TServerDataModule, ServerDataModule);
       ROService.Run;
       Exit;
     end;
 
     Application.Initialize;
-    Application.CreateForm(TServerDataModule3, ServerDataModule3);
+    Application.CreateForm(TServerDataModule, ServerDataModule);
   Application.CreateForm(TServerForm, ServerForm);
   //Application.CreateForm(TfrmServerForm, frmServerForm);
   Application.Run;
